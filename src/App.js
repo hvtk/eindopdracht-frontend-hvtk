@@ -33,7 +33,7 @@ function App() {
               <Route path="/youth">
                 <SelectionYouth/>
               </Route>
-              <Route path="/signIn">
+              <Route path="/signin">
                 <SignIn/>
               </Route>
               <Route path="/signup">
