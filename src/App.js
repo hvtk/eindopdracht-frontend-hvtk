@@ -13,9 +13,6 @@ import Homepage from "./pages/homepage/Homepage";
 
 function App() {
   return (
-      //<div>
-     //       Dit zijn de eerste tekens van mijn applicatie voor de eindopdracht onderdeel: frontend!
-    //  </div>
       <Router>
           <Switch>
               <Route exact path="/">
@@ -44,7 +41,6 @@ function App() {
               </Route>
           </Switch>
       </Router>
-
   );
 }
 
