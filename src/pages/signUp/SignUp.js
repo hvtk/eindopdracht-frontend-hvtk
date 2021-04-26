@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 //import './components/pageBasics/ColorBoxes.css';
 
-//import './SignUp.css';
+import './SignUp.css';
 
 
 function SignUp() {
@@ -21,7 +21,7 @@ function SignUp() {
             Dit is het aanmeld scherm!
         </div>
 
-        <form onSubmit={handleSubmit(onFormSubmit)}>
+        <form className="containerBasicStart" onSubmit={handleSubmit(onFormSubmit)}>
 
             <h4> Postcode: </h4>
 
@@ -88,8 +88,9 @@ function SignUp() {
                 type="submit" >
                 Inloggen
             </button>
+            <p>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
         </form>
-        <p>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
+
       </>
     );
 }
