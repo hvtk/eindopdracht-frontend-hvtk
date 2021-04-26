@@ -3,7 +3,9 @@ import React from "react";
 import {useForm} from "react-hook-form";
 import { Link } from "react-router-dom";
 
-//import '/SignUp.css';
+//import './components/pageBasics/ColorBoxes.css';
+
+//import './SignUp.css';
 
 
 function SignUp() {

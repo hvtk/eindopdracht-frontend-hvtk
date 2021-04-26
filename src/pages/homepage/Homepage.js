@@ -1,13 +1,14 @@
 import React from "react";
 
-//import '/Homepage.css';
+import './Homepage.css';
+
 
 
 function Homepage() {
 
     return (
-        <div>
-            Dit is de startpagina!
+        <div >
+          <p> Dit is de startpagina! </p>
         </div>
     )
 

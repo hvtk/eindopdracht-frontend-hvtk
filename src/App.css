@@ -1,0 +1,14 @@
+@media only screen
+        and (max-width: 1920px) and (max-height: 1080px) {
+    body {
+        width: 92.9vw ;
+        height: 87vh;
+        margin: 5px;
+        border: 60px solid #A1EF80;
+        background-color: #D710EE;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+    }
+}
