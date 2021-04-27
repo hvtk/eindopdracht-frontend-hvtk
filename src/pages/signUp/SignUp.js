@@ -17,11 +17,9 @@ function SignUp() {
 
     return (
       <>
-        <div>
-            Dit is het aanmeld scherm!
-        </div>
+        <form className="containerBasicLeft" onSubmit={handleSubmit(onFormSubmit)}>
 
-        <form className="containerBasicStart" onSubmit={handleSubmit(onFormSubmit)}>
+            <h3> registreren </h3>
 
             <h4> Postcode: </h4>
 
@@ -86,9 +84,9 @@ function SignUp() {
             <br/>
             <button
                 type="submit" >
-                Inloggen
+                Registreren
             </button>
-            <p>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
+            <h5>Heb je je al geregistreerd? Je kunt <Link to="/signin">hier</Link> inloggen.</h5>
         </form>
 
       </>

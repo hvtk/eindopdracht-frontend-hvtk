@@ -1,4 +1,4 @@
-.containerBasicStart {
+.containerBasicLeft {
     width: 490px;
     height: 660px;
     background-color: #CA4564;
@@ -7,5 +7,5 @@
     justify-content: flex-start;
     text-align: center;
     margin-left: 35px;
-    margin-top: 75px;
+    margin-top: 150px;
 }

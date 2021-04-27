@@ -3,7 +3,7 @@ import React from "react";
 import {useForm} from "react-hook-form";
 import { Link } from "react-router-dom";
 
-//import '/SignIn.css';
+import './SignIn.css';
 
 
 function SignIn() {
@@ -16,11 +16,10 @@ function SignIn() {
 
     return (
       <>
-        <div>
-            Dit is het inlogscherm!
-        </div>
+        <form className="containerBasicLeft" onSubmit={handleSubmit(onFormSubmit)}>
 
-        <form onSubmit={handleSubmit(onFormSubmit)}>
+            <h3> Inloggen </h3>
+
             <h4> Gebruikersnaam: </h4>
 
             <label htmlFor="username-field">
@@ -49,8 +48,9 @@ function SignIn() {
                 type="submit" >
                 Inloggen
             </button>
+            <h5>Heb je je nog niet geregistreerd? <Link to="/signup">Registreer</Link> je dan eerst.</h5>
         </form>
-        <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
+
       </>
     )
 }
