@@ -1,6 +1,6 @@
-import React from "react";
+//import React from "react";
 
-function PhoneNumbers({image, title, description}) {
+/*function PhoneNumbers({image, title, description}) {
     return (
         <article className="phoneNumbers">
             <img src={image} alt="to call" />
@@ -14,4 +14,4 @@ function PhoneNumbers({image, title, description}) {
     )
 }
 
-export default PhoneNumbers;
+export default PhoneNumbers; */

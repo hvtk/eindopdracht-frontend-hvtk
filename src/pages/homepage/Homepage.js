@@ -1,11 +1,11 @@
 import React from "react";
 
 import './Homepage.css';
-import { ReactComponent as call} from "./assets/icons/telephoneicon.svg";
-import PhoneNumbers from "../../components/pageBasics/PhoneNumbers";
+import { ReactComponent as call} from './assets/icons/callicon.svg';
+//import PhoneNumbers from "../../components/pageBasics/PhoneNumbers";
 
 
-function Homepage() {
+/*function Homepage() {
 
     return (
         <>
@@ -19,6 +19,15 @@ function Homepage() {
                     />
              </div>
         </>
+    )
+} */
+
+function Homepage() {
+
+    return (
+        <div>
+            <call />
+        </div>
     )
 }
 
