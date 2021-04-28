@@ -1,7 +1,7 @@
 import React from "react";
 
 import './Homepage.css';
-import PhoneNumbers from "../../components/pageBasics/PhoneNumbers";
+//import PhoneNumbers from "../../components/pageBasics/PhoneNumbers";
 import phoneIcon from '../../assets/icons/callicon.svg'
 
 function Homepage() {

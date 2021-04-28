@@ -1,0 +1,91 @@
+.item-A {
+    grid-area: border;
+}
+
+.item-B {
+    grid-area: emty;
+}
+
+.item-C {
+    grid-area: picture-homepage;
+}
+
+.item-D {
+    grid-area: phoneNumbers;
+}
+
+.item-E {
+    grid-area: search-age;
+}
+
+.item-F {
+    grid-area: picture-children;
+}
+
+.item-G {
+    grid-area: search-problems-right;
+}
+
+.item-H {
+    grid-area: picture-youth-big;
+}
+
+.item-I {
+    grid-area: picture-youth-smal;
+}
+
+.item-J {
+    grid-area: picture-adults;
+}
+
+.item-K {
+    grid-area: picture-elderly;
+}
+
+.item-L {
+    grid-area: signup;
+}
+
+.item-M {
+    grid-area: signin;
+}
+
+.item-N {
+    grid-area: search-problems-left ;
+}
+
+.item-O {
+    grid-area: webaddress;
+}
+
+.item-P {
+    grid-area: search-option-web;
+}
+
+.item-Q {
+    grid-area: piture-search-web-big;
+}
+
+.item-R {
+    grid-area: picture-search-web-small;
+}
+
+.item-S {
+    grid-area: postalCode;
+}
+
+.item-T {
+    grid-area: age;
+}
+
+.pageGrid {
+    display: grid;
+    grid-template-columns: 60px 35px 490px 35px 35px 160px 84px 160px 84px 160px 32px 51px 160px 84px 160px 35px 35px 60px;
+    grid-template-rows: 60px 45px 60px 45px 40px 40px 50px 30px 50px 40px 160px 90px 160px 80px 80px 45px 60px 45px 60px;
+    grid-template-areas:
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . containerLeft . containerRight . ."
+        ". . . . . . ."
+        ". . . . . . .";
+}
