@@ -17,7 +17,7 @@ function SignUp() {
 
     return (
       <>
-        <form className="containerBasicLeft" onSubmit={handleSubmit(onFormSubmit)}>
+        <form className="containerSignup" onSubmit={handleSubmit(onFormSubmit)}>
 
             <h3> registreren </h3>
 

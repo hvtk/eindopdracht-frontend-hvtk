@@ -1,33 +1,49 @@
 import React from "react";
 
 import './Homepage.css';
-import './assets/icons/callicon.svg'
-//import call from './assets/icons/callicon.svg';
-//import { default as call} from './assets/icons/callicon.svg';
 import PhoneNumbers from "../../components/pageBasics/PhoneNumbers";
-
+import phoneIcon from '../../assets/icons/callicon.svg'
 
 function Homepage() {
 
     return (
+      <>
+        <section className="containerHomepage">
+          <form className="containerNumbers">
 
-        <div >
-            <PhoneNumbers
-               image="./assets/icons/callicon.svg"
-               title="112"
-               description="bij levensbedrijgende situaties"
-            />
-        </div>
+             <img src={phoneIcon} /> <h4> 112 </h4>
+              <h4> bij levensbedrijgende situaties </h4>
+
+          </form>
+
+          <form className="containerSearchAge" >
+           <h3> dit is het keuze menu </h3>
+          </form>
+        </section>
+      </>
     )
 }
 
-/*function Homepage() {
 
-    return (
-        <div>
-            <call />
-        </div>
-    )
+/*return (
+    <>
+        <section className="containerHomepage">
+            <form className="containerNumbers">
+
+                <PhoneNumbers
+                    image={phoneIcon}
+                    title="112"
+                    description="bij levensbedrijgende situaties"
+                />
+
+            </form>
+
+            <form className="containerSearchAge" >
+                <h3> dit is het keuze menu </h3>
+            </form>
+        </section>
+    </>
+)
 }*/
 
 

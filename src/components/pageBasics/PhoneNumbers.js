@@ -2,10 +2,12 @@ import React from "react";
 
 import './PhoneNumber.css'
 
+
+
 function PhoneNumbers({image, title, description}) {
     return (
         <div className="phoneNumbers">
-            <img src={image} alt=""/>
+            <img  className="phoneNumbers-images" src={image} alt=""/>
             <h4 className="phoneNumbers-number">
                 {title}
             </h4>
@@ -15,6 +17,8 @@ function PhoneNumbers({image, title, description}) {
         </div>
     )
 }
+
+
 
 export default PhoneNumbers;
 

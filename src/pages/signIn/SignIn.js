@@ -16,7 +16,7 @@ function SignIn() {
 
     return (
       <>
-        <form className="containerBasicLeft" onSubmit={handleSubmit(onFormSubmit)}>
+        <form className="containerSignin" onSubmit={handleSubmit(onFormSubmit)}>
 
             <h3> Inloggen </h3>
 
