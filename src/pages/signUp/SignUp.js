@@ -17,61 +17,62 @@ function SignUp() {
 
     return (
       <>
-        <form className="containerSignup" onSubmit={handleSubmit(onFormSubmit)}>
+          <div className="signUpLayout">
+            <form className="signUp-box" id="signUpBox" onSubmit={handleSubmit(onFormSubmit)}>
 
-            <h3> registreren </h3>
+               <h3> registreren </h3>
 
-            <h4> Postcode: </h4>
+               <h4> Postcode: </h4>
 
-            <label htmlFor="postalCode-field">
-                <input
+               <label htmlFor="postalCode-field">
+                 <input
                     type="text"
                     name="postalCode"
                     id="postalCode-field"
                     placeholder="postcode"
                     {...register("postalCode")}
                 />
-            </label>
+               </label>
 
-            <h4> Leeftijd: </h4>
+                 <h4> Leeftijd: </h4>
 
-            <label htmlFor="age-field">
-                <input
+                <label htmlFor="age-field">
+                 <input
                     type="number"
                     name="age"
                     id="age-field"
                     placeholder="age"
                     {...register("age")}
                 />
-            </label>
+               </label>
 
-            <h4> Gebruikersnaam: </h4>
+               <h4> Gebruikersnaam: </h4>
 
-            <label htmlFor="username-field">
-            <input
+               <label htmlFor="username-field">
+              <input
                 type="text"
                 name="username"
                 id="username-field"
                 placeholder="gebruikersnaam"
                 {...register("username")}
-            />
-            </label>
+              />
+              </label>
 
-            <h4> Wachtwoord: </h4>
+               <h4> Wachtwoord: </h4>
 
-            <label htmlFor="password-field">
-            <input
+              <label htmlFor="password-field">
+               <input
                 type="password"
                 name="password"
                 id="password-field"
                 placeholder="wachtwoord"
                 {...register("password")}
-            />
-            </label>
+               />
+             </label>
 
-            <h4> Herhaal wachtwoord </h4>
+             <h4> Herhaal wachtwoord </h4>
 
-            <label htmlFor="repeatPassword-field">
+              <label htmlFor="repeatPassword-field">
                 <input
                     type="password"
                     name="repeatPassword"
@@ -79,16 +80,16 @@ function SignUp() {
                     placeholder="herhaal-wachtwoord"
                     {...register("repeatPassword")}
                 />
-            </label>
+              </label>
 
-            <br/>
-            <button
+              <br/>
+              <button
                 type="submit" >
                 Registreren
-            </button>
-            <h5>Heb je je al geregistreerd? Je kunt <Link to="/signin">hier</Link> inloggen.</h5>
-        </form>
-
+              </button>
+             <h5>Heb je je al geregistreerd? Je kunt <Link to="/signin">hier</Link> inloggen.</h5>
+            </form>
+          </div>
       </>
     );
 }

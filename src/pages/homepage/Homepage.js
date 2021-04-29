@@ -25,9 +25,12 @@ function Homepage() {
                     type="submit" >
                     Taalkeuze
                 </button>
+                 <div id="border-top__item">
+                     <h4> H </h4>
+                 </div>
             </div>
             <div id="border-right"></div>
-            <div className="LayoutInputBorderBottom" id="border-bottom">
+            <div className="layoutInputBorderBottom" id="border-bottom">
                 <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
             </div>
             <div id="border-left"></div>
