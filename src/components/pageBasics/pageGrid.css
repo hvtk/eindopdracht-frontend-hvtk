@@ -1,80 +1,76 @@
-.border {
+#border {
     grid-area: border;
 }
 
-.item-B {
-    grid-area: emty;
-}
-
-.picture-homepage {
+#picture-homepage {
     grid-area: picture-homepage;
 }
 
-.phoneNumbers {
+#phoneNumbers {
     grid-area: phoneNumbers;
 }
 
-.search-age {
+#search-age {
     grid-area: search-age;
 }
 
-.picture-children {
+#picture-children {
     grid-area: picture-children;
 }
 
-.search-problems-right {
+#search-problems-right {
     grid-area: search-problems-right;
 }
 
-.picture-youth-big {
+#picture-youth-big {
     grid-area: picture-youth-big;
 }
 
-.picture-youth-small {
+#picture-youth-small {
     grid-area: picture-youth-small;
 }
 
-.picture-adults {
+#picture-adults {
     grid-area: picture-adults;
 }
 
-.picture-elderly {
+#picture-elderly {
     grid-area: picture-elderly;
 }
 
-.signUp-box {
+#signUp-box {
     grid-area: signup;
 }
 
-.signIn-box {
+#signIn-box {
     grid-area: signin;
 }
 
-.search-problems-left {
+#search-problems-left {
     grid-area: search-problems-left ;
 }
 
-.webAddress-box {
+#webAddress-box {
     grid-area: webaddress;
 }
 
-.search-option-web {
+#search-option-web {
     grid-area: search-option-web;
 }
 
-.picture-search-web-big {
+#picture-search-web-big {
     grid-area: piture-search-web-big;
 }
 
-.picture-search-web-small {
+#picture-search-web-small {
     grid-area: picture-search-web-small;
 }
 
-.postalCode-box {
+#postalCode-box {
     grid-area: postalCode;
 }
 
-.age-box {
+#age-box {
     grid-area: age;
 }
 

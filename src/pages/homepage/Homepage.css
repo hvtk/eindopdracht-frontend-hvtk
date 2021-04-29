@@ -33,77 +33,8 @@ img {
 
 
 
-.item-B {
-    grid-area: emty;
-}
 
-
-
-.search-age {
-    grid-area: search-age;
-}
-
-.picture-children {
-    grid-area: picture-children;
-}
-
-.search-problems-right {
-    grid-area: search-problems-right;
-}
-
-.picture-youth-big {
-    grid-area: picture-youth-big;
-}
-
-.picture-youth-small {
-    grid-area: picture-youth-small;
-}
-
-.picture-adults {
-    grid-area: picture-adults;
-}
-
-.picture-elderly {
-    grid-area: picture-elderly;
-}
-
-.signUp-box {
-    grid-area: signup;
-}
-
-.signIn-box {
-    grid-area: signin;
-}
-
-.search-problems-left {
-    grid-area: search-problems-left ;
-}
-
-.webAddress-box {
-    grid-area: webaddress;
-}
-
-.search-option-web {
-    grid-area: search-option-web;
-}
-
-.picture-search-web-big {
-    grid-area: piture-search-web-big;
-}
-
-.picture-search-web-small {
-    grid-area: picture-search-web-small;
-}
-
-.postalCode-box {
-    grid-area: postalCode;
-}
-
-.age-box {
-    grid-area: age;
-}
-
-.homepageWrapper {
+.homepageLayout {
     display: grid;
     grid-template-columns: 60px 35px 490px 35px 750px 35px 490px 35px 60px;
     grid-template-rows: 60px 45px 105px 660px 105px 45px 60px;
@@ -111,7 +42,7 @@ img {
     "border-top border-top border-top border-top border-top border-top border-top border-top border-top"
     "border-left . . . . . . . border-right"
     "border-left . . . picture-homepage . . . border-right"
-    "border-left . phone-numbers . picture-homepage . . . border-right"
+    "border-left . phone-numbers . picture-homepage . search-age . border-right"
     "border-left . . . picture-homepage . . . border-right"
     "border-left . . . . . . . border-right"
     "border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom";
@@ -137,22 +68,17 @@ img {
     background-color: #A1EF80;
 }
 
-.readout {
-    background-color: aqua;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#picture-homepage {
+    grid-area: picture-homepage;
 }
 
-.chosen-language {
-    background-color: aqua;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#phone-numbers {
+    grid-area: phone-numbers;
 }
 
+#search-age {
+    grid-area: search-age;
+}
 
 .pictureHomepage {
     background-color: #D710EE;
@@ -162,19 +88,40 @@ img {
     align-items: center;
 }
 
-#picture-homepage {
-    grid-area: picture-homepage;
-}
-
-#phone-numbers {
-    grid-area: phone-numbers;
-}
-
 .phoneNumbers {
     background-color: #D710EE;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.searchAge {
+    background-color: #D710EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layoutInputBorderTop {
+    background-color: aqua;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.layoutInputBorderBottom {
+    background-color: aqua;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+
+
+
 
 

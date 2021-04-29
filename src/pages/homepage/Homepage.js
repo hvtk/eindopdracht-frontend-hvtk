@@ -1,25 +1,44 @@
 import React from "react";
 
 import './Homepage.css';
+import {useForm} from "react-hook-form";
 //import PhoneNumbers from "../../components/pageBasics/PhoneNumbers";
 //import phoneIcon from '../../assets/icons/callicon.svg'
 
 function Homepage() {
 
+    const {handleSubmit}= useForm();
+
+    function onFormSubmitReadout(data) {
+        console.log(data);
+    }
+
     return (
 
-        <div className="homepageWrapper">
-            <div className="readout" id="border-top"> voorlezen </div>
-            <div className="chosen-language" id="border-right"> taalkeuze </div>
-            <div id="border-bottom"></div>
+        <div className="homepageLayout">
+            <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
+                <button
+                    type="submit" >
+                    Voorlezen
+                </button>
+                <button
+                    type="submit" >
+                    Taalkeuze
+                </button>
+            </div>
+            <div id="border-right"></div>
+            <div className="LayoutInputBorderBottom" id="border-bottom">
+                <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
+            </div>
             <div id="border-left"></div>
             <div className="pictureHomepage" id="picture-homepage"></div>
             <div className="phoneNumbers" id="phone-numbers"></div>
+            <div className="searchAge" id="search-age"></div>
         </div>
     )
 }
 
-/*    return (
+/*   return (
       <>
         <section className="containerHomepage">
           <form className="containerNumbers">
