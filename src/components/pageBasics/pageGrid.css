@@ -1,4 +1,4 @@
-.item-A {
+.border {
     grid-area: border;
 }
 
@@ -6,86 +6,80 @@
     grid-area: emty;
 }
 
-.item-C {
+.picture-homepage {
     grid-area: picture-homepage;
 }
 
-.item-D {
+.phoneNumbers {
     grid-area: phoneNumbers;
 }
 
-.item-E {
+.search-age {
     grid-area: search-age;
 }
 
-.item-F {
+.picture-children {
     grid-area: picture-children;
 }
 
-.item-G {
+.search-problems-right {
     grid-area: search-problems-right;
 }
 
-.item-H {
+.picture-youth-big {
     grid-area: picture-youth-big;
 }
 
-.item-I {
-    grid-area: picture-youth-smal;
+.picture-youth-small {
+    grid-area: picture-youth-small;
 }
 
-.item-J {
+.picture-adults {
     grid-area: picture-adults;
 }
 
-.item-K {
+.picture-elderly {
     grid-area: picture-elderly;
 }
 
-.item-L {
+.signUp-box {
     grid-area: signup;
 }
 
-.item-M {
+.signIn-box {
     grid-area: signin;
 }
 
-.item-N {
+.search-problems-left {
     grid-area: search-problems-left ;
 }
 
-.item-O {
+.webAddress-box {
     grid-area: webaddress;
 }
 
-.item-P {
+.search-option-web {
     grid-area: search-option-web;
 }
 
-.item-Q {
+.picture-search-web-big {
     grid-area: piture-search-web-big;
 }
 
-.item-R {
+.picture-search-web-small {
     grid-area: picture-search-web-small;
 }
 
-.item-S {
+.postalCode-box {
     grid-area: postalCode;
 }
 
-.item-T {
+.age-box {
     grid-area: age;
 }
 
-.pageGrid {
+/*.ageGridTotalWebsite {
     display: grid;
     grid-template-columns: 60px 35px 490px 35px 35px 160px 84px 160px 84px 160px 32px 51px 160px 84px 160px 35px 35px 60px;
-    grid-template-rows: 60px 45px 60px 45px 40px 40px 50px 30px 50px 40px 160px 90px 160px 80px 80px 45px 60px 45px 60px;
-    grid-template-areas:
-        ". . . . . . ."
-        ". . . . . . ."
-        ". . containerLeft . containerRight . ."
-        ". . . . . . ."
-        ". . . . . . .";
-}
+    grid-template-rows: 60px 45px 60px 45px 40px 40px 50px 30px 50px 40px 160px 90px 160px 80px 80px 45px 60px 45px 60px; */
+
