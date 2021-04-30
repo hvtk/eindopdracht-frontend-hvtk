@@ -10,13 +10,13 @@
     grid-template-areas:
     "border-top border-top border-top border-top border-top border-top border-top border-top border-top"
     "border-left . . . . . . . border-right"
+    "border-left . search-problems-left . web-address-box web-address-box web-address-box . border-right"
     "border-left . search-problems-left . . . . . border-right"
-    "border-left . search-problems-left . . . . . border-right"
-    "border-left . search-problems-left . . . . . border-right"
-    "border-left . search-problems-left . . . . . border-right"
-    "border-left . search-problems-left . . . . . border-right"
-    "border-left . search-problems-left . . . . . border-right"
-    "border-left . search-problems-left . . . . . border-right"
+    "border-left . search-problems-left . search-option-web . postal-code-box . border-right"
+    "border-left . search-problems-left . search-option-web . . . border-right"
+    "border-left . search-problems-left . search-option-web . age-box . border-right"
+    "border-left . search-problems-left . search-option-web . . . border-right"
+    "border-left . search-problems-left . search-option-web . picture-search-web-small . border-right"
     "border-left . . . . . . . border-right"
     "border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom";
 }
@@ -45,8 +45,8 @@
     grid-area: search-problems-left ;
 }
 
-#webAddress-box {
-    grid-area: webaddress-box;
+#web-address-box {
+    grid-area: web-address-box;
 }
 
 #search-option-web {
@@ -57,12 +57,12 @@
     grid-area: picture-search-web-small;
 }
 
-#postalCode-box {
-    grid-area: postalCode;
+#postal-code-box {
+    grid-area: postal-code-box;
 }
 
 #age-box {
-    grid-area: age;
+    grid-area: age-box;
 }
 
 .layoutInputBorderTop {
@@ -89,14 +89,14 @@
 }
 
 .webAddressBox {
-    background-color: #D710EE;
+    background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .searchOptionWeb {
-    background-color: #D710EE;
+    background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;

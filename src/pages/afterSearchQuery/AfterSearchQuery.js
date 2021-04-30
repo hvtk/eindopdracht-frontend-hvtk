@@ -32,9 +32,11 @@ function AfterSearchQuery() {
             </div>
             <div id="border-left"></div>
             <div className="searchProblemsLeft" id="search-problems-left"></div>
-
-
-
+            <div className="webAddressBox" id="web-address-box"></div>
+            <div className="searchOptionWeb" id="search-option-web"> AFTER SEARCH QUARY </div>
+            <div className="postalCodeBox" id="postal-code-box"></div>
+            <div className="ageBox" id="age-box"></div>
+            <div className="pictureSearchWebSmall" id="picture-search-web-small"></div>
         </div>
     )
 }
