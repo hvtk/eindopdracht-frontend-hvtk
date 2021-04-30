@@ -37,13 +37,5 @@ function SelectionChildren() {
     )
 }
 
-/*    return (
-        <div>
-            Dit is het scherm na selectie op leeftijd voor kinderen!
-        </div>
-    )
-
-}*/
-
 export default SelectionChildren;
 
