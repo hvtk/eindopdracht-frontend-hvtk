@@ -31,23 +31,11 @@ function SelectionYouth() {
                 <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
             </div>
             <div id="border-left"></div>
-            <div className="pictureYouthSmall" id="picture-youth-small"></div>
+            <div className="pictureYouthSmall" id="picture-youth-small"> Youth </div>
             <div className="phoneNumbers" id="phone-numbers"></div>
             <div className="searchProblemsRight" id="search-problems-right"></div>
         </div>
     )
 }
-
-
-
-
-/*return (
-        <div>
-            Dit is het scherm na selectie op leeftijd voor jongeren!
-        </div>
-    )
-
-
-}*/
 
 export default SelectionYouth;

@@ -49,6 +49,13 @@
     align-items: center;
 }
 
+.pictureChildrenBackground {
+    background-color: #D710EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .layoutInputBorderTop {
     background-color: aqua;
     color: white;

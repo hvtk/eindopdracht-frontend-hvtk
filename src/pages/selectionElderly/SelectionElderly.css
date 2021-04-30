@@ -1,91 +1,90 @@
-.item-A {
-    grid-area: border;
+/*.ageGridTotalWebsite {
+    display: grid;
+    grid-template-columns: 60px 35px 490px 35px 35px 160px 84px 160px 84px 160px 32px 51px 160px 84px 160px 35px 35px 60px;
+    grid-template-rows: 60px 45px 60px 45px 40px 40px 50px 30px 50px 40px 160px 90px 160px 80px 80px 45px 60px 45px 60px; */
+
+.selectionElderlyLayout {
+    display: grid;
+    grid-template-columns: 60px 35px 490px 35px 750px 35px 490px 35px 60px;
+    grid-template-rows: 60px 45px 105px 80px 500px 80px 105px 45px 60px;
+    grid-template-areas:
+    "border-top border-top border-top border-top border-top border-top border-top border-top border-top"
+    "border-left . . . . . . . border-right"
+    "border-left . . . . . . . border-right"
+    "border-left . phone-numbers . . . search-problems-right . border-right"
+    "border-left . phone-numbers . picture-elderly . search-problems-right . border-right"
+    "border-left . phone-numbers . . . search-problems-right . border-right"
+    "border-left . . . . . . . border-right"
+    "border-left . . . . . . . border-right"
+    "border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom";
 }
 
-.item-B {
-    grid-area: emty;
+#border-top {
+    grid-area: border-top;
+    background-color: #A1EF80;
 }
 
-.item-C {
-    grid-area: picture-homepage;
+#border-left {
+    grid-area: border-left;
+    background-color: #A1EF80;
 }
 
-.item-D {
-    grid-area: phoneNumbers;
+#border-bottom {
+    grid-area: border-bottom;
+    background-color: #A1EF80;
 }
 
-.item-E {
-    grid-area: search-age;
+#border-right {
+    grid-area: border-right;
+    background-color: #A1EF80;
 }
 
-.item-F {
-    grid-area: picture-children;
+#phone-numbers {
+    grid-area: phone-numbers;
 }
 
-.item-G {
+#search-problems-right {
     grid-area: search-problems-right;
 }
 
-.item-H {
-    grid-area: picture-youth-big;
-}
-
-.item-I {
-    grid-area: picture-youth-smal;
-}
-
-.item-J {
-    grid-area: picture-adults;
-}
-
-.item-K {
+#picture-elderly {
     grid-area: picture-elderly;
 }
 
-.item-L {
-    grid-area: signup;
+.pictureElderly {
+    background-color: #D710EE;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.item-M {
-    grid-area: signin;
+.phoneNumbers {
+    background-color: #D710EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.item-N {
-    grid-area: search-problems-left ;
+.searchProblemsRight {
+    background-color: #D710EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.item-O {
-    grid-area: webaddress;
+.layoutInputBorderTop {
+    background-color: aqua;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.item-P {
-    grid-area: search-option-web;
-}
-
-.item-Q {
-    grid-area: piture-search-web-big;
-}
-
-.item-R {
-    grid-area: picture-search-web-small;
-}
-
-.item-S {
-    grid-area: postalCode;
-}
-
-.item-T {
-    grid-area: age;
-}
-
-.pageGrid {
-    display: grid;
-    grid-template-columns: 60px 35px 490px 35px 35px 160px 84px 160px 84px 160px 32px 51px 160px 84px 160px 35px 35px 60px;
-    grid-template-rows: 60px 45px 60px 45px 40px 40px 50px 30px 50px 40px 160px 90px 160px 80px 80px 45px 60px 45px 60px;
-    grid-template-areas:
-        ". . . . . . ."
-        ". . . . . . ."
-        ". . containerLeft . containerRight . ."
-        ". . . . . . ."
-        ". . . . . . .";
+.layoutInputBorderBottom {
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

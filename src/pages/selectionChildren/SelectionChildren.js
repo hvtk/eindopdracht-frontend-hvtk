@@ -32,7 +32,7 @@ function SelectionChildren() {
             </div>
             <div id="border-left"></div>
             <div className="phoneNumbers" id="phone-numbers"></div>
-            <div id="picture-children-background"></div>
+            <div id="picture-children-background" className="pictureChildrenBackground"> CHILDREN </div>
         </div>
     )
 }

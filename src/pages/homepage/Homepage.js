@@ -31,7 +31,7 @@ function Homepage() {
                 <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
             </div>
             <div id="border-left"></div>
-            <div className="pictureHomepage" id="picture-homepage"></div>
+            <div className="pictureHomepage" id="picture-homepage"> HOMEPAGE </div>
             <div className="phoneNumbers" id="phone-numbers"></div>
             <div className="searchAge" id="search-age"></div>
         </div>
