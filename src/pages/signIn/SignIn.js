@@ -14,9 +14,30 @@ function SignIn() {
       console.log(data);
     }
 
+    function onFormSubmitReadout(data) {
+        console.log(data);
+    }
+
     return (
       <>
-        <form className="containerSignin" onSubmit={handleSubmit(onFormSubmit)}>
+        <div className="signInLayout">
+          <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
+              <button
+                  type="submit" >
+                  Voorlezen
+              </button>
+              <button
+                  type="submit" >
+                  Taalkeuze
+              </button>
+          </div>
+          <div id="border-right"></div>
+          <div className="layoutInputBorderBottom" id="border-bottom">
+              <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
+          </div>
+          <div id="border-left"></div>
+
+          <form className="signInBox" id="signIn-box" onSubmit={handleSubmit(onFormSubmit)}>
 
             <h3> Inloggen </h3>
 
@@ -49,8 +70,9 @@ function SignIn() {
                 Inloggen
             </button>
             <h5>Heb je je nog niet geregistreerd? <Link to="/signup">Registreer</Link> je dan eerst.</h5>
-        </form>
-
+          </form>
+          <div id="picture-children-background"></div>
+        </div>
       </>
     )
 }
