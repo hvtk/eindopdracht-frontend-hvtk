@@ -6,8 +6,7 @@ import './AfterSearchQuery.css';
 
 function AfterSearchQuery() {
 
-
-    const {handleSubmit}= useForm()
+    const {handleSubmit, register}= useForm()
 
     function onFormSubmitReadout(data) {
         console.log(data);
@@ -34,8 +33,28 @@ function AfterSearchQuery() {
             <div className="searchProblemsLeft" id="search-problems-left"></div>
             <div className="webAddressBox" id="web-address-box"></div>
             <div className="searchOptionWeb" id="search-option-web"> AFTER SEARCH QUARY </div>
-            <div className="postalCodeBox" id="postal-code-box"></div>
-            <div className="ageBox" id="age-box"></div>
+            <div className="postalCodeBox" id="postal-code-box">
+                <label htmlFor="postalCode-field">
+                    <input
+                        type="text"
+                        name="postalCode"
+                        id="postalCode-field"
+                        placeholder="postcode"
+                        {...register("postalCode")}
+                    />
+                </label>
+            </div>
+            <div className="ageBox" id="age-box">
+                <label htmlFor="ageBox-field">
+                    <input
+                        type="text"
+                        name="age"
+                        id="ageBox-field"
+                        placeholder="leeftijd"
+                        {...register("age")}
+                    />
+                </label>
+            </div>
             <div className="pictureSearchWebSmall" id="picture-search-web-small"></div>
         </div>
     )
