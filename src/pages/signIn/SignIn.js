@@ -71,7 +71,7 @@ function SignIn() {
             </button>
             <h5>Heb je je nog niet geregistreerd? <Link to="/signup">Registreer</Link> je dan eerst.</h5>
           </form>
-          <div id="picture-children-background"></div>
+          <div className="pictureChildrenBackground" id="picture-children-background"></div>
         </div>
       </>
     )

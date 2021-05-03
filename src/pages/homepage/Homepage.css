@@ -86,6 +86,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 
 .phoneNumbers {
@@ -93,6 +94,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50px;
 }
 
 .searchAge {
@@ -100,6 +102,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50px;
 }
 
 .layoutInputBorderTop {

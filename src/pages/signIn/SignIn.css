@@ -52,15 +52,25 @@
     background-color: #CA4564;
 }
 
+#picture-children-background {
+    grid-area: picture-children-background;
+    background-color: #CA4564;
+    border-radius: 10px;
+}
+
 .signInBox {
     background-color: #D710EE;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    border-radius: 50px;
 }
 
-#picture-children-background {
-    grid-area: picture-children-background;
-    background-color: #CA4564;
+.pictureChildrenBackground {
+    background-color: #D710EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 }

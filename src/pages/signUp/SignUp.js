@@ -109,7 +109,7 @@ function SignUp() {
                <h5>Heb je je al geregistreerd? Je kunt <Link to="/signin">hier</Link> inloggen.</h5>
 
              </form>
-             <div id="picture-children-background"></div>
+             <div className="pictureChildrenBackground" id="picture-children-background"></div>
           </div>
       </>
     );

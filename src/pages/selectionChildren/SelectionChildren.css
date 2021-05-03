@@ -47,6 +47,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50px;
 }
 
 .pictureChildrenBackground {
@@ -54,6 +55,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 
 .layoutInputBorderTop {

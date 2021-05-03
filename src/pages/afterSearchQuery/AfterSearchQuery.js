@@ -7,7 +7,7 @@ import './AfterSearchQuery.css';
 function AfterSearchQuery() {
 
 
-    const {handleSubmit}= useForm();
+    const {handleSubmit}= useForm()
 
     function onFormSubmitReadout(data) {
         console.log(data);
