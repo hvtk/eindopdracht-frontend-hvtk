@@ -2,6 +2,7 @@ import React from "react";
 
 import './Homepage.css';
 import {useForm} from "react-hook-form";
+import {Link} from "react-router-dom";
 //import PhoneNumbers from "../../components/pageBasics/PhoneNumbers";
 //import phoneIcon from '../../assets/icons/callicon.svg'
 
@@ -33,7 +34,15 @@ function Homepage() {
             <div id="border-left"></div>
             <div className="pictureHomepage" id="picture-homepage"> HOMEPAGE </div>
             <div className="phoneNumbers" id="phone-numbers"></div>
-            <div className="searchAge" id="search-age"></div>
+            <div className="searchAge" id="search-age">
+                <h4> Kies de leeftijdsgroep </h4>
+
+                <p className="ageSelectionBox"> <Link to="/children">KINDEREN</Link> </p>
+                <p className="ageSelectionBox"> <Link to="/youth">JONGEREN </Link> </p>
+                <p className="ageSelectionBox"> <Link to="/adults">VOLWASSENEN</Link> </p>
+                <p className="ageSelectionBox"> <Link to="/elderly">OUDEREN</Link> </p>
+
+            </div>
         </div>
     )
 }
