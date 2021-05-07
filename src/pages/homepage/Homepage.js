@@ -4,7 +4,10 @@ import './Homepage.css';
 import {useForm} from "react-hook-form";
 import {Link} from "react-router-dom";
 //import PhoneNumbers from "../../components/pageBasics/PhoneNumbers";
-//import phoneIcon from '../../assets/icons/callicon.svg'
+import phoneIcon from '../../assets/icons/callicon.svg'
+import chatIcon from'../../assets/icons/chaticon.svg'
+import whatsappIcon from '../../assets/icons/whattsappicon.svg'
+import imageHomepage from '../../assets/images/homepage/ImageHomepage.svg'
 
 function Homepage() {
 
@@ -32,9 +35,41 @@ function Homepage() {
                 <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
             </div>
             <div id="border-left"></div>
-            <div className="pictureHomepage" id="picture-homepage"> HOMEPAGE </div>
-            <div className="phoneNumbers" id="phone-numbers"></div>
+
+            <div className="phoneNumbers" id="phone-numbers">
+                <span className="positionTextInBox">  <img src={phoneIcon} alt=""/>  112 <br/>
+                    <span> bij levensbedrijgende situaties</span>
+                    <br/>
+                    <img src={phoneIcon} alt=""/> 113 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
+                    <span> denk je aan zelfmoord? </span>
+                    <br/>
+                    <img src={phoneIcon} alt=""/> 0800-0188 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
+                    <span> hulp na seksueel misbruik </span>
+                    <br/>
+                    <img src={phoneIcon} alt=""/> 0800-2000 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
+                    <span> hulp bij huiselijk geweld </span>
+                    <br/>
+                    <img src={phoneIcon} alt=""/> 0800-2432 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
+                    <span> kinder telefoon </span>
+                    <br/>
+                    <img src={phoneIcon} alt=""/> 0900-0767 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
+                    <span> de luisterlijn (18 tot 25 jaar)</span>
+                    <br/>
+                    <img src={phoneIcon} alt=""/> 0900-1450 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
+                    <span> Mind Korrelatie (13 tot 25 jaar) </span>
+                    <br/>
+                    <img src={phoneIcon} alt=""/> 043-2058106 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
+                    <span> @ease praten over gevoelens? (12 tot 25 jaar) </span>
+                    <br/>
+                    <img src={phoneIcon} alt=""/> 030-3400600 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
+                    <span> ouderen infolijn (van seniorenorganisatie KBO-PCOB)</span>
+                </span>
+            </div>
+
+            <div className="pictureHomepage" id="picture-homepage"> <img className="imageHomepage" src={imageHomepage} alt=""/> </div>
+
             <div className="searchAge" id="search-age">
+
                 <h4> Kies de leeftijdsgroep </h4>
 
                 <p className="ageSelectionBox"> <Link to="/children">KINDEREN</Link> </p>

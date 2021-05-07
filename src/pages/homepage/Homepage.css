@@ -1,3 +1,5 @@
+/*@import "src/assets/fonts/fonts.css";*/
+
 /*.containerNumbers {
     width: 490px;
     height: 660px;
@@ -9,7 +11,7 @@
     grid-area: containerLeft;
     grid-column: 3;
     grid-row: 3;
-}*/
+}
 
 /*.containerSearchAge {
     width: 490px;
@@ -22,11 +24,6 @@
     grid-area: containerRight;
     grid-column: 5;
     grid-row: 3;
-}
-
-img {
-    width: 24px;
-    height: 24px;
 }*/
 
 
@@ -91,21 +88,14 @@ img {
     border-radius: 10px;
 }
 
-.phoneNumbers {
-    background-color: #D710EE;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
+img {
+    width: 28px;
+    height: 28px;
 }
 
-.searchAge {
-    background-color: #D710EE;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
+.imageHomepage {
+    height: 843px;
+    width: 653px;
 }
 
 .layoutInputBorderTop {
@@ -124,6 +114,30 @@ img {
     align-items: center;
 }
 
+.phoneNumbers {
+    background-color: #D710EE;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:self-start ;
+    align-content: flex-start;
+    border-radius: 50px;
+}
+
+.positionTextInBox {
+    margin-left: 20px;
+    margin-top: 65px;
+}
+
+.searchAge {
+    background-color: #D710EE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
 .ageSelectionBox {
     background-color: #CDD32B;
     border-radius: 10px;
@@ -134,6 +148,10 @@ img {
     height: 53px;
 }
 
+.positionTextInBox {
+    margin-left: 20px;
+    margin-top: 65px;
+}
 
 
 

@@ -51,31 +51,6 @@
     grid-area: picture-adults;
 }
 
-.pictureAdults {
-    background-color: #D710EE;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-
-.phoneNumbers {
-    background-color: #D710EE;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-}
-
-.searchProblemsRight {
-    background-color: #D710EE;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-}
-
 .layoutInputBorderTop {
     background-color: aqua;
     color: white;
@@ -91,3 +66,46 @@
     justify-content: center;
     align-items: center;
 }
+
+.phoneNumbers {
+    background-color: #D710EE;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:self-start ;
+    align-content: flex-start;
+    border-radius: 50px;
+}
+
+.positionTextInBox {
+    margin-left: 20px;
+    margin-top: 65px;
+}
+
+img {
+    width: 28px;
+    height: 28px;
+}
+
+.pictureAdults {
+    background-color: #D710EE;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.imageAdults {
+    height: 843px;
+    width: 653px;
+}
+
+.searchProblemsRight {
+    background-color: #D710EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
