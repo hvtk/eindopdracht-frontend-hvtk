@@ -1,23 +1,59 @@
-import React from "react";
+import React, {useState} from "react";
+
+import axios from "axios";
 
 import {useForm} from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useHistory} from "react-router-dom";
 
 //import './components/pageBasics/ColorBoxes.css';
 
 import './SignUp.css';
 
+//. installeer axios
+//.importeer axios
+//.asychrome functie
+//.try and catch blok
+//. error state and loading state aanmaken en communiceren aan gebruiker.
+//.try : postrequest maken naar endpoint "zie springboot" en wat je wilt doen bv registreren
+//.axios post request krijgt de url en het data object mee (in springboot staan de 2 velden die minimaal meegegeven meoetn worden voor authenticatie)
+//. succes melding tonen aan gebruiker  (stukje state voor maken!)
+//. gebruiker doorsturen naar inlogformulier
+
+
+
+
 
 function SignUp() {
     const {handleSubmit, register}= useForm();
+    const [authenticateSucces, toggleAuthenticeSucces] = useState(false)
+    const history = useHistory();
 
-    function onFormSubmit(data) {
+    async function onFormSubmit(data) {
         console.log(data);
+        try {
+            const result = await axios.post('https://localhost:8443/authenticate',{
+                username:data.username,
+                password: data.password,
+                age: data.age,
+                postalCode: data.postalCode,
+            })
+
+            console.log(result);
+            toggleAuthenticeSucces(true);
+
+            setTimeout(() => {
+                history.push('/signin');
+            }, 2000)
+
+        } catch(e) {
+            console.error(e)
+        }
     }
 
     function onFormSubmitReadout(data) {
         console.log(data);
     }
+
 
     return (
       <>
@@ -106,9 +142,12 @@ function SignUp() {
                 Registreren
                </button>
 
-               <h5>Heb je je al geregistreerd? Je kunt <Link to="/signin">hier</Link> inloggen.</h5>
+                  <h5>Heb je je al geregistreerd? Je kunt <Link to="/signin">hier</Link> inloggen.</h5>
+
+                  {authenticateSucces === true && <p> Registreren is gelukt! Je wordt nu doorgestuurd naar de inlogpagina</p>}
 
              </form>
+
              <div className="pictureChildrenBackground" id="picture-children-background"></div>
           </div>
       </>
