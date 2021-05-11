@@ -10,6 +10,7 @@ import SelectionYouth from "./pages/selectionYouth/SelectionYouth";
 import SignIn from "./pages/signIn/SignIn";
 import SignUp from "./pages/signUp/SignUp";
 import Homepage from "./pages/homepage/Homepage";
+import Profilepage from "./pages/profilepage/Profilepage";
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
               </Route>
               <Route path="/signup">
                 <SignUp/>
+              </Route>
+              <Route path="/profile">
+                <Profilepage/>
               </Route>
           </Switch>
       </Router>

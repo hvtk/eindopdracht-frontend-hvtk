@@ -18,7 +18,8 @@ import './SignIn.css';
 //. wat we terug krijgen is een JWT token die in de local storage moet komen
 //. gebruiker doorsturen naar de profielpagina
 //. de gebruikersdata moet in de context geplaatst worden zodat alle componenten erbij kunnen
-
+//. importeer useContext en authContext
+//. destructure daar de login functie uit.
 
 function SignIn() {
     const {handleSubmit, register}= useForm();
