@@ -31,7 +31,7 @@ function SignUp() {
     async function onFormSubmit(data) {
         console.log(data);
         try {
-            const result = await axios.post('https://localhost:8443/authenticate',{
+            const result = await axios.post('https://localhost:8443/username',{
                 username:data.username,
                 password: data.password,
                 age: data.age,
