@@ -48,9 +48,6 @@ function SelectionAdults() {
                     <img src={phoneIcon} alt=""/> 0800-2000 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
                     <span> hulp bij huiselijk geweld </span>
                     <br/>
-                    <img src={phoneIcon} alt=""/> 0800-2432 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
-                    <span> kinder telefoon </span>
-                    <br/>
                     <img src={phoneIcon} alt=""/> 0900-0767 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
                     <span> de luisterlijn (18 tot 25 jaar)</span>
                     <br/>
@@ -59,9 +56,6 @@ function SelectionAdults() {
                     <br/>
                     <img src={phoneIcon} alt=""/> 043-2058106 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
                     <span> @ease praten over gevoelens? (12 tot 25 jaar) </span>
-                    <br/>
-                    <img src={phoneIcon} alt=""/> 030-3400600 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
-                    <span> ouderen infolijn (van seniorenorganisatie KBO-PCOB)</span>
                 </span>
             </div>
             <div className="pictureAdults" id="picture-adults"> <img className="imageAdults" src={imageAdults} alt=""/> </div>

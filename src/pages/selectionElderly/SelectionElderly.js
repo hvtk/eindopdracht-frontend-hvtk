@@ -3,6 +3,9 @@ import {useForm} from "react-hook-form";
 
 import './SelectionElderly.css';
 import elderly from '../../assets/images/selectionElderly/ImageElderly.svg';
+import phoneIcon from "../../assets/icons/callicon.svg";
+import whatsappIcon from "../../assets/icons/whattsappicon.svg";
+import chatIcon from "../../assets/icons/chaticon.svg";
 
 
 function SelectionElderly() {
@@ -33,7 +36,23 @@ function SelectionElderly() {
             </div>
             <div id="border-left"></div>
             <div className="pictureElderly" id="picture-elderly"> <img className="imageElderly" src={elderly} alt=""/></div>
-            <div className="phoneNumbers" id="phone-numbers"></div>
+            <div className="phoneNumbers" id="phone-numbers">
+                  <span className="positionTextInBox">  <img src={phoneIcon} alt=""/>  112 <br/>
+                    <span> bij levensbedrijgende situaties</span>
+                    <br/>
+                    <img src={phoneIcon} alt=""/> 113 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
+                    <span> denk je aan zelfmoord? </span>
+                    <br/>
+                    <img src={phoneIcon} alt=""/> 0800-0188 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
+                    <span> hulp na seksueel misbruik </span>
+                    <br/>
+                    <img src={phoneIcon} alt=""/> 0800-2000 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
+                    <span> hulp bij huiselijk geweld </span>
+                    <br/>
+                    <img src={phoneIcon} alt=""/> 030-3400600 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
+                    <span> ouderen infolijn (van seniorenorganisatie KBO-PCOB)</span>
+                 </span>
+            </div>
             <div className="searchProblemsRight" id="search-problems-right"></div>
         </div>
     )
