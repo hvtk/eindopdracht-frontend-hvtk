@@ -13,6 +13,10 @@ function SelectionYouth() {
 
     const {handleSubmit}= useForm();
 
+    function onFormSubmit(data) {
+        console.log(data);
+    }
+
     function onFormSubmitReadout(data) {
         console.log(data);
     }
@@ -60,7 +64,41 @@ function SelectionYouth() {
                  </span>
             </div>
             <div className="pictureYouthSmall" id="picture-youth-small"> <img className="imageYouth" src={imageYouth} alt=""/> </div>
-            <div className="searchProblemsRight" id="search-problems-right"></div>
+            <div className="searchProblemsRight" id="search-problems-right" onSubmit={handleSubmit(onFormSubmit)}>
+                <button
+                    type="submit" >
+                    Zoeken
+                </button>
+                <h4> Info over... </h4>
+                <button
+                    type="submit" >
+                    Aandoeningen A - Z
+                </button>
+                <button
+                    type="submit" >
+                    Testen
+                </button>
+                <button
+                    type="submit" >
+                    Depressief
+                </button>
+                <button
+                    type="submit" >
+                    Eenzaam
+                </button>
+                <button
+                    type="submit" >
+                    Burn-out
+                </button>
+                <button
+                    type="submit" >
+                    Persoonlijke verhalen
+                </button>
+                <button
+                    type="submit" >
+                    Zelfstandig wonen, hoe?
+                </button>
+            </div>
         </div>
     )
 }

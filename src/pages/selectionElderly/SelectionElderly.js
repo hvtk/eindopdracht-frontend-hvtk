@@ -10,8 +10,11 @@ import chatIcon from "../../assets/icons/chaticon.svg";
 
 function SelectionElderly() {
 
-
     const {handleSubmit}= useForm();
+
+    function onFormSubmit(data) {
+        console.log(data);
+    }
 
     function onFormSubmitReadout(data) {
         console.log(data);
@@ -53,7 +56,33 @@ function SelectionElderly() {
                     <span> ouderen infolijn (van seniorenorganisatie KBO-PCOB)</span>
                  </span>
             </div>
-            <div className="searchProblemsRight" id="search-problems-right"></div>
+            <div className="searchProblemsRight" id="search-problems-right" onSubmit={handleSubmit(onFormSubmit)}>
+                <button
+                    type="submit" >
+                    Zoeken
+                </button>
+                <h4> Info over... </h4>
+                <button
+                    type="submit" >
+                    Aandoeningen A - Z
+                </button>
+                <button
+                    type="submit" >
+                    Eenzaam
+                </button>
+                <button
+                    type="submit" >
+                    Dementie
+                </button>
+                <button
+                    type="submit" >
+                    Depressief
+                </button>
+                <button
+                    type="submit" >
+                    Angstig
+                </button>
+            </div>
         </div>
     )
 }
