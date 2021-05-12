@@ -93,16 +93,13 @@ img {
 
 .pictureYouthSmall {
     background-color: #D710EE;
+    background-image: url("ImageYouth.svg");
+    background-size: cover;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-}
-
-.imageYouth {
-    height: 843px;
-    width: 653px;
 }
 
 .searchProblemsRight {

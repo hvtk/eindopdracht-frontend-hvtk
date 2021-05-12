@@ -9,6 +9,10 @@ function AfterSearchQuery() {
 
     const {handleSubmit, register}= useForm()
 
+    function onFormSubmit(data) {
+        console.log(data);
+    }
+
     function onFormSubmitReadout(data) {
         console.log(data);
     }
@@ -31,7 +35,33 @@ function AfterSearchQuery() {
                 <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
             </div>
             <div id="border-left"></div>
-            <div className="searchProblemsLeft" id="search-problems-left"></div>
+            <div className="searchProblemsLeftElderly" id="search-problems-left" onSubmit={handleSubmit(onFormSubmit)}>
+                <button
+                    type="submit" >
+                    Zoeken
+                </button>
+                <h4> Info over... </h4>
+                <button
+                    type="submit" >
+                    Aandoeningen A - Z
+                </button>
+                <button
+                    type="submit" >
+                    Problemen thuis
+                </button>
+                <button
+                    type="submit" >
+                    Seksualiteit
+                </button>
+                <button
+                    type="submit" >
+                    Eenzaam
+                </button>
+                <button
+                    type="submit" >
+                    Persoonlijke verhalen
+                </button>
+            </div>
             <div className="webAddressBox" id="web-address-box"></div>
             <div className="searchOptionWeb" id="search-option-web"> AFTER SEARCH QUARY </div>
             <div className="postalCodeBox" id="postal-code-box">

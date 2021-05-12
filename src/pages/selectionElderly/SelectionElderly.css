@@ -53,6 +53,8 @@
 
 .pictureElderly {
     background-color: #D710EE;
+    background-image: url("ImageElderly.svg");
+    background-size: cover;
     color: white;
     display: flex;
     justify-content: center;
@@ -92,7 +94,3 @@
     align-items: center;
 }
 
-.imageElderly {
-    height: 450px;
-    width: 653px;
-}

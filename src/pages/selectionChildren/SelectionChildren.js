@@ -53,7 +53,23 @@ function SelectionChildren() {
                     <br/>
                 </span>
             </div>
-            <div id="picture-children-background" className="pictureChildrenBackground"><img className="imageSelectionChildren" src={imageChildrenBig} alt=""/> </div>
+            <div id="picture-children-background" className="pictureChildrenBackground">
+
+                <img className="imageSelectionChildren" src={imageChildrenBig} alt=""/>
+                <a href="www.google.com "  >  <img className="imageSelectionChildren" src="https://via.placeholder.com/500" /> </a>
+                <a href="www.google.com "  >  <img className="imageSelectionChildren" src="https://via.placeholder.com/500" /> </a>
+                <a href="www.google.com "  >  <img className="imageSelectionChildren" src="https://via.placeholder.com/500" /> </a>
+                <a href="www.google.com "  >  <img className="imageSelectionChildren" src="https://via.placeholder.com/500" /> </a>
+                <a href="www.google.com "  >  <img className="imageSelectionChildren" src="https://via.placeholder.com/500" /> </a>
+                <a href="www.google.com "  >  <img className="imageSelectionChildren" src="https://via.placeholder.com/500" /> </a>
+                <a href="www.google.com "  >  <img className="imageSelectionChildren" src="https://via.placeholder.com/500" /> </a>
+                <a href="www.google.com "  >  <img className="imageSelectionChildren" src="https://via.placeholder.com/500" /> </a>
+                <a href="www.google.com "  >  <img className="imageSelectionChildren" src="https://via.placeholder.com/500" /> </a>
+                <a href="www.google.com "  >  <img className="imageSelectionChildren" src="https://via.placeholder.com/500" /> </a>
+
+            </div>
+
+
         </div>
     )
 }

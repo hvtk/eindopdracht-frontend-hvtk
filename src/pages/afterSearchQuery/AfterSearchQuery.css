@@ -81,10 +81,11 @@
     align-items: center;
 }
 
-.searchProblemsLeft {
+.searchProblemsLeftElderly {
     background-color: #D710EE;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -110,6 +111,8 @@
 
 .pictureSearchWebSmall {
     background-color: #D710EE;
+    background-image: url("ImageSeachPostalcodeAge.svg");
+    background-size: cover;
     color: white;
     display: flex;
     justify-content: center;

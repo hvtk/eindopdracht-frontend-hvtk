@@ -62,7 +62,7 @@ function SelectionAdults() {
                     <span> @ease praten over gevoelens? (12 tot 25 jaar) </span>
                 </span>
             </div>
-            <div className="pictureAdults" id="picture-adults"> <img className="imageAdults" src={imageAdults} alt=""/> </div>
+            <div className="pictureAdults" id="picture-adults"> </div>
             <div className="searchProblemsRight" id="search-problems-right" onSubmit={handleSubmit(onFormSubmit)}>
                 <button
                     type="submit" >

@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 import phoneIcon from '../../assets/icons/callicon.svg'
 import chatIcon from'../../assets/icons/chaticon.svg'
 import whatsappIcon from '../../assets/icons/whattsappicon.svg'
-import imageHomepage from '../../assets/images/homepage/ImageHomepage.svg'
+
 
 function Homepage() {
 
@@ -66,7 +66,7 @@ function Homepage() {
                 </span>
             </div>
 
-            <div className="pictureHomepage" id="picture-homepage"> <img className="imageHomepage" src={imageHomepage} alt=""/> </div>
+            <div className="pictureHomepage" id="picture-homepage"> </div>
 
             <div className="searchAge" id="search-age">
 

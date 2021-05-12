@@ -52,9 +52,13 @@
 
 .pictureChildrenBackground {
     background-color: #D710EE;
+    background-image: url("ImagePageChildrenBig.svg");
+    background-size: cover;
+    flex-wrap: wrap;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+
     border-radius: 10px;
 }
 
@@ -75,7 +79,11 @@
 }
 
 .imageSelectionChildren {
-    height: 750px;
-    width: 1182px;
+    height: 200px;
+    width: 200px;
+
+
 }
+
+
 
