@@ -43,7 +43,6 @@ function Profilepage() {
                     type="image"
                     name="profileImage"
                     id="profileImage-field"
-                    placeholder="gebruikersnaam"
                     {...register("profileImage")}
                  />
               </label>

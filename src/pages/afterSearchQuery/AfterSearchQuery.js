@@ -2,6 +2,7 @@ import React from "react";
 import {useForm} from "react-hook-form";
 
 import './AfterSearchQuery.css';
+import imageSearchPostalcodeAge from '../../assets/images/afterSearchQuery/ImageSeachPostalcodeAge.svg';
 
 
 function AfterSearchQuery() {
@@ -55,7 +56,7 @@ function AfterSearchQuery() {
                     />
                 </label>
             </div>
-            <div className="pictureSearchWebSmall" id="picture-search-web-small"></div>
+            <div className="pictureSearchWebSmall" id="picture-search-web-small"><img className="imageSearchPostalcodeAge" src={imageSearchPostalcodeAge} alt=""/> </div>
         </div>
     )
 }

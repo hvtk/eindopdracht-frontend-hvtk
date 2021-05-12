@@ -2,6 +2,7 @@ import React from "react";
 import {useForm} from "react-hook-form";
 
 import './SelectionElderly.css';
+import elderly from '../../assets/images/selectionElderly/ImageElderly.svg';
 
 
 function SelectionElderly() {
@@ -31,7 +32,7 @@ function SelectionElderly() {
                 <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
             </div>
             <div id="border-left"></div>
-            <div className="pictureElderly" id="picture-elderly"> ELDERLY </div>
+            <div className="pictureElderly" id="picture-elderly"> <img className="imageElderly" src={elderly} alt=""/></div>
             <div className="phoneNumbers" id="phone-numbers"></div>
             <div className="searchProblemsRight" id="search-problems-right"></div>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import {useForm} from "react-hook-form";
 
 import './SelectionChildren.css';
+import imageChildrenBig from '../../assets/images/selectionChildren/ImagePageChildrenBig.svg';
 
 
 function SelectionChildren() {
@@ -32,7 +33,7 @@ function SelectionChildren() {
             </div>
             <div id="border-left"></div>
             <div className="phoneNumbers" id="phone-numbers"></div>
-            <div id="picture-children-background" className="pictureChildrenBackground"> CHILDREN </div>
+            <div id="picture-children-background" className="pictureChildrenBackground"><img className="imageSelectionChildren" src={imageChildrenBig} alt=""/> </div>
         </div>
     )
 }

@@ -6,6 +6,8 @@ import React, { createContext,useState } from "react";
 // 2.maak de state aan den de lege functies
 // 3.plaats de state en de functies in een data object en geef die mee via de value={} prop
 // 4.test de context door een component aan te melden en de context met useContext met alles = useContext(AuthContext)
+// 5.Inlogfunctie: het proces van inloggen (JWT token in Local Storage zetten en gebruikersdata opslaan in de context)
+// in de provider regelen.
 
 // .AuthContext maken met createContext
 // .ContextProvider functie component bouwen met daarin:
@@ -19,8 +21,7 @@ import React, { createContext,useState } from "react";
 
 //.informatie die in de context moet staan (login, logout, state)
 //.Stukje state maken voor de gebruikersdata
-//.Inlogfunctie: het proces van inloggen (JWT token in Local Storage zetten en gebruikersdata opslaan in de context)
-// in de provider regelen.
+
 //.Uitleg functie: het proces van uitloggen (JWT token uit de local storage halen en context terughalen)
 //.Implementeren dat bij refresh wordt gecheckt of er nog een JWT token is en zo ja: gebruikersdata ophalen.
 
