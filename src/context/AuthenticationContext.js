@@ -1,4 +1,7 @@
-import React, { createContext,useState } from "react";
+import React, {createContext, useEffect, useState} from "react";
+import jwt_decode from "jwt-decode";
+import { useHistory } from 'react-router-dom'
+import axios from "axios";
 
 //Authenticatie
 // 1.Bedenk welke data je in de context beschikbaar moet stellen en maak daar een raamwerkje voor:
@@ -29,24 +32,84 @@ import React, { createContext,useState } from "react";
 export const AuthContext = createContext({});
 
 function AuthContextProvider({children}) {
+    const history = useHistory();
     // state voor de gebruikersdata
     const[authState, setAuthState] = useState( {
         user: null,
+        status: 'pending',
+
         }
     )
 
+    async function fetchUserData(jwtToken) {
+        // we hebben de jwttoken nodig om daaruit de user ID te halen
+        // hier gebruiken we de package jwt-decode voor
+        const decoded = jwt_decode(jwtToken);
+        const userId = decoded.sub; //sub is de benaming van de id in de decoded jwttoken in de console
+
+        // gebruikersinformatie ophalen
+        try {
+            const result = await axios.get('https://localhost/8443/users/${userId}', {
+                header: {
+                    "Content-Type": "application/json",
+                    Authorization: 'Bearer ${jwtToken}', //ge encode jwttoken. de headerinfo komt uit de documentatie van de API
+                }
+            })
+
+            // die data gebruiken om de context te vullen
+            setAuthState( {
+                user: {
+                    username: result.data.username,
+                    age: result.data.age,
+                    postalCode: result.data.postalCode,
+                    id: result.data.id,
+                },
+                status: 'done',
+            })
+        } catch(e) {
+            console.error(e) ;
+        }
+
+
+    }
+
+    // wanneer de applicatie geladen wordt, willen we checken of er een token is, en als die er is maar er is geen gebruiker,
+    // dan willen we alsnog de gebruikersdata ophalen.
+
+    useEffect(() => {
+        // is er een token?
+        const token = localStorage.getItem('token');
+        // is er geen user?
+        if(token !== undefined && authState.user === null) {
+            // haal dan de gebruikersdata op
+            fetchUserData(token);
+
+        } else {
+            // zo nee, dan geen user, maar wel status op 'done'
+            setAuthState({
+                user: null,
+                status: 'done',
+            })
+        }
+    }, []);
+
     //inlogfunctie
-    function login() {
-        // we hebben de JWT token nodig om daaruit de user ID te halen
+    async function login(jwtToken) {
         // JWT token in de local storage zetten
-        // alle gebruikersdata ophalen
-        // die data gebruiken om de context te vullen
+        localStorage.setItem('token', jwtToken); //positie JWT token in de pos
+
+        // gebruikersdata ophalen
+        fetchUserData(jwtToken)
         // doorlinken naar de profielpagina
-        console.log('Login!');
+        history.push('/profile'); // de profielpagina
     }
 
     //uitlogfunctie
     function logout() {
+        // leeghalen van de localstorage (met localestorage.clear
+
+        //user in de context weer op nul zetten.
+
         console.log('log uit!')
     }
     // omdat authState een object is en we nog steeds gebruik willen maken van die automatische state updates
@@ -59,9 +122,11 @@ function AuthContextProvider({children}) {
 
     return (
         <AuthContext.Provider value={data}>
-            {children}
+            {authState.status === 'done'
+            ? children
+            :<p>Loading...</p>
+            }
         </AuthContext.Provider>
-
     )
 }
 

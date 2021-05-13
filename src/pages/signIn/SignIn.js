@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 
 import axios from "axios";
 
 import {useForm} from "react-hook-form";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { AuthContext} from "../../context/AuthenticationContext";
 
 import './SignIn.css';
 
@@ -22,26 +23,20 @@ import './SignIn.css';
 //. destructure daar de login functie uit.
 
 function SignIn() {
+    const { login } = useContext(AuthContext)
     const {handleSubmit, register}= useForm();
-    const history = useHistory();
-
-
-    async function onFormSubmit(data) {
+        async function onFormSubmit(data) {
         try {
-            const result = await axios.post('https://localhost:8443/login?',{
+            const result = await axios.post('https://localhost:8443/users/login',{
                 username:data.username,
                 password: data.password,
                 age: data.age,
                 postalCode: data.postalCode,
             })
 
-            console.log(result.data); //. de positie van de data die we uit de post willen zien
+            console.log(result.data.accessToken); //. de positie van de data die we uit de post willen zien
 
-            localStorage.setItem('hoeishetmogelijk', result.data) //positie JWT token in de pos
-
-            history.push('/adults'); // de gekozen leeftijdsgroep
-
-
+            login(result.data.accessToken);
         } catch(e) {
             console.error(e)
         }

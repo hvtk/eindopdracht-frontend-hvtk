@@ -1,12 +1,16 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import {useForm} from "react-hook-form";
+import {AuthContext} from "../../context/AuthenticationContext";
 
 import './Profilepage.css';
 
 // in invoervelden, met uitzondering van de foto worden vanuit de context gevuld!. Moet nog geprogrammeerd worden.
 
 function Profilepage() {
+
+    const { user } = useContext(AuthContext);
+    console.log(user);
 
     const {handleSubmit, register}= useForm();
 
@@ -47,13 +51,13 @@ function Profilepage() {
                  />
               </label>
 
-              <p> <h4> Gebruikersnaam: </h4> ............ </p>
+              <p> <h4> Gebruikersnaam: </h4> {user && user.username} </p>
 
-              <p> <h4> Wachtwoord: </h4> ............ </p>
+              <p> <h4> Wachtwoord: </h4> ............. </p>
 
-              <p> <h4> Postcode: </h4> ............ </p>
+              <p> <h4> Postcode: </h4> {user && user.postalCode} </p>
 
-              <p> <h4> Leeftijd: </h4> ............ </p>
+              <p> <h4> Leeftijd: </h4> {user && user.age} </p>
 
               <h5>Terug naar de <Link to="/">Homepagina</Link> </h5>
             </div>
