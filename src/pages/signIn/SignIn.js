@@ -4,7 +4,7 @@ import axios from "axios";
 
 import {useForm} from "react-hook-form";
 import { Link } from "react-router-dom";
-import { AuthContext} from "../../context/AuthenticationContext";
+import AuthenticationContext, { AuthContext} from "../../context/AuthenticationContext";
 
 import './SignIn.css';
 
@@ -25,7 +25,8 @@ import './SignIn.css';
 function SignIn() {
     const { login } = useContext(AuthContext)
     const {handleSubmit, register}= useForm();
-        async function onFormSubmit(data) {
+
+    async function onFormSubmit(data) {
         try {
             const result = await axios.post('https://localhost:8443/users/login',{
                 username:data.username,
@@ -38,7 +39,7 @@ function SignIn() {
 
             login(result.data.accessToken);
         } catch(e) {
-            console.error(e)
+          console.error(e)
         }
       console.log(data);
     }

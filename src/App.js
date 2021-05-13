@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "./context/AuthenticationContext";
 
 import { BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import './App.css';
@@ -13,6 +14,9 @@ import Homepage from "./pages/homepage/Homepage";
 import Profilepage from "./pages/profilepage/Profilepage";
 
 function App() {
+
+  const { user } = useContext(AuthContext) ;
+
   return (
       <Router>
           <Switch>
@@ -40,7 +44,7 @@ function App() {
               <Route path="/signup">
                 <SignUp/>
               </Route>
-              <Route path="/profile">
+              <Route path="/profile" user={user}>
                 <Profilepage/>
               </Route>
           </Switch>

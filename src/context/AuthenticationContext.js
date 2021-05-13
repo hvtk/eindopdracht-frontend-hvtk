@@ -107,10 +107,14 @@ function AuthContextProvider({children}) {
     //uitlogfunctie
     function logout() {
         // leeghalen van de localstorage (met localestorage.clear
-
+        localStorage.clear();
         //user in de context weer op nul zetten.
-
-        console.log('log uit!')
+        setAuthState ({
+            user: null,
+            status: 'done',
+        })
+        history.push("/")
+        // console.log('log uit!')
     }
     // omdat authState een object is en we nog steeds gebruik willen maken van die automatische state updates
     // zullen we de authState "spreadden"
