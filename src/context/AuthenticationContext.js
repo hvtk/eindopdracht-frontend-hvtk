@@ -49,15 +49,15 @@ function AuthContextProvider({children}) {
 
         // gebruikersinformatie ophalen
         try {
-            const result = await axios.get('https://localhost/8443/users/${userId}', {
+            const result = await axios.get(`https://localhost/8443/users/${userId}`, {
                 header: {
                     "Content-Type": "application/json",
-                    Authorization: 'Bearer ${jwtToken}', //ge encode jwttoken. de headerinfo komt uit de documentatie van de API
+                    Authorization: `Bearer ${jwtToken}`, //ge encode jwttoken. de headliner komt uit de documentatie van de API
                 }
             })
 
             // die data gebruiken om de context te vullen
-            setAuthState( {
+            setAuthState({
                 user: {
                     username: result.data.username,
                     age: result.data.age,
@@ -66,11 +66,9 @@ function AuthContextProvider({children}) {
                 },
                 status: 'done',
             })
-        } catch(e) {
-            console.error(e) ;
+        } catch (e) {
+            console.error(e);
         }
-
-
     }
 
     // wanneer de applicatie geladen wordt, willen we checken of er een token is, en als die er is maar er is geen gebruiker,

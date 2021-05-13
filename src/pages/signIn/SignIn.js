@@ -4,7 +4,7 @@ import axios from "axios";
 
 import {useForm} from "react-hook-form";
 import { Link } from "react-router-dom";
-import AuthenticationContext, { AuthContext} from "../../context/AuthenticationContext";
+import { AuthContext } from "../../context/AuthenticationContext";
 
 import './SignIn.css';
 
@@ -23,12 +23,13 @@ import './SignIn.css';
 //. destructure daar de login functie uit.
 
 function SignIn() {
-    const { login } = useContext(AuthContext)
+    const { login } = useContext(AuthContext);
     const {handleSubmit, register}= useForm();
 
     async function onFormSubmit(data) {
+        console.log(data);
         try {
-            const result = await axios.post('https://localhost:8443/users/login',{
+            const result = await axios.post(`https://localhost:8443/users/login`,{
                 username:data.username,
                 password: data.password,
                 age: data.age,
@@ -59,7 +60,7 @@ function SignIn() {
               <button
                   type="submit" >
                   Taalkeuze
-              </button>
+              </button>mbt
           </div>
           <div id="border-right"></div>
           <div className="layoutInputBorderBottom" id="border-bottom">

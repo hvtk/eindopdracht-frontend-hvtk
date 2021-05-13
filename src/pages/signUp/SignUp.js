@@ -4,9 +4,6 @@ import axios from "axios";
 
 import {useForm} from "react-hook-form";
 import { Link, useHistory} from "react-router-dom";
-
-//import './components/pageBasics/ColorBoxes.css';
-
 import './SignUp.css';
 
 //. installeer axios
@@ -25,13 +22,13 @@ import './SignUp.css';
 
 function SignUp() {
     const {handleSubmit, register}= useForm();
-    const [authenticateSucces, toggleAuthenticeSucces] = useState(false)
+    const [authenticateSucces, toggleAuthenticateSucces] = useState(false);
     const history = useHistory();
 
     async function onFormSubmit(data) {
         console.log(data);
         try {
-            const result = await axios.post('https://localhost:8443/username/authorities',{
+            const result = await axios.post(`https://localhost:8443/username/authorities`,{
                 username:data.username,
                 password: data.password,
                 age: data.age,
@@ -39,7 +36,7 @@ function SignUp() {
             })
 
             console.log(result);
-            toggleAuthenticeSucces(true);
+            toggleAuthenticateSucces(true);
 
             setTimeout(() => {
                 history.push('/signin');
