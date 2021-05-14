@@ -29,7 +29,7 @@ function SignIn() {
     async function onFormSubmit(data) {
         console.log(data);
         try {
-            const result = await axios.post(`https://localhost:8443/users/login`,{
+            const result = await axios.post(`https://localhost:8443/login`,{
                 username:data.username,
                 password: data.password,
                 age: data.age,
