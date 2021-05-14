@@ -45,13 +45,13 @@ function AuthContextProvider({children}) {
         // we hebben de jwttoken nodig om daaruit de user ID te halen
         // hier gebruiken we de package jwt-decode voor
         const decoded = jwt_decode(jwtToken);
-        const userId = decoded.sub; //sub is de benaming van de id in de decoded jwttoken in de console
+        const Authorization = decoded.sub; //sub is de benaming van de id in de decoded jwttoken in de console
 
         // gebruikersinformatie ophalen
         try {
-            const result = await axios.get(`https://localhost/8443/users/${userId}`, {
+            const result = await axios.get(`https://localhost/8443/${Authorization}`, {
                 header: {
-                    "Content-Type": "application/json",
+                    /*"Content-Type": "application/json",*/
                     Authorization: `Bearer ${jwtToken}`, //ge encode jwttoken. de headliner komt uit de documentatie van de API
                 }
             })
