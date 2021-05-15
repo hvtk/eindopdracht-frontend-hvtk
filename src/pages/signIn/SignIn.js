@@ -29,14 +29,9 @@ function SignIn() {
     async function onFormSubmit(data) {
         console.log(data);
         try {
-            const result = await axios.post(`https://localhost:8443/login`,{
-                username:data.username,
-                password: data.password,
-                age: data.age,
-                postalCode: data.postalCode,
-            })
+            const result = await axios.post('https://localhost:8443/login', data);  // dit pad klopt niet!!
 
-            console.log(result.data.accessToken); //. de positie van de data die we uit de post willen zien
+            //console.log(result.data.accessToken); //. de positie van de data die we uit de post willen zien
 
             login(result.data.accessToken);
         } catch(e) {

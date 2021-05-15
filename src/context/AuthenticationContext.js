@@ -45,13 +45,13 @@ function AuthContextProvider({children}) {
         // we hebben de jwttoken nodig om daaruit de user ID te halen
         // hier gebruiken we de package jwt-decode voor
         const decoded = jwt_decode(jwtToken);
-        const Authorization = decoded.sub; //sub is de benaming van de id in de decoded jwttoken in de console
+        const username = decoded.sub; //sub is de benaming van de id in de decoded jwttoken in de console
 
         // gebruikersinformatie ophalen
         try {
-            const result = await axios.get(`https://localhost/8443/${Authorization}`, {
-                header: {
-                    /*"Content-Type": "application/json",*/
+            const result = await axios.get(`https://localhost/8443/${username}/authorities"`, {  /* was userID in fake-server */
+                headers: {
+                   "Content-Type": "application/json",
                     Authorization: `Bearer ${jwtToken}`, //ge encode jwttoken. de headliner komt uit de documentatie van de API
                 }
             })
@@ -62,9 +62,8 @@ function AuthContextProvider({children}) {
                     username: result.data.username,
                     age: result.data.age,
                     postalCode: result.data.postalCode,
-                    id: result.data.id,
+                    jwt: result.data.jwt,
                 },
-                status: 'done',
             })
         } catch (e) {
             console.error(e);
@@ -126,7 +125,7 @@ function AuthContextProvider({children}) {
         <AuthContext.Provider value={data}>
             {authState.status === 'done'
             ? children
-            :<p>Loading...</p>
+            :<p>Loading...</p>   //vanaf hier komt de foutmelding. loading... zie je nog kort verschijnen.
             }
         </AuthContext.Provider>
     )

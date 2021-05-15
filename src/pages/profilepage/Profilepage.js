@@ -59,7 +59,7 @@ function Profilepage() {
 
               <p> <h4> Leeftijd: </h4> {user && user.age} </p>
 
-              <h5>Terug naar de <Link to="/">Homepagina</Link> </h5>
+              <h5>Terug naar de <Link to="/">Startpagina</Link> </h5>
             </div>
             <div className="pictureChildrenBackground" id="picture-children-background"></div>
           </div>

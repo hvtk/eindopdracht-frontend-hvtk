@@ -31,8 +31,8 @@ function SignUp() {
             const result = await axios.post(`https://localhost:8443/authenticate`,{
                 username:data.username,
                 password: data.password,
-                age: data.age,
-                postalCode: data.postalCode,
+              /*  age: data.age,
+                postalCode: data.postalCode,*/
             })
 
             console.log(result);
