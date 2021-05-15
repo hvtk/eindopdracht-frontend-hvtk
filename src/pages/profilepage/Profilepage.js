@@ -12,7 +12,7 @@ function Profilepage() {
     const { user } = useContext(AuthContext);
     console.log(user);
 
-    const {handleSubmit, register}= useForm();
+    const {handleSubmit, register} = useForm();
 
     function onFormSubmitReadout(data) {
         console.log(data);

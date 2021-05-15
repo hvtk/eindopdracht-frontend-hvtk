@@ -28,6 +28,7 @@ function SignUp() {
     async function onFormSubmit(data) {
         console.log(data);
         try {
+            // Deze route is incorrect.
             const result = await axios.post(`https://localhost:8443/authenticate`,{
                 username:data.username,
                 password: data.password,

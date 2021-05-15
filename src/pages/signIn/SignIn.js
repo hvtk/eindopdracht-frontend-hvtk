@@ -29,11 +29,11 @@ function SignIn() {
     async function onFormSubmit(data) {
         console.log(data);
         try {
-            const result = await axios.post('https://localhost:8443/login', data);  // dit pad klopt niet!!
+            const result = await axios.post('https://localhost:8443/authenticate', data);  // dit pad klopt wel!!
 
             //console.log(result.data.accessToken); //. de positie van de data die we uit de post willen zien
 
-            login(result.data.accessToken);
+            login(result.data.jwt); // jwt is gedefinieerd in AuthenticationResponse.java in back-end
         } catch(e) {
           console.error(e)
         }
@@ -55,7 +55,7 @@ function SignIn() {
               <button
                   type="submit" >
                   Taalkeuze
-              </button>mbt
+              </button>
           </div>
           <div id="border-right"></div>
           <div className="layoutInputBorderBottom" id="border-bottom">

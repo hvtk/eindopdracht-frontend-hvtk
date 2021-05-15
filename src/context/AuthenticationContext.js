@@ -49,7 +49,8 @@ function AuthContextProvider({children}) {
 
         // gebruikersinformatie ophalen
         try {
-            const result = await axios.get(`https://localhost/8443/${username}/authorities"`, {  /* was userID in fake-server */
+            // Ik heb hier /authorities weggehaald, zodat we de daadwerkelijke gegevens van de gebruiker ophalen ipv de authorisaties
+            const result = await axios.get(`https://localhost:8443/users/${username}`, {  /* was userID in fake-server */
                 headers: {
                    "Content-Type": "application/json",
                     Authorization: `Bearer ${jwtToken}`, //ge encode jwttoken. de headliner komt uit de documentatie van de API
@@ -64,6 +65,7 @@ function AuthContextProvider({children}) {
                     postalCode: result.data.postalCode,
                     jwt: result.data.jwt,
                 },
+                status: "done"
             })
         } catch (e) {
             console.error(e);
@@ -77,7 +79,7 @@ function AuthContextProvider({children}) {
         // is er een token?
         const token = localStorage.getItem('token');
         // is er geen user?
-        if(token !== undefined && authState.user === null) {
+        if(token != null /* token != null ipv !== undefined om op te vangen dat token = null als de token niet in localstorage staat*/  && authState.user === null) {
             // haal dan de gebruikersdata op
             fetchUserData(token);
 
