@@ -65,39 +65,55 @@ function SelectionYouth() {
             </div>
             <div className="pictureYouthSmall" id="picture-youth-small"> <img className="imageYouth" src={imageYouth} alt=""/> </div>
             <div className="searchProblemsRight" id="search-problems-right" onSubmit={handleSubmit(onFormSubmit)}>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit" className="searchSelectionBox">
                     Zoeken
                 </button>
+              </p>
                 <h4> Info over... </h4>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit" className="searchSelectionBox">
                     Aandoeningen A - Z
                 </button>
+              </p>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit" className="searchSelectionBox">
                     Testen
                 </button>
+              </p>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit" className="searchSelectionBox">
                     Depressief
                 </button>
+              </p>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit" className="searchSelectionBox">
                     Eenzaam
                 </button>
+              </p>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit" className="searchSelectionBox">
                     Burn-out
                 </button>
+              </p>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit" className="searchSelectionBox">
                     Persoonlijke verhalen
                 </button>
+              </p>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit" className="searchSelectionBox">
                     Zelfstandig wonen, hoe?
                 </button>
+              </p>
             </div>
         </div>
     )

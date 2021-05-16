@@ -48,7 +48,7 @@ function SignUp() {
         }
     }
 
-    function onFormSubmitReadout(data) {
+    function onSubmitReadout(data) {
         console.log(data);
     }
 
@@ -56,7 +56,7 @@ function SignUp() {
     return (
       <>
           <div className="signUpLayout">
-              <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
+              <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onSubmitReadout)}>
                   <button
                       type="submit" >
                       Voorlezen

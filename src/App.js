@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "./context/AuthenticationContext";
 
-import { BrowserRouter as Router,Switch,Route} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, useHistory} from "react-router-dom";
 import './App.css';
 import AfterSearchQuery from "./pages/afterSearchQuery/AfterSearchQuery";
 import SelectionAdults from "./pages/selectionAdults/SelectionAdults";
@@ -16,6 +16,7 @@ import Profilepage from "./pages/profilepage/Profilepage";
 function App() {
 
   const { user } = useContext(AuthContext) ;
+
 
   return (
       <Router>

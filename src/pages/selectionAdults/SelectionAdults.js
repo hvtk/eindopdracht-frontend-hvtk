@@ -40,7 +40,8 @@ function SelectionAdults() {
             <div id="border-left"></div>
 
             <div className="phoneNumbers" id="phone-numbers">
-                <span className="positionTextInBox">  <img src={phoneIcon} alt=""/>  112 <br/>
+                <span className="positionTextInBox">
+                    <img src={phoneIcon} alt=""/>  112 <br/>
                     <span> bij levensbedrijgende situaties</span>
                     <br/>
                     <img src={phoneIcon} alt=""/> 113 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
@@ -64,39 +65,55 @@ function SelectionAdults() {
             </div>
             <div className="pictureAdults" id="picture-adults"> </div>
             <div className="searchProblemsRight" id="search-problems-right" onSubmit={handleSubmit(onFormSubmit)}>
-                <button
-                    type="submit" >
-                    Zoeken
-                </button>
+                <p>
+                   <button
+                      type="submit" className="searchSelectionBox">
+                      Zoeken
+                   </button>
+                </p>
                 <h4> Info over... </h4>
-                <button
-                    type="submit" >
-                    Aandoeningen A - Z
-                </button>
-                <button
-                    type="submit" >
-                    Testen
-                </button>
-                <button
-                    type="submit" >
-                    Depressief
-                </button>
-                <button
-                    type="submit" >
-                    Eenzaam
-                </button>
-                <button
-                    type="submit" >
-                    Burn-out
-                </button>
-                <button
-                    type="submit" >
-                    Verslaving
-                </button>
-                <button
-                    type="submit" >
-                    Dementie
-                </button>
+                <p>
+                   <button
+                      type="submit" className="searchSelectionBox">
+                      Aandoeningen A - Z
+                   </button>
+                </p>
+                <p>
+                   <button
+                      type="submit" className="searchSelectionBox">
+                      Testen
+                   </button>
+                </p>
+                <p>
+                   <button
+                      type="submit" className="searchSelectionBox">
+                      Depressief
+                   </button>
+                </p>
+                <p>
+                   <button
+                      type="submit" className="searchSelectionBox">
+                      Eenzaam
+                   </button>
+                </p>
+                <p>
+                   <button
+                      type="submit" className="searchSelectionBox">
+                      Burn-out
+                   </button>
+                </p>
+                <p>
+                   <button
+                      type="submit" className="searchSelectionBox">
+                      Verslaving
+                   </button>
+                </p>
+                <p>
+                   <button
+                      type="submit" className="searchSelectionBox">
+                      Dementie
+                   </button>
+                </p>
             </div>
         </div>
     )

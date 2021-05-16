@@ -40,14 +40,14 @@ function SignIn() {
       console.log(data);
     }
 
-    function onFormSubmitReadout(data) {
+    function onSubmitReadout(data) {
         console.log(data);
     }
 
     return (
       <>
         <div className="signInLayout">
-          <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
+          <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onSubmitReadout)}>
               <button
                   type="submit" >
                   Voorlezen

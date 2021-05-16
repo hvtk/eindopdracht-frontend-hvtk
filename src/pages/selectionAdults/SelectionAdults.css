@@ -102,8 +102,16 @@ img {
     background-color: #D710EE;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    border-radius: 50px;
+    border-radius: 50px
 }
+
+.searchSelectionBox {
+    background-color: #CDD32B;
+    border-radius: 10px;
+    width: 440px;
+    height: 40px;
+}
+
+
 
