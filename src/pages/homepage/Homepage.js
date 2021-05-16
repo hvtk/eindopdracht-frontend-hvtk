@@ -73,10 +73,10 @@ function Homepage() {
 
                 <h4> Kies de leeftijdsgroep </h4>
 
-                <p className="ageSelectionBox"> <Link to="/children">KINDEREN</Link> </p>
-                <p className="ageSelectionBox"> <Link to="/youth">JONGEREN </Link> </p>
-                <p className="ageSelectionBox"> <Link to="/adults">VOLWASSENEN</Link> </p>
-                <p className="ageSelectionBox"> <Link to="/elderly">OUDEREN</Link> </p>
+                <p className="ageSelectionBox"> <Link to="/signup">KINDEREN</Link> </p>
+                <p className="ageSelectionBox"> <Link to="/signup">JONGEREN </Link> </p>
+                <p className="ageSelectionBox"> <Link to="/signup">VOLWASSENEN</Link> </p>
+                <p className="ageSelectionBox"> <Link to="/signup">OUDEREN</Link> </p>
 
             </div>
         </div>
