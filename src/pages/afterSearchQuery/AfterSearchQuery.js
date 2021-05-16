@@ -36,31 +36,43 @@ function AfterSearchQuery() {
             </div>
             <div id="border-left"></div>
             <div className="searchProblemsLeftElderly" id="search-problems-left" onSubmit={handleSubmit(onFormSubmit)}>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit" className="searchSelectionBox">
                     Zoeken
                 </button>
+              </p>
                 <h4> Info over... </h4>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit"className="searchSelectionBox" >
                     Aandoeningen A - Z
                 </button>
+              </p>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit" className="searchSelectionBox">
                     Problemen thuis
                 </button>
+              </p>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit" className="searchSelectionBox">
                     Seksualiteit
                 </button>
+              </p>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit" className="searchSelectionBox">
                     Eenzaam
                 </button>
+              </p>
+              <p>
                 <button
-                    type="submit" >
+                    type="submit" className="searchSelectionBox">
                     Persoonlijke verhalen
                 </button>
+              </p>
             </div>
             <div className="webAddressBox" id="web-address-box"></div>
             <div className="searchOptionWeb" id="search-option-web"> AFTER SEARCH QUARY </div>
