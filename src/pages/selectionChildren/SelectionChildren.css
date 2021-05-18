@@ -54,13 +54,10 @@
     background-color: #D710EE;
     background-image: url("ImagePageChildrenBig.svg");
     background-size: cover;
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
     border-radius: 10px;
-}
+    display: flex;
+    flex-wrap: wrap;
+ }
 
 .layoutInputBorderTop {
     background-color: aqua;
@@ -78,11 +75,14 @@
     align-items: center;
 }
 
-.imageSelectionChildren {
-    height: 200px;
-    width: 200px;
+#imageSize1 {
+    width: 130px;
+    height: 160px;
+}
 
-
+#imageSize2 {
+    width: 160px;
+    height: 130px;
 }
 
 

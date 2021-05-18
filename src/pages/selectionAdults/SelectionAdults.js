@@ -5,7 +5,6 @@ import './SelectionAdults.css';
 import phoneIcon from "../../assets/icons/callicon.svg";
 import whatsappIcon from "../../assets/icons/whattsappicon.svg";
 import chatIcon from "../../assets/icons/chaticon.svg";
-import imageAdults from "../../assets/images/selectionAdults/ImageAdults.svg";
 
 
 function SelectionAdults() {

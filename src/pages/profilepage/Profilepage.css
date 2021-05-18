@@ -1,4 +1,4 @@
-.profilepageLayout {
+.profilePageLayout {
     display: grid;
     grid-template-columns: 60px 35px 490px 35px 750px 35px 490px 35px 60px;
     grid-template-rows: 60px 45px 60px 45px 660px 45px 60px 45px 60px;
@@ -6,9 +6,9 @@
     "border-top border-top border-top border-top border-top border-top border-top border-top border-top"
     "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
-    "border-left . . . picture-children-background picture-children-background picture-children-background . border-right"
-    "border-left . profile-box . picture-children-background picture-children-background picture-children-background . border-right"
-    "border-left . . . picture-children-background picture-children-background picture-children-background . border-right"
+    "border-left . . . picture-profile-background picture-profile-background picture-profile-background . border-right"
+    "border-left . profile-box . picture-profile-background picture-profile-background picture-profile-background . border-right"
+    "border-left . . . picture-profile-background picture-profile-background picture-profile-background . border-right"
     "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
     "border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom";
@@ -35,12 +35,12 @@
 }
 
 #profile-box {
-    grid-area: signUp-box;
+    grid-area: profile-box;
     background-color: #CA4564;
 }
 
-#picture-children-background {
-    grid-area: picture-children-background;
+#picture-profile-background {
+    grid-area: picture-profile-background;
     background-color: #CA4564;
 }
 
@@ -53,8 +53,10 @@
     border-radius: 50px;
 }
 
-.pictureChildrenBackground {
+.pictureProfileBackground {
     background-color: #D710EE;
+    background-image: url("ImageProfile.svg");
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;

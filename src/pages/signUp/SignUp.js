@@ -73,11 +73,8 @@ function SignUp() {
               <div id="border-left"></div>
 
                   <form className="signUpBox" id="signUp-box" onSubmit={handleSubmit(onFormSubmit)}>
-
                      <h3> registreren </h3>
-
                      <h4> Postcode: </h4>
-
                      <label htmlFor="postalCode-field">
                         <input
                           type="text"
@@ -87,9 +84,7 @@ function SignUp() {
                           {...register("postalCode")}
                          />
                      </label>
-
                      <h4> Leeftijd: </h4>
-
                      <label htmlFor="age-field">
                          <input
                            type="number"
@@ -99,9 +94,7 @@ function SignUp() {
                            {...register("age")}
                          />
                      </label>
-
                      <h4> Gebruikersnaam: </h4>
-
                      <label htmlFor="username-field">
                          <input
                            type="text"
@@ -111,9 +104,7 @@ function SignUp() {
                            {...register("username")}
                          />
                      </label>
-
                      <h4> Wachtwoord: </h4>
-
                      <label htmlFor="password-field">
                         <input
                           type="password"
@@ -123,9 +114,7 @@ function SignUp() {
                           {...register("password")}
                         />
                      </label>
-
                      <h4> Herhaal wachtwoord </h4>
-
                      <label htmlFor="repeatPassword-field">
                         <input
                           type="password"
@@ -144,7 +133,6 @@ function SignUp() {
                          <h5>Heb je je al geregistreerd? Je kunt <Link to="/signin">hier</Link> inloggen.</h5>
 
                      {authenticateSucces === true && <p> Registreren is gelukt! Je wordt nu doorgestuurd naar de inlogpagina</p>}
-
                   </form>
               <div className="pictureSignUp" id="picture-signUp"></div>
           </div>

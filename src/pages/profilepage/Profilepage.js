@@ -20,7 +20,7 @@ function Profilepage() {
 
     return (
         <>
-          <div className="signUpLayout">
+          <div className="profilePageLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
                 <button
                     type="submit" >
@@ -39,9 +39,7 @@ function Profilepage() {
             <div className="profileBox" id="profile-box">
               <h3> Profielpagina </h3>
               <h4> Gegevens </h4>
-
               <h4> Profielfoto: </h4>
-
               <label htmlFor="profileImage-field">
                  <input
                     type="image"
@@ -50,18 +48,12 @@ function Profilepage() {
                     {...register("profileImage")}
                  />
               </label>
-
               <p> <h4> Gebruikersnaam: </h4> {user && user.username} </p>
-
-              <p> <h4> Wachtwoord: </h4> ............. </p>
-
               <p> <h4> Postcode: </h4> {user && user.postalCode} </p>
-
               <p> <h4> Leeftijd: </h4> {user && user.age} </p>
-
               <h5>Terug naar de <Link to="/">Startpagina</Link> </h5>
             </div>
-            <div className="pictureChildrenBackground" id="picture-children-background"></div>
+            <div className="pictureProfileBackground" id="picture-profile-background"> </div>
           </div>
         </>
 
