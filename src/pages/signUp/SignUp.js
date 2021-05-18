@@ -146,7 +146,7 @@ function SignUp() {
                      {authenticateSucces === true && <p> Registreren is gelukt! Je wordt nu doorgestuurd naar de inlogpagina</p>}
 
                   </form>
-              <div className="pictureChildrenBackground" id="picture-children-background"></div>
+              <div className="pictureSignUp" id="picture-signUp"></div>
           </div>
       </>
     );

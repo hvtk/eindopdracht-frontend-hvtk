@@ -19,9 +19,9 @@
     "border-top border-top border-top border-top border-top border-top border-top border-top border-top"
     "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
-    "border-left . . . picture-children-background picture-children-background picture-children-background . border-right"
-    "border-left . signIn-box . picture-children-background picture-children-background picture-children-background . border-right"
-    "border-left . . . picture-children-background picture-children-background picture-children-background . border-right"
+    "border-left . . . picture-signIn picture-signIn picture-signIn . border-right"
+    "border-left . signIn-box . picture-signIn picture-signIn picture-signIn . border-right"
+    "border-left . . . picture-signIn picture-signIn picture-signIn . border-right"
     "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
     "border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom";
@@ -52,8 +52,8 @@
     background-color: #CA4564;
 }
 
-#picture-children-background {
-    grid-area: picture-children-background;
+#picture-signIn {
+    grid-area: picture-signIn;
     background-color: #CA4564;
     border-radius: 10px;
 }
@@ -67,8 +67,10 @@
     border-radius: 50px;
 }
 
-.pictureChildrenBackground {
+.pictureSignIn {
     background-color: #D710EE;
+    background-image: url("ImageSignIn.svg");
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
