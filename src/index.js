@@ -11,9 +11,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <AuthContextProvider>
-          {/*<AgeGroupContextProvider>*/}
+          <AgeGroupContextProvider>
          <App />
-            {/*}</AgeGroupContextProvider>*/}
+          </AgeGroupContextProvider>
       </AuthContextProvider>
     </Router>
   </React.StrictMode>,

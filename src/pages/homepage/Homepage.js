@@ -1,19 +1,20 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 
 import './Homepage.css';
 import {useForm} from "react-hook-form";
-import {Link, useHistory} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import phoneIcon from '../../assets/icons/callicon.svg'
 import chatIcon from'../../assets/icons/chaticon.svg'
 import whatsappIcon from '../../assets/icons/whattsappicon.svg'
+import {AgeGroupContext} from "../../context/SearchAgeGroupContext"
 
 
 function Homepage() {
-
+const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(AgeGroupContext);
     const {handleSubmit}= useForm();
     const [selectedAgeGroup, setSelectedAgeGroup] = useState(null);
     const history =useHistory();
-
+    console.log(selectedAgeGroupForContext);
 
     function onFormSubmitReadout(data) {
         console.log(data);
@@ -77,7 +78,7 @@ function Homepage() {
                 <button className="ageSelectionBox"
                   type="button"
                   onClick={() => {
-                      setSelectedAgeGroup('KINDEREN');
+                      setSelectedAgeGroupForContext('KINDEREN');
                       history.push("/signup");
                   }}
                 >
@@ -86,7 +87,7 @@ function Homepage() {
                 <button className="ageSelectionBox"
                   type="button"
                   onClick={() => {
-                      setSelectedAgeGroup('JONGEREN');
+                      setSelectedAgeGroupForContext('JONGEREN');
                       history.push("/signup");
                   }}
                 >
@@ -95,7 +96,7 @@ function Homepage() {
                 <button className="ageSelectionBox"
                    type="button"
                    onClick={() => {
-                       setSelectedAgeGroup('VOLWASSENEN');
+                       setSelectedAgeGroupForContext('VOLWASSENEN');
                        history.push("/signup");
                    }}
                 >
@@ -104,17 +105,12 @@ function Homepage() {
                 <button className="ageSelectionBox"
                    type="button"
                    onClick={() => {
-                       setSelectedAgeGroup('OUDEREN');
+                       setSelectedAgeGroupForContext('OUDEREN');
                        history.push("/signup");
                    }}
                 >
                     OUDEREN
                 </button>
-                {/* <p className="ageSelectionBox"> <Link to="/signup">KINDEREN</Link> </p>
-                <p className="ageSelectionBox"> <Link to="/signup">JONGEREN </Link> </p>
-                <p className="ageSelectionBox"> <Link to="/signup">VOLWASSENEN</Link> </p>
-                <p className="ageSelectionBox"> <Link to="/signup">OUDEREN</Link> </p> */}
-
             </div>
         </div>
       </>

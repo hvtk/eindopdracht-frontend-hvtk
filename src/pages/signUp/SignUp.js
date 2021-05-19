@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 
 import axios from "axios";
 
 import {useForm} from "react-hook-form";
 import { Link, useHistory} from "react-router-dom";
 import './SignUp.css';
+import {AgeGroupContext} from "../../context/SearchAgeGroupContext";
 
 //. installeer axios
 //.importeer axios
@@ -24,19 +25,33 @@ function SignUp() {
     const {handleSubmit, register}= useForm();
     const [authenticateSucces, toggleAuthenticateSucces] = useState(false);
     const history = useHistory();
+    const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(AgeGroupContext);
+    console.log(selectedAgeGroupForContext)
 
     async function onFormSubmit(data) {
         console.log(data);
         try {
             // Deze route is incorrect.
-            const result = await axios.post(`https://localhost:8443/authenticate`,{
-                username:data.username,
-                password: data.password,
-              /*  age: data.age,
-                postalCode: data.postalCode,*/
-            })
+            // const result = await axios.post(`https://localhost:8443/authenticate`,{
+            //     username:data.username,
+            //     password: data.password,
+            //   /*  age: data.age,
+            //     postalCode: data.postalCode,*/
+            // })
+            if (selectedAgeGroupForContext === 'KINDEREN'){
+             return history.push("/children")
+            }
+            if (selectedAgeGroupForContext === 'JONGEREN'){
+                return history.push("/youth")
+            }
+            if (selectedAgeGroupForContext === 'VOLWASSENEN'){
+                return history.push("/adults")
+            }
+            if (selectedAgeGroupForContext === 'OUDEREN'){
+                return history.push("/elderly")
+            }
 
-            console.log(result);
+          //  console.log(result);
             toggleAuthenticateSucces(true);
 
             setTimeout(() => {
