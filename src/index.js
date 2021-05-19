@@ -5,12 +5,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AuthContextProvider from "./context/AuthenticationContext";
+import AgeGroupContextProvider from "./context/SearchAgeGroupContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <AuthContextProvider>
-       <App />
+          {/*<AgeGroupContextProvider>*/}
+         <App />
+            {/*}</AgeGroupContextProvider>*/}
       </AuthContextProvider>
     </Router>
   </React.StrictMode>,

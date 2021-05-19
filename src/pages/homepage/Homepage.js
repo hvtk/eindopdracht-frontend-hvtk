@@ -1,9 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 
 import './Homepage.css';
 import {useForm} from "react-hook-form";
-import {Link} from "react-router-dom";
-//import PhoneNumbers from "../../components/pageBasics/PhoneNumbers";
+import {Link, useHistory} from "react-router-dom";
 import phoneIcon from '../../assets/icons/callicon.svg'
 import chatIcon from'../../assets/icons/chaticon.svg'
 import whatsappIcon from '../../assets/icons/whattsappicon.svg'
@@ -12,6 +11,8 @@ import whatsappIcon from '../../assets/icons/whattsappicon.svg'
 function Homepage() {
 
     const {handleSubmit}= useForm();
+    const [selectedAgeGroup, setSelectedAgeGroup] = useState(null);
+    const history =useHistory();
 
 
     function onFormSubmitReadout(data) {
@@ -19,7 +20,7 @@ function Homepage() {
     }
 
     return (
-
+      <>
         <div className="homepageLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
                 <button
@@ -73,55 +74,53 @@ function Homepage() {
 
                 <h4> Kies de leeftijdsgroep </h4>
 
-                <p className="ageSelectionBox"> <Link to="/signup">KINDEREN</Link> </p>
+                <button className="ageSelectionBox"
+                  type="button"
+                  onClick={() => {
+                      setSelectedAgeGroup('KINDEREN');
+                      history.push("/signup");
+                  }}
+                >
+                  KINDEREN
+                </button>
+                <button className="ageSelectionBox"
+                  type="button"
+                  onClick={() => {
+                      setSelectedAgeGroup('JONGEREN');
+                      history.push("/signup");
+                  }}
+                >
+                    JONGEREN
+                </button>
+                <button className="ageSelectionBox"
+                   type="button"
+                   onClick={() => {
+                       setSelectedAgeGroup('VOLWASSENEN');
+                       history.push("/signup");
+                   }}
+                >
+                    VOLWASSENEN
+                </button>
+                <button className="ageSelectionBox"
+                   type="button"
+                   onClick={() => {
+                       setSelectedAgeGroup('OUDEREN');
+                       history.push("/signup");
+                   }}
+                >
+                    OUDEREN
+                </button>
+                {/* <p className="ageSelectionBox"> <Link to="/signup">KINDEREN</Link> </p>
                 <p className="ageSelectionBox"> <Link to="/signup">JONGEREN </Link> </p>
                 <p className="ageSelectionBox"> <Link to="/signup">VOLWASSENEN</Link> </p>
-                <p className="ageSelectionBox"> <Link to="/signup">OUDEREN</Link> </p>
+                <p className="ageSelectionBox"> <Link to="/signup">OUDEREN</Link> </p> */}
 
             </div>
         </div>
+      </>
     )
 }
 
-/*   return (
-      <>
-        <section className="containerHomepage">
-          <form className="containerNumbers">
-
-             <img src={phoneIcon} /> <h4> 112 </h4>
-              <h4> bij levensbedrijgende situaties </h4>
-
-          </form>
-
-          <form className="containerSearchAge" >
-           <h3> dit is het keuze menu </h3>
-          </form>
-        </section>
-      </>
-    )
-}*/
-
-
-/*return (
-    <>
-        <section className="containerHomepage">
-            <form className="containerNumbers">
-
-                <PhoneNumbers
-                    image={phoneIcon}
-                    title="112"
-                    description="bij levensbedrijgende situaties"
-                />
-
-            </form>
-
-            <form className="containerSearchAge" >
-                <h3> dit is het keuze menu </h3>
-            </form>
-        </section>
-    </>
-)
-}*/
 
 
 export default Homepage;
