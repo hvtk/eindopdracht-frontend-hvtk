@@ -3,8 +3,10 @@ import React, {useContext} from "react";
 import axios from "axios";
 
 import {useForm} from "react-hook-form";
+import { useHistory } from 'react-router-dom'
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthenticationContext";
+import {AgeGroupContext} from "../../context/SearchAgeGroupContext";
 
 import './SignIn.css';
 
@@ -24,7 +26,9 @@ import './SignIn.css';
 
 function SignIn() {
     const { login } = useContext(AuthContext);
+    const history = useHistory();
     const {handleSubmit, register}= useForm();
+    const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(AgeGroupContext);
 
     async function onFormSubmit(data) {
         console.log(data);
@@ -33,11 +37,24 @@ function SignIn() {
 
             //console.log(result.data.accessToken); //. de positie van de data die we uit de post willen zien
 
-            login(result.data.jwt); // jwt is gedefinieerd in AuthenticationResponse.java in back-end
+            await login(result.data.jwt); // jwt is gedefinieerd in AuthenticationResponse.java in back-end
+
+            if (selectedAgeGroupForContext === 'KINDEREN'){
+                return history.push("/children")
+            }
+            if (selectedAgeGroupForContext === 'JONGEREN'){
+                return history.push("/youth")
+            }
+            if (selectedAgeGroupForContext === 'VOLWASSENEN'){
+                return history.push("/adults")
+            }
+            if (selectedAgeGroupForContext === 'OUDEREN'){
+                return history.push("/elderly")
+            }
         } catch(e) {
           console.error(e)
         }
-      console.log(data);
+        console.log(data);
     }
 
     function onSubmitReadout(data) {

@@ -5,9 +5,9 @@
     grid-template-areas:
     "border-top border-top border-top border-top border-top border-top border-top border-top border-top"
     "border-left . . . . . . . border-right"
+    "border-left . . . . . back-to-home back-to-home border-right"
     "border-left . . . . . . . border-right"
-    "border-left . . . . . . . border-right"
-    "border-left . . . . . . . border-right"
+    "border-left . . . . . selected-page selected-page border-right"
     "border-left . . . . . . . border-right"
     "border-left . . . picture-children-background picture-children-background picture-children-background . border-right"
     "border-left . phone-numbers . picture-children-background picture-children-background picture-children-background . border-right"
@@ -44,6 +44,14 @@
 #picture-children-background {
     grid-area: picture-children-background;
     background-color: #CA4564;
+}
+
+#selected-page {
+    grid-area: selected-page;
+}
+
+#back-to-home {
+    grid-area: back-to-home;
 }
 
 .layoutInputBorderTop {

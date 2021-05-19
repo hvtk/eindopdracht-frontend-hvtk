@@ -32,27 +32,20 @@ function SignUp() {
         console.log(data);
         try {
             // Deze route is incorrect.
-            // const result = await axios.post(`https://localhost:8443/authenticate`,{
-            //     username:data.username,
-            //     password: data.password,
-            //   /*  age: data.age,
-            //     postalCode: data.postalCode,*/
-            // })
-            if (selectedAgeGroupForContext === 'KINDEREN'){
-             return history.push("/children")
-            }
-            if (selectedAgeGroupForContext === 'JONGEREN'){
-                return history.push("/youth")
-            }
-            if (selectedAgeGroupForContext === 'VOLWASSENEN'){
-                return history.push("/adults")
-            }
-            if (selectedAgeGroupForContext === 'OUDEREN'){
-                return history.push("/elderly")
-            }
+            const result = await axios.post(`https://localhost:8443/users/signup`,{
+                username:data.username,
+                password: data.password,
+                age: data.age,
+                postalCode: data.postalCode,
+            })
+
+            // Hier evt direct authenticaten?
+
+
+
 
           //  console.log(result);
-            toggleAuthenticateSucces(true);
+            //toggleAuthenticateSucces(true);
 
             setTimeout(() => {
                 history.push('/signin');

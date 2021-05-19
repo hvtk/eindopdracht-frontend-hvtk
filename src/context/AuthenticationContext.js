@@ -69,6 +69,11 @@ function AuthContextProvider({children}) {
             })
         } catch (e) {
             console.error(e);
+
+            setAuthState({
+                user: null,
+                status: 'done',
+            })
         }
     }
 
@@ -82,7 +87,6 @@ function AuthContextProvider({children}) {
         if(token != null /* token != null ipv !== undefined om op te vangen dat token = null als de token niet in localstorage staat*/  && authState.user === null) {
             // haal dan de gebruikersdata op
             fetchUserData(token);
-
         } else {
             // zo nee, dan geen user, maar wel status op 'done'
             setAuthState({
@@ -100,7 +104,7 @@ function AuthContextProvider({children}) {
         // gebruikersdata ophalen
         fetchUserData(jwtToken)
         // doorlinken naar de profielpagina
-        history.push('/profile'); // de profielpagina
+        //history.push('/profile'); // de profielpagina
     }
 
     //uitlogfunctie

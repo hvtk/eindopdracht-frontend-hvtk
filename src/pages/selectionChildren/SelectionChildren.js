@@ -76,6 +76,28 @@ function SelectionChildren() {
                     <p> <img id="imageSize1" src={emotions} alt="" /> <br/> Emotionele problemen </p>
                     <p> <img id="imageSize2" src={Lonely} alt="" /> <br/> Eenzaam </p>
             </div>
+            { /* <div id="back-to-home" className="backToHome">
+                <button className="ageSelectionBox"
+                        type="button"
+                        onClick={() =>
+                            history.push("/signup");
+                        }
+                >
+                    HOMEPAGE
+                </button>
+            </div>
+            <div id="selected-page" className="selectedPage" >
+                <button className="ageSelectionBox"
+                        type="button"
+                        onClick={() => {
+                            setSelectedAgeGroupForContext('KINDEREN');
+                            history.push("/signup");
+                        }}
+                >
+                    KINDEREN
+                </button>
+
+            </div>*/}
         </div>
     )
 }
