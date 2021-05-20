@@ -5,9 +5,9 @@
     grid-template-areas:
     "border-top border-top border-top border-top border-top border-top border-top border-top border-top"
     "border-left . . . . . . . border-right"
-    "border-left . . . . . back-to-home back-to-home border-right"
+    "border-left go-to-profile-page go-to-profile-page . . . back-to-home back-to-home border-right"
     "border-left . . . . . . . border-right"
-    "border-left . . . . . selected-page selected-page border-right"
+    "border-left log-out log-out . . . selected-page selected-page border-right"
     "border-left . . . . . . . border-right"
     "border-left . . . picture-children-background picture-children-background picture-children-background . border-right"
     "border-left . phone-numbers . picture-children-background picture-children-background picture-children-background . border-right"
@@ -54,6 +54,14 @@
     grid-area: back-to-home;
 }
 
+#go-to-profile-page {
+    grid-area: go-to-profile-page;
+}
+
+#log-out {
+    grid-area: log-out;
+}
+
 .layoutInputBorderTop {
     background-color: aqua;
     color: white;
@@ -87,22 +95,6 @@
     flex-wrap: wrap;
  }
 
-.layoutInputBorderTop {
-    background-color: aqua;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.layoutInputBorderBottom {
-    background-color: aqua;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #imageSize1 {
     width: 130px;
     height: 160px;
@@ -112,6 +104,48 @@
     width: 160px;
     height: 130px;
 }
+
+.backToHome {
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.selectedPage {
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.goToProfilePage {
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.logOut {
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+
 
 
 
