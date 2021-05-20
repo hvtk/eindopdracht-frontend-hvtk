@@ -78,7 +78,7 @@ function SelectionChildren() {
                     <p> <img id="imageSize2" src={Lonely} alt="" /> <br/> Eenzaam </p>
             </div>
             <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>
-            <div id="selected-page" className="selectedPage"> KINDEREN </div>
+            <div id="selected-page" className="selectedPage"> KINDEREN-PAGINA </div>
             <div id="go-to-profile-page" className="goToProfilePage"> <Link to="/profile"> Ga naar de profielpagina </Link> </div>
             <div id="log-out" className="logOut"> Uit loggen </div>
         </div>

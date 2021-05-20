@@ -6,6 +6,7 @@ import phoneIcon from "../../assets/icons/callicon.svg";
 import whatsappIcon from "../../assets/icons/whattsappicon.svg";
 import chatIcon from "../../assets/icons/chaticon.svg";
 import imageYouth from "../../assets/images/selectionYouth/ImageYouth.svg";
+import {Link} from "react-router-dom";
 
 
 
@@ -115,6 +116,10 @@ function SelectionYouth() {
                 </button>
               </p>
             </div>
+            <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>
+            <div id="selected-page" className="selectedPage"> JONGEREN-PAGINA </div>
+            <div id="go-to-profile-page" className="goToProfilePage"> <Link to="/profile"> Ga naar de profielpagina </Link> </div>
+            <div id="log-out" className="logOut"> Uit loggen </div>
         </div>
     )
 }
