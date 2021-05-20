@@ -3,6 +3,7 @@ import {useForm} from "react-hook-form";
 
 import './AfterSearchQuery.css';
 import imageSearchPostalcodeAge from '../../assets/images/afterSearchQuery/ImageSeachPostalcodeAge.svg';
+import {Link} from "react-router-dom";
 
 
 function AfterSearchQuery() {
@@ -99,6 +100,10 @@ function AfterSearchQuery() {
                 </label>
             </div>
             <div className="pictureSearchWebSmall" id="picture-search-web-small"><img className="imageSearchPostalcodeAge" src={imageSearchPostalcodeAge} alt=""/> </div>
+            <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>
+            <div id="selected-page" className="selectedPage"> ZOEK-PAGINA </div>
+            <div id="go-to-profile-page" className="goToProfilePage"> <Link to="/profile"> Ga naar de profielpagina </Link> </div>
+            <div id="log-out" className="logOut"> Uit loggen </div>
         </div>
     )
 }

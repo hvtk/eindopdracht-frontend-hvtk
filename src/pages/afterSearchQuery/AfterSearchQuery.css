@@ -6,9 +6,14 @@
 .afterSearchLayout {
     display: grid;
     grid-template-columns: 60px 35px 490px 35px 782px 35px 388px 35px 60px;
-    grid-template-rows: 60px 150px 40px 40px 50px 40px 50px 114px 326px 150px 60px;
+    grid-template-rows: 60px 10px 40px 5px 40px 10px 45px 40px 40px 50px 40px 50px 114px 326px 150px 60px;
     grid-template-areas:
     "border-top border-top border-top border-top border-top border-top border-top border-top border-top"
+    "border-left . . . . . . . border-right"
+    "border-left go-to-profile-page go-to-profile-page . . . back-to-home back-to-home border-right"
+    "border-left . . . . . . . border-right"
+    "border-left log-out log-out . . . selected-page selected-page border-right"
+    "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
     "border-left . search-problems-left . web-address-box web-address-box web-address-box . border-right"
     "border-left . search-problems-left . . . . . border-right"
@@ -63,6 +68,22 @@
 
 #age-box {
     grid-area: age-box;
+}
+
+#selected-page {
+    grid-area: selected-page;
+}
+
+#back-to-home {
+    grid-area: back-to-home;
+}
+
+#go-to-profile-page {
+    grid-area: go-to-profile-page;
+}
+
+#log-out {
+    grid-area: log-out;
 }
 
 .layoutInputBorderTop {
@@ -146,5 +167,46 @@
     height: 326px;
     width: 388px;
 }
+
+.backToHome {
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.selectedPage {
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.goToProfilePage {
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.logOut {
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+}
+
 
 
