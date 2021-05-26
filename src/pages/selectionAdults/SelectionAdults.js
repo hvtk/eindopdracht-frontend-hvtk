@@ -1,7 +1,5 @@
 import React from "react";
 import {useForm} from "react-hook-form";
-import axios from "axios";
-import { useState } from "react";
 import {useHistory} from "react-router-dom";
 
 import './SelectionAdults.css';
@@ -14,17 +12,7 @@ import {Link} from "react-router-dom";
 function SelectionAdults() {
 
     const {handleSubmit}= useForm();
-    const [burnoutData, setBurnoutData] = useState(null);
     const history = useHistory()
-
-    const fetchDataBurnout = async () => {
-        try {
-          const result = await axios.get(`https://localhost:8443/aidWorkers`);
-          setBurnoutData(result.data);
-        } catch (e) {
-            console.error(e);
-        }
-    }
 
     function onFormSubmit(data) {
         console.log(data);
@@ -115,13 +103,12 @@ function SelectionAdults() {
                       className="searchSelectionBox"
                       type="button"
                       onClick={() => {
-                          fetchDataBurnout();
-                          history.push("/search");
+                          history.push("/search/aidWorkers"); /* dit verwijst naar de search pagina waar de fetchdata de geselecteerde data uit de database ophaalt.*/
                       }}
                    >
                       Burn-out
                    </button>
-                </p>op
+                </p>
                 <p>
                    <button
                       type="submit" className="searchSelectionBox">

@@ -1,15 +1,32 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 
 import './AfterSearchQuery.css';
 import imageSearchPostalcodeAge from '../../assets/images/afterSearchQuery/ImageSeachPostalcodeAge.svg';
-import {Link} from "react-router-dom";
-import burnoutData from "../selectionAdults/SelectionAdults"
+import {Link, useParams} from "react-router-dom";
+import axios from "axios";
+
 
 function AfterSearchQuery() {
 
+    const params = useParams()
+    console.log(params)
     const {handleSubmit, register}= useForm()
+    const [data, setData] = useState([])
 
+    useEffect(()=> {
+        const fetchData = async () => {
+            try {
+                const result = await axios.get(`https://localhost:8443/${params.endpoint}`);
+                setData(result.data);
+            } catch (e) {
+                console.error(e);
+            }
+        }
+        fetchData()
+    }, [params.endpoint])
+    console.log("DIT IS DATA", data)
+    
     function onFormSubmit(data) {
         console.log(data);
     }
@@ -76,18 +93,11 @@ function AfterSearchQuery() {
               </p>
             </div>
             <div className="webAddressBox" id="web-address-box">
-              {burnoutData &&
-                <>
-                    <h3> {burnoutData.aidWorkerWebbAddress} </h3>
-                </>
-              }
+                {data.map((aidWorker) => {
+                    return <div>{aidWorker.aidWorkerName} </div>  /* dit returned alle namen die in aidWorker zitten door .map  */
+                })}
             </div>
             <div className="searchOptionWeb" id="search-option-web">
-              {burnoutData &&
-                <>
-                    <h3> {burnoutData.aidWorkerName}</h3>
-                </>
-              }
             </div>
             <div className="postalCodeBox" id="postal-code-box">
                 <label htmlFor="postalCode-field">
