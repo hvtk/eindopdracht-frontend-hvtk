@@ -93,11 +93,20 @@ function AfterSearchQuery() {
               </p>
             </div>
             <div className="webAddressBox" id="web-address-box">
-                {data.map((aidWorker) => {
-                    return <div>{aidWorker.aidWorkerName} </div>  /* dit returned alle namen die in aidWorker zitten door .map  */
-                })}
+                {/*{data.map((aidWorker) => {*/}
+                {/*    return (*/}
+                {/*        <div>*/}
+                {/*            {aidWorker.aidWorkerName}*/}
+                {/*        </div>) /* dit returned alle namen die in aidWorker zitten door .map  */}
+                {/*})}*/}
             </div>
             <div className="searchOptionWeb" id="search-option-web">
+                {data.map((aidWorker) => {
+                    return (
+                        <div>
+                            <a href={aidWorker.aidWorkerWebbAddress}>{aidWorker.aidWorkerName}</a>
+                        </div>) /* dit returned alle namen die in aidWorker zitten door .map  */
+                })}
             </div>
             <div className="postalCodeBox" id="postal-code-box">
                 <label htmlFor="postalCode-field">

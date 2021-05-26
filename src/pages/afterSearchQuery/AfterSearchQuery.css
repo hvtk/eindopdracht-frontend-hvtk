@@ -125,7 +125,9 @@
 
 .searchOptionWeb {
     background-color: aqua;
-    display: flex;
+    /*display: flex;*/
+    display: grid; /* Deze en de volgende regel zijn toegevoegd om de aidWorkers onder elkaar weer te geven */
+    grid-template-columns: auto; /* Deze regel is toegevoegd om de aidWorkers onder elkaar weer te geven */
     justify-content: center;
     align-items: center;
     border-radius: 10px;
