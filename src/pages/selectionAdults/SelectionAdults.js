@@ -1,5 +1,6 @@
 import React from "react";
 import {useForm} from "react-hook-form";
+import axios from "axios";
 
 import './SelectionAdults.css';
 import phoneIcon from "../../assets/icons/callicon.svg";
@@ -11,6 +12,15 @@ import {Link} from "react-router-dom";
 function SelectionAdults() {
 
     const {handleSubmit}= useForm();
+
+    async function fetchDataBurnout() {
+        try {
+          const result = await axios.get(`https://localhost:8443/aidWorkers`);
+          console.log(result.data);
+        } catch (e) {
+            console.error(e);
+        }
+    }
 
     function onFormSubmit(data) {
         console.log(data);
@@ -98,7 +108,10 @@ function SelectionAdults() {
                 </p>
                 <p>
                    <button
-                      type="submit" className="searchSelectionBox">
+                      className="searchSelectionBox"
+                      type="button"
+                      onClick={fetchDataBurnout}
+                   >
                       Burn-out
                    </button>
                 </p>
