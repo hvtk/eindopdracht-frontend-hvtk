@@ -10,20 +10,6 @@ import {AgeGroupContext} from "../../context/SearchAgeGroupContext";
 
 import './SignIn.css';
 
-
-// .importeer axios
-// .start axios
-// .async function
-// .try catch block
-//. in de try: axios post request naar het endpoint: https://localhost:8443/login?
-//. error state en loading state aanmaken en communiceren aan de gebruiker
-//. het postrequest bevat het endpoint en het data object met username and password zie code springboot
-//. wat we terug krijgen is een JWT token die in de local storage moet komen
-//. gebruiker doorsturen naar de profielpagina
-//. de gebruikersdata moet in de context geplaatst worden zodat alle componenten erbij kunnen
-//. importeer useContext en authContext
-//. destructure daar de login functie uit.
-
 function SignIn() {
     const { login } = useContext(AuthContext);
     const history = useHistory();
@@ -33,11 +19,9 @@ function SignIn() {
     async function onFormSubmit(data) {
         console.log(data);
         try {
-            const result = await axios.post('https://localhost:8443/authenticate', data);  // dit pad klopt wel!!
+            const result = await axios.post('https://localhost:8443/authenticate', data);
 
-            //console.log(result.data.accessToken); //. de positie van de data die we uit de post willen zien
-
-            await login(result.data.jwt); // jwt is gedefinieerd in AuthenticationResponse.java in back-end
+            await login(result.data.jwt);
 
             if (selectedAgeGroupForContext === 'KINDEREN'){
                 return history.push("/children")

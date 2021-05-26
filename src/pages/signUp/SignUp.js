@@ -7,20 +7,6 @@ import { Link, useHistory} from "react-router-dom";
 import './SignUp.css';
 import {AgeGroupContext} from "../../context/SearchAgeGroupContext";
 
-//. installeer axios
-//.importeer axios
-//.asychrome functie
-//.try and catch blok
-//. error state and loading state aanmaken en communiceren aan gebruiker.
-//.try : postrequest maken naar endpoint "zie springboot" en wat je wilt doen bv registreren
-//.axios post request krijgt de url en het data object mee (in springboot staan de 2 velden die minimaal meegegeven meoetn worden voor authenticatie)
-//. succes melding tonen aan gebruiker  (stukje state voor maken!)
-//. gebruiker doorsturen naar inlogformulier
-
-
-
-
-
 function SignUp() {
     const {handleSubmit, register}= useForm();
     const [authenticateSucces, toggleAuthenticateSucces] = useState(false);
@@ -38,14 +24,6 @@ function SignUp() {
                 age: data.age,
                 postalCode: data.postalCode,
             })
-
-            // Hier evt direct authenticaten?
-
-
-
-
-          //  console.log(result);
-            //toggleAuthenticateSucces(true);
 
             setTimeout(() => {
                 history.push('/signin');
@@ -147,8 +125,6 @@ function SignUp() {
       </>
     );
 }
-
-
 
 export default SignUp;
 

@@ -41,7 +41,7 @@ function SelectionElderly() {
             <div id="border-left"></div>
             <div className="pictureElderly" id="picture-elderly"> <img className="imageElderly" src={elderly} alt=""/></div>
             <div className="phoneNumbers" id="phone-numbers">
-                  <span className="positionTextInBox">  <img src={phoneIcon} alt=""/>  112 <br/>
+                  <span className="positionTextInBoxPhoneNumbers">  <img src={phoneIcon} alt=""/>  112 <br/>
                     <span> bij levensbedrijgende situaties</span>
                     <br/>
                     <img src={phoneIcon} alt=""/> 113 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>

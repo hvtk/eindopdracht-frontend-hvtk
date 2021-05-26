@@ -1,6 +1,8 @@
 import React from "react";
 import {useForm} from "react-hook-form";
 import axios from "axios";
+import { useState } from "react";
+import {useHistory} from "react-router-dom";
 
 import './SelectionAdults.css';
 import phoneIcon from "../../assets/icons/callicon.svg";
@@ -12,11 +14,13 @@ import {Link} from "react-router-dom";
 function SelectionAdults() {
 
     const {handleSubmit}= useForm();
+    const [burnoutData, setBurnoutData] = useState(null);
+    const history = useHistory()
 
-    async function fetchDataBurnout() {
+    const fetchDataBurnout = async () => {
         try {
           const result = await axios.get(`https://localhost:8443/aidWorkers`);
-          console.log(result.data);
+          setBurnoutData(result.data);
         } catch (e) {
             console.error(e);
         }
@@ -50,7 +54,7 @@ function SelectionAdults() {
             <div id="border-left"></div>
 
             <div className="phoneNumbers" id="phone-numbers">
-                <span className="positionTextInBox">
+                <span className="positionTextInBoxPhoneNumbers">
                     <img src={phoneIcon} alt=""/>  112 <br/>
                     <span> bij levensbedrijgende situaties</span>
                     <br/>
@@ -110,11 +114,14 @@ function SelectionAdults() {
                    <button
                       className="searchSelectionBox"
                       type="button"
-                      onClick={fetchDataBurnout}
+                      onClick={() => {
+                          fetchDataBurnout();
+                          history.push("/search");
+                      }}
                    >
                       Burn-out
                    </button>
-                </p>
+                </p>op
                 <p>
                    <button
                       type="submit" className="searchSelectionBox">
@@ -135,8 +142,5 @@ function SelectionAdults() {
         </div>
     )
 }
-
-
-
 
 export default SelectionAdults;

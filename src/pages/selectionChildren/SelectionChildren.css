@@ -86,6 +86,16 @@
     border-radius: 50px;
 }
 
+.positionTextInBoxPhoneNumbers {
+    margin-left: 20px;
+    margin-top: 65px;
+}
+
+img {
+    width: 28px;
+    height: 28px;
+}
+
 .pictureChildrenBackground {
     background-color: #D710EE;
     background-image: url("ImagePageChildrenBig.svg");

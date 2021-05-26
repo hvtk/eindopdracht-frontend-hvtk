@@ -4,7 +4,7 @@ import {useForm} from "react-hook-form";
 import './AfterSearchQuery.css';
 import imageSearchPostalcodeAge from '../../assets/images/afterSearchQuery/ImageSeachPostalcodeAge.svg';
 import {Link} from "react-router-dom";
-
+import burnoutData from "../selectionAdults/SelectionAdults"
 
 function AfterSearchQuery() {
 
@@ -75,8 +75,20 @@ function AfterSearchQuery() {
                 </button>
               </p>
             </div>
-            <div className="webAddressBox" id="web-address-box"></div>
-            <div className="searchOptionWeb" id="search-option-web"> AFTER SEARCH QUARY </div>
+            <div className="webAddressBox" id="web-address-box">
+              {burnoutData &&
+                <>
+                    <h3> {burnoutData.aidWorkerWebbAddress} </h3>
+                </>
+              }
+            </div>
+            <div className="searchOptionWeb" id="search-option-web">
+              {burnoutData &&
+                <>
+                    <h3> {burnoutData.aidWorkerName}</h3>
+                </>
+              }
+            </div>
             <div className="postalCodeBox" id="postal-code-box">
                 <label htmlFor="postalCode-field">
                     <input
@@ -107,9 +119,6 @@ function AfterSearchQuery() {
         </div>
     )
 }
-
-
-
 
 export default AfterSearchQuery;
 

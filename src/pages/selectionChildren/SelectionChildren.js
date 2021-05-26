@@ -46,7 +46,7 @@ function SelectionChildren() {
             </div>
             <div id="border-left"></div>
             <div className="phoneNumbers" id="phone-numbers">
-                 <div className="positionTextInBox">
+                 <div className="positionTextInBoxPhoneNumbers">
                     <img src={phoneIcon} alt=""/>  112 <br/>
                     <span> bij levensbedrijgende situaties</span>
                     <br/>

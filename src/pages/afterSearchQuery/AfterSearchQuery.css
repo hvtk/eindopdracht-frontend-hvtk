@@ -1,8 +1,3 @@
-/*.ageGridTotalWebsite {
-    display: grid;
-    grid-template-columns: 60px 35px 490px 35px 35px 160px 84px 160px 84px 160px 32px 51px 160px 84px 160px 35px 35px 60px;
-    grid-template-rows: 60px 45px 60px 45px 40px 40px 50px 30px 50px 40px 160px 90px 160px 80px 80px 45px 60px 45px 60px; */
-
 .afterSearchLayout {
     display: grid;
     grid-template-columns: 60px 35px 490px 35px 782px 35px 388px 35px 60px;
@@ -119,7 +114,6 @@
     width: 440px;
     height: 40px;
 }
-
 
 .webAddressBox {
     background-color: aqua;

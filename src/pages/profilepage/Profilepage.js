@@ -4,7 +4,6 @@ import {useForm} from "react-hook-form";
 import {AuthContext} from "../../context/AuthenticationContext";
 
 import './Profilepage.css';
-import axios from "axios";
 
 // in invoervelden, met uitzondering van de foto worden vanuit de context gevuld!. Moet nog geprogrammeerd worden.
 

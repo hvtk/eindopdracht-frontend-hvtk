@@ -13,7 +13,7 @@ function Homepage() {
 const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(AgeGroupContext);
     const {handleSubmit}= useForm();
     const [selectedAgeGroup, setSelectedAgeGroup] = useState(null);
-    const history =useHistory();
+    const history = useHistory();
     console.log(selectedAgeGroupForContext);
 
     function onFormSubmitReadout(data) {
@@ -40,7 +40,7 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
             <div id="border-left"></div>
 
             <div className="phoneNumbers" id="phone-numbers">
-                <span className="positionTextInBox">  <img src={phoneIcon} alt=""/>  112 <br/>
+                <span className="positionTextInBoxPhoneNumbers">  <img src={phoneIcon} alt=""/>  112 <br/>
                     <span> bij levensbedrijgende situaties</span>
                     <br/>
                     <img src={phoneIcon} alt=""/> 113 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
@@ -116,8 +116,6 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
       </>
     )
 }
-
-
 
 export default Homepage;
 
