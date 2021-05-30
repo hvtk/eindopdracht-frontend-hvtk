@@ -12,11 +12,11 @@
     "border-left . . . . . . . border-right"
     "border-left . search-problems-left . web-address-box web-address-box web-address-box . border-right"
     "border-left . search-problems-left . . . . . border-right"
-    "border-left . search-problems-left . search-option-web . postal-code-box . border-right"
-    "border-left . search-problems-left . search-option-web . . . border-right"
-    "border-left . search-problems-left . search-option-web . age-box . border-right"
-    "border-left . search-problems-left . search-option-web . . . border-right"
-    "border-left . search-problems-left . search-option-web . picture-search-web-small . border-right"
+    "border-left . search-problems-left . search-option-web-query . postal-code-box . border-right"
+    "border-left . search-problems-left . search-option-web-query . . . border-right"
+    "border-left . search-problems-left . search-option-web-query . age-box . border-right"
+    "border-left . search-problems-left . search-option-web-query . . . border-right"
+    "border-left . search-problems-left . search-option-web-query . picture-search-web-small . border-right"
     "border-left . . . . . . . border-right"
     "border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom";
 }
@@ -49,8 +49,8 @@
     grid-area: web-address-box;
 }
 
-#search-option-web {
-    grid-area: search-option-web;
+#search-option-web-query{
+    grid-area: search-option-web-query;
 }
 
 #picture-search-web-small {
@@ -123,7 +123,7 @@
     border-radius: 10px;
 }
 
-.searchOptionWeb {
+.searchOptionWebQuery {
     background-color: aqua;
     /*display: flex;*/
     display: grid; /* Deze en de volgende regel zijn toegevoegd om de aidWorkers onder elkaar weer te geven */

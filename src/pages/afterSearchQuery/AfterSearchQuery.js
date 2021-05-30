@@ -100,7 +100,7 @@ function AfterSearchQuery() {
                 {/*        </div>) /* dit returned alle namen die in aidWorker zitten door .map  */}
                 {/*})}*/}
             </div>
-            <div className="searchOptionWeb" id="search-option-web">
+            <div className="searchOptionWebQuery" id="search-option-web-query">
                 {data.map((aidWorker) => {
                     return (
                         <div>
