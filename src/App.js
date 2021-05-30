@@ -24,7 +24,7 @@ function App() {
               <Route exact path="/">
                 <Homepage/>
               </Route>
-              <Route path="/search/:endpoint">  {/* dit zorgt ervoor dat de opgehaalde dat naar dit path meegenomen wordt */}
+              <Route path="/search/:endpoint">
                 <AfterSearchQuery/>
               </Route>
               <Route path="/adults">

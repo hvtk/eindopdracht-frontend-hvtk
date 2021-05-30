@@ -5,8 +5,6 @@ import {AuthContext} from "../../context/AuthenticationContext";
 
 import './Profilepage.css';
 
-// in invoervelden, met uitzondering van de foto worden vanuit de context gevuld!. Moet nog geprogrammeerd worden.
-
 function Profilepage() {
 
     const { user } = useContext(AuthContext);

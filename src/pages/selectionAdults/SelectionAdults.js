@@ -103,7 +103,7 @@ function SelectionAdults() {
                       className="searchSelectionBox"
                       type="button"
                       onClick={() => {
-                          history.push("/search/aidWorkers"); /* dit verwijst naar de search pagina waar de fetchdata de geselecteerde data uit de database ophaalt.*/
+                          history.push("/search/aidWorkers");
                       }}
                    >
                       Burn-out
