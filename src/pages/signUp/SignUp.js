@@ -14,6 +14,30 @@ function SignUp() {
     const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(AgeGroupContext);
     console.log(selectedAgeGroupForContext)
 
+    const [progress, setProgress] = useState('getUpload')
+    const [url, setImageUrl] = useState(undefined)
+    const [errorMessage, setErrorMessage] = useState('')
+
+    const content = () => {
+        switch (progress){
+            case 'getUpload':
+                return <div> please upload an image </div>
+            case 'uploading':
+                return <h2> Uploading... </h2>
+            case 'uploaded':
+                return <img src={url} alt='uploaded' />
+            case 'uploadError':
+                return (
+                    <>
+                        <div> Error message = {errorMessage}</div>
+                        <div> please upload an image </div>
+                    </>
+                )
+
+        }
+    }
+
+
     async function onFormSubmit(data) {
         console.log(data);
         try {
@@ -60,6 +84,10 @@ function SignUp() {
 
                   <form className="signUpBox" id="signUp-box" onSubmit={handleSubmit(onFormSubmit)}>
                      <h3> registreren </h3>
+                     <h4> Profielfoto: </h4>
+                     <div>
+                         {content()}
+                     </div>
                      <h4> Postcode: </h4>
                      <label htmlFor="postalCode-field">
                         <input
