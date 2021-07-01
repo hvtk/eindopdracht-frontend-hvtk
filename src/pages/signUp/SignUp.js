@@ -20,13 +20,36 @@ function SignUp() {
     const [url, setImageUrl] = useState(undefined)
     const [errorMessage, setErrorMessage] = useState('')
 
-    const uploadComponent = props => {
+    const onUrlChange = e => {
+        setImageUrl(e.target.value);
+    };
+
+    const onImage = async  (failedImages, successImages) => {
+        if (!url){
+            console.log('missing Url')
+            setErrorMessage('missing a url to upload to')
+            setProgress('uploadError');
+            return
+        }
+
+        setProgress('uploading')
+
+        try {
+            console.log('successImages', successImages)
+        } catch (error) {
+            console.log('error in upload', error);
+            setErrorMessage(error.message);
+            setProgress('uploadError')
+        }
+    }
+
+    const UploadComponent = props => (
         <form>
             <label>
                 File Upload URL:
                 <input id="urlInput" type="text" onChange={props.onUrlChange} value={props.url}/>
             </label>
-            <imageUploader
+            <ImageUploader
                 key="image-uploader"
                 withIcon={true}
                 singleImage={true}
@@ -36,14 +59,14 @@ function SignUp() {
                 onChange={props.onImage}
                 imgExtension={['.jpg', '.png', '.jpeg']}
                 maxFileSize={5242880}
-            ></imageUploader>
-        </form>;
-    };
+            ></ImageUploader>
+        </form>
+    )
 
     const content = () => {
         switch (progress){
             case 'getUpload':
-                return <uploadComponent onUrlChange={onUrlChange} onImage={onImage} url={url} />
+                return <UploadComponent onUrlChange={onUrlChange} onImage={onImage} url={url} />
             case 'uploading':
                 return <h2> Uploading... </h2>
             case 'uploaded':
