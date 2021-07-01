@@ -36,6 +36,14 @@ function SignUp() {
 
         try {
             console.log('successImages', successImages)
+            const parts = successImages[0].split(';');
+            const mime = parts[0].split(':')[1];
+            const name = parts[1].split('=')[1];
+            const data = parts[2];
+            const res = await axios.post(url, { mime, name, image: data});
+
+            setImageUrl(res.data.imageURL)
+            setProgress('uploaded')
         } catch (error) {
             console.log('error in upload', error);
             setErrorMessage(error.message);
@@ -75,7 +83,7 @@ function SignUp() {
                 return (
                     <>
                         <div> Error message = {errorMessage}</div>
-                        <div> please upload an image </div>
+                        <UploadComponent onUrlChange={onUrlChange} onImage={onImage} url={url} />
                     </>
                 )
 
