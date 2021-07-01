@@ -2,6 +2,8 @@ import React, {useContext, useState} from "react";
 
 import axios from "axios";
 
+import ImageUploader from 'react-images-upload'
+
 import {useForm} from "react-hook-form";
 import { Link, useHistory} from "react-router-dom";
 import './SignUp.css';
@@ -18,10 +20,30 @@ function SignUp() {
     const [url, setImageUrl] = useState(undefined)
     const [errorMessage, setErrorMessage] = useState('')
 
+    const uploadComponent = props => {
+        <form>
+            <label>
+                File Upload URL:
+                <input id="urlInput" type="text" onChange={props.onUrlChange} value={props.url}/>
+            </label>
+            <imageUploader
+                key="image-uploader"
+                withIcon={true}
+                singleImage={true}
+                withPreview={true}
+                label="Maximum size file: 5MB"
+                buttonText="Choose an image"
+                onChange={props.onImage}
+                imgExtension={['.jpg', '.png', '.jpeg']}
+                maxFileSize={5242880}
+            ></imageUploader>
+        </form>;
+    };
+
     const content = () => {
         switch (progress){
             case 'getUpload':
-                return <div> please upload an image </div>
+                return <uploadComponent onUrlChange={onUrlChange} onImage={onImage} url={url} />
             case 'uploading':
                 return <h2> Uploading... </h2>
             case 'uploaded':
