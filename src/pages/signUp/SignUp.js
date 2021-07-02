@@ -2,7 +2,7 @@ import React, {useContext, useState} from "react";
 
 import axios from "axios";
 
-import ImageUploader from 'react-images-upload'
+import ImageUploading from "react-images-uploading";
 
 import {useForm} from "react-hook-form";
 import { Link, useHistory} from "react-router-dom";
@@ -16,80 +16,12 @@ function SignUp() {
     const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(AgeGroupContext);
     console.log(selectedAgeGroupForContext)
 
-    const [progress, setProgress] = useState('getUpload')
-    const [url, setImageUrl] = useState(undefined)
-    const [errorMessage, setErrorMessage] = useState('')
-
-    const onUrlChange = e => {
-        setImageUrl(e.target.value);
+    const [images, setImages] = useState([]);
+    const maxNumber = 69;
+    const onChange = (imageList, addUpdateIndex) => {
+        console.log(imageList, addUpdateIndex);
+        setImages(imageList);
     };
-
-    const onImage = async  (failedImages, successImages) => {
-        if (!url){
-            console.log('missing Url')
-            setErrorMessage('missing a url to upload to')
-            setProgress('uploadError');
-            return
-        }
-
-        setProgress('uploading')
-
-        try {
-            console.log('successImages', successImages)
-            const parts = successImages[0].split(';');
-            const mime = parts[0].split(':')[1];
-            const name = parts[1].split('=')[1];
-            const data = parts[2];
-            const res = await axios.post(url, { mime, name, image: data});
-
-            setImageUrl(res.data.imageURL)
-            setProgress('uploaded')
-        } catch (error) {
-            console.log('error in upload', error);
-            setErrorMessage(error.message);
-            setProgress('uploadError')
-        }
-    }
-
-    const UploadComponent = props => (
-        <form>
-            <label>
-                File Upload URL:
-                <input id="urlInput" type="text" onChange={props.onUrlChange} value={props.url}/>
-            </label>
-            <ImageUploader
-                key="image-uploader"
-                withIcon={true}
-                singleImage={true}
-                withPreview={true}
-                label="Maximum size file: 5MB"
-                buttonText="Choose an image"
-                onChange={props.onImage}
-                imgExtension={['.jpg', '.png', '.jpeg']}
-                maxFileSize={5242880}
-            ></ImageUploader>
-        </form>
-    )
-
-    const content = () => {
-        switch (progress){
-            case 'getUpload':
-                return <UploadComponent onUrlChange={onUrlChange} onImage={onImage} url={url} />
-            case 'uploading':
-                return <h2> Uploading... </h2>
-            case 'uploaded':
-                return <img src={url} alt='uploaded' />
-            case 'uploadError':
-                return (
-                    <>
-                        <div> Error message = {errorMessage}</div>
-                        <UploadComponent onUrlChange={onUrlChange} onImage={onImage} url={url} />
-                    </>
-                )
-
-        }
-    }
-
 
     async function onFormSubmit(data) {
         console.log(data);
@@ -138,9 +70,49 @@ function SignUp() {
                   <form className="signUpBox" id="signUp-box" onSubmit={handleSubmit(onFormSubmit)}>
                      <h3> registreren </h3>
                      <h4> Profielfoto: </h4>
-                     <div>
+                      <div>
+                          <ImageUploading
+                              multiple
+                              value={images}
+                              onChange={onChange}
+                              maxNumber={maxNumber}
+                              dataURLKey="data_url"
+                          >
+                              {({
+                                  imageList,
+                                  onImageUpload,
+                                  onImageRemoveAll,
+                                  onImageUpdate,
+                                  onImageRemove,
+                                  isDragging,
+                                  dragProps
+                              }) => (
+                                  <div>
+                                      <button
+                                          style={isDragging ? {color: "red" } : null}
+                                          onClick={onImageUpload}
+                                          {...dragProps}
+                                      >
+                                        Click or Drop here
+                                      </button>
+                                      &nbsp;
+                                      <button onClick={onImageRemoveAll}> Remove all Images </button>
+                                      {imageList.map((image, index) => (
+                                          <div key={index}>
+                                              <img src={image.data_url} alt="" width="100" />
+                                              <div>
+                                                <button onClick={() => onImageUpdate(index)}> Update </button>
+                                                <button onClick={() => onImageRemove(index)}> Remove </button>
+                                              </div>
+                                          </div>
+                                      ))}
+                                  </div>
+                              )}
+                          </ImageUploading>
+                      </div>
+                      {/*} <div>
                          {content()}
-                     </div>
+                     </div> */}
                      <h4> Postcode: </h4>
                      <label htmlFor="postalCode-field">
                         <input
