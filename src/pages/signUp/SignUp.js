@@ -110,9 +110,6 @@ function SignUp() {
                               )}
                           </ImageUploading>
                       </div>
-                      {/*} <div>
-                         {content()}
-                     </div> */}
                      <h4> Postcode: </h4>
                      <label htmlFor="postalCode-field">
                         <input
