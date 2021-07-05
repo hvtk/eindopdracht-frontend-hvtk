@@ -2,8 +2,6 @@ import React, {useContext, useState} from "react";
 
 import axios from "axios";
 
-import ImageUploading from "react-images-uploading";
-
 import {useForm} from "react-hook-form";
 import { Link, useHistory} from "react-router-dom";
 import './SignUp.css';
@@ -15,13 +13,6 @@ function SignUp() {
     const history = useHistory();
     const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(AgeGroupContext);
     console.log(selectedAgeGroupForContext)
-
-    const [images, setImages] = useState([]);
-    const maxNumber = 69;
-    const onChange = (imageList, addUpdateIndex) => {
-        console.log(imageList, addUpdateIndex);
-        setImages(imageList);
-    };
 
     async function onFormSubmit(data) {
         console.log(data);
@@ -47,7 +38,6 @@ function SignUp() {
         console.log(data);
     }
 
-
     return (
       <>
           <div className="signUpLayout">
@@ -69,47 +59,6 @@ function SignUp() {
 
                   <form className="signUpBox" id="signUp-box" onSubmit={handleSubmit(onFormSubmit)}>
                      <h3> registreren </h3>
-                     <h4> Profielfoto: </h4>
-                      <div>
-                          <ImageUploading
-                              multiple
-                              value={images}
-                              onChange={onChange}
-                              maxNumber={maxNumber}
-                              dataURLKey="data_url"
-                          >
-                              {({
-                                  imageList,
-                                  onImageUpload,
-                                  onImageRemoveAll,
-                                  onImageUpdate,
-                                  onImageRemove,
-                                  isDragging,
-                                  dragProps
-                              }) => (
-                                  <div>
-                                      <button
-                                          style={isDragging ? {color: "red" } : null}
-                                          onClick={onImageUpload}
-                                          {...dragProps}
-                                      >
-                                        Click or Drop here
-                                      </button>
-                                      &nbsp;
-                                      <button onClick={onImageRemoveAll}> Remove all Images </button>
-                                      {imageList.map((image, index) => (
-                                          <div key={index}>
-                                              <img src={image.data_url} alt="" width="100" />
-                                              <div>
-                                                <button onClick={() => onImageUpdate(index)}> Update </button>
-                                                <button onClick={() => onImageRemove(index)}> Remove </button>
-                                              </div>
-                                          </div>
-                                      ))}
-                                  </div>
-                              )}
-                          </ImageUploading>
-                      </div>
                      <h4> Postcode: </h4>
                      <label htmlFor="postalCode-field">
                         <input

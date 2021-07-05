@@ -1,9 +1,10 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import { Link } from "react-router-dom";
 import {useForm} from "react-hook-form";
 import {AuthContext} from "../../context/AuthenticationContext";
 
 import './Profilepage.css';
+import ImageUploading from "react-images-uploading";
 
 function Profilepage() {
 
@@ -11,6 +12,14 @@ function Profilepage() {
     console.log(user);
 
     const {handleSubmit, register} = useForm();
+
+    const [images, setImages] = useState([]);
+    const maxNumber = 69;
+    const onChange = (imageList, addUpdateIndex) => {
+        console.log(imageList, addUpdateIndex);
+        setImages(imageList);
+    };
+
 
     function onFormSubmitReadout(data) {
         console.log(data);
@@ -36,16 +45,47 @@ function Profilepage() {
             <div id="border-left"></div>
             <div className="profileBox" id="profile-box">
               <h3> Profielpagina </h3>
-              <h4> Gegevens </h4>
               <h4> Profielfoto: </h4>
-              <label htmlFor="profileImage-field">
-                 <input
-                    type="image"
-                    name="profileImage"
-                    id="profileImage-field"
-                    {...register("profileImage")}
-                 />
-              </label>
+                <div>
+                    <ImageUploading
+                        multiple
+                        value={images}
+                        onChange={onChange}
+                        maxNumber={maxNumber}
+                        dataURLKey="data_url"
+                    >
+                        {({
+                              imageList,
+                              onImageUpload,
+                              onImageRemoveAll,
+                              onImageUpdate,
+                              onImageRemove,
+                              isDragging,
+                              dragProps
+                          }) => (
+                            <div>
+                                <button
+                                    style={isDragging ? {color: "red" } : null}
+                                    onClick={onImageUpload}
+                                    {...dragProps}
+                                >
+                                    Click or Drop here
+                                </button>
+                                &nbsp;
+                                <button onClick={onImageRemoveAll}> Remove all Images </button>
+                                {imageList.map((image, index) => (
+                                    <div key={index}>
+                                        <img className="upload-image-size" src={image.data_url} alt=""/>
+                                        <div>
+                                            <button onClick={() => onImageUpdate(index)}> Update </button>
+                                            <button onClick={() => onImageRemove(index)}> Remove </button>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </ImageUploading>
+                </div>
               <p> <h4> Gebruikersnaam: </h4> {user && user.username} </p>
               <p> <h4> Postcode: </h4> {user && user.postalCode} </p>
               <p> <h4> Leeftijd: </h4> {user && user.age} </p>
