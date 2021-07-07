@@ -5,6 +5,7 @@ import {AuthContext} from "../../context/AuthenticationContext";
 
 import './Profilepage.css';
 import ImageUploading from "react-images-uploading";
+import axios from "axios";
 
 function Profilepage() {
 
@@ -19,6 +20,19 @@ function Profilepage() {
         console.log(imageList, addUpdateIndex);
         setImages(imageList);
     };
+
+    async function onFormSubmitFile(data) {
+        console.log(data);
+        try {
+
+            const result = await axios.post(`https://localhost:8443/users/signup`,{
+                onImageUpload:data.onImageUpload,
+            })
+        } catch(e) {
+            console.error(e)
+        }
+    }
+
 
 
     function onFormSubmitReadout(data) {
@@ -46,7 +60,7 @@ function Profilepage() {
             <div className="profileBox" id="profile-box">
               <h3> Profielpagina </h3>
               <h4> Profielfoto: </h4>
-                <div>
+                <div onSubmit={handleSubmit(onFormSubmitFile)} >
                     <ImageUploading
                         multiple
                         value={images}
@@ -85,6 +99,10 @@ function Profilepage() {
                             </div>
                         )}
                     </ImageUploading>
+                    <button
+                        type="submit" >
+                        Safe file in database
+                    </button>
                 </div>
               <p> <h4> Gebruikersnaam: </h4> {user && user.username} </p>
               <p> <h4> Postcode: </h4> {user && user.postalCode} </p>

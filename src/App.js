@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React, {useContext, useState} from "react";
 import { AuthContext } from "./context/AuthenticationContext";
 
-import {BrowserRouter as Router, Switch, Route, useHistory} from "react-router-dom";
+import {Switch, Route, Redirect, useHistory} from "react-router-dom";
 import './App.css';
 import AfterSearchQuery from "./pages/afterSearchQuery/AfterSearchQuery";
 import SelectionAdults from "./pages/selectionAdults/SelectionAdults";
@@ -17,9 +17,7 @@ function App() {
 
   const { user } = useContext(AuthContext) ;
 
-
   return (
-      <Router>
           <Switch>
               <Route exact path="/">
                 <Homepage/>
@@ -46,10 +44,11 @@ function App() {
                 <SignUp/>
               </Route>
               <Route path="/profile" user={user}>
-                <Profilepage/>
+                  {user ?
+                    <Profilepage/>
+                  : <Redirect to="/"/>}
               </Route>
           </Switch>
-      </Router>
   );
 }
 
