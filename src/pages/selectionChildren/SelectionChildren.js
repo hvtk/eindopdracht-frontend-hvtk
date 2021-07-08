@@ -1,7 +1,11 @@
 import React from "react";
 import {useForm} from "react-hook-form";
+import {Link} from "react-router-dom";
 
 import './SelectionChildren.css';
+
+import ButtonB from "../../components/ButtonB";
+
 import phoneIcon from "../../assets/icons/callicon.svg";
 import whatsappIcon from "../../assets/icons/whattsappicon.svg";
 import chatIcon from "../../assets/icons/chaticon.svg";
@@ -16,7 +20,7 @@ import Autisme from "../../assets/images/selectionChildren/Autisme-coaching size
 import emotionscartoon from "../../assets/images/selectionChildren/Emotionele-problemen size.svg";
 import emotions from "../../assets/images/selectionChildren/Emotional problems.svg";
 import Lonely from "../../assets/images/selectionChildren/Lonely2.svg";
-import {Link} from "react-router-dom";
+
 
 function SelectionChildren() {
 
@@ -31,14 +35,14 @@ function SelectionChildren() {
 
         <div className="childrenLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
-                <button
-                    type="submit" >
+                <ButtonB
+                    submit>
                     Voorlezen
-                </button>
-                <button
-                    type="submit" >
+                </ButtonB>
+                <ButtonB
+                    submit>
                     Taalkeuze
-                </button>
+                </ButtonB>
             </div>
             <div id="border-right"></div>
             <div className="layoutInputBorderBottom" id="border-bottom">

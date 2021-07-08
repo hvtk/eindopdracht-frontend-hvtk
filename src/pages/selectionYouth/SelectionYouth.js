@@ -1,14 +1,16 @@
 import React from "react";
 import {useForm} from "react-hook-form";
+import {Link} from "react-router-dom";
 
 import './SelectionYouth.css';
+
+import Button from "../../components/Button";
+import ButtonB from "../../components/ButtonB";
+
 import phoneIcon from "../../assets/icons/callicon.svg";
 import whatsappIcon from "../../assets/icons/whattsappicon.svg";
 import chatIcon from "../../assets/icons/chaticon.svg";
 import imageYouth from "../../assets/images/selectionYouth/ImageYouth.svg";
-import {Link} from "react-router-dom";
-
-
 
 function SelectionYouth() {
 
@@ -26,14 +28,14 @@ function SelectionYouth() {
 
         <div className="selectionYouthLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
-                <button
-                    type="submit" >
+                <ButtonB
+                    submit>
                     Voorlezen
-                </button>
-                <button
-                    type="submit" >
+                </ButtonB>
+                <ButtonB
+                    submit>
                     Taalkeuze
-                </button>
+                </ButtonB>
             </div>
             <div id="border-right"></div>
             <div className="layoutInputBorderBottom" id="border-bottom">
@@ -67,53 +69,53 @@ function SelectionYouth() {
             <div className="pictureYouthSmall" id="picture-youth-small"> <img className="imageYouth" src={imageYouth} alt=""/> </div>
             <div className="searchProblemsRight" id="search-problems-right" onSubmit={handleSubmit(onFormSubmit)}>
               <p>
-                <button
-                    type="submit" className="searchSelectionBox">
+                <Button
+                    submit>
                     Zoeken
-                </button>
+                </Button>
               </p>
                 <h4> Info over... </h4>
               <p>
-                <button
-                    type="submit" className="searchSelectionBox">
+                <Button
+                    submit>
                     Aandoeningen A - Z
-                </button>
+                </Button>
               </p>
               <p>
-                <button
-                    type="submit" className="searchSelectionBox">
+                <Button
+                    submit>
                     Testen
-                </button>
+                </Button>
               </p>
               <p>
-                <button
-                    type="submit" className="searchSelectionBox">
+                <Button
+                    submit>
                     Depressief
-                </button>
+                </Button>
               </p>
               <p>
-                <button
-                    type="submit" className="searchSelectionBox">
+                <Button
+                    submit>
                     Eenzaam
-                </button>
+                </Button>
               </p>
               <p>
-                <button
-                    type="submit" className="searchSelectionBox">
+                <Button
+                    submit>
                     Burn-out
-                </button>
+                </Button>
               </p>
               <p>
-                <button
-                    type="submit" className="searchSelectionBox">
+                <Button
+                    submit>
                     Persoonlijke verhalen
-                </button>
+                </Button>
               </p>
               <p>
-                <button
-                    type="submit" className="searchSelectionBox">
+                <Button
+                    submit>
                     Zelfstandig wonen, hoe?
-                </button>
+                </Button>
               </p>
             </div>
             <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>

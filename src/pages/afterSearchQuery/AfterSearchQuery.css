@@ -108,13 +108,6 @@
     border-top-right-radius: 10px;
 }
 
-.searchSelectionBox {
-    background-color: #CDD32B;
-    border-radius: 10px;
-    width: 440px;
-    height: 40px;
-}
-
 .webAddressBox {
     background-color: aqua;
     display: flex;

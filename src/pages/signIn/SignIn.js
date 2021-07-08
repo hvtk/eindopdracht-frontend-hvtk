@@ -1,14 +1,14 @@
 import React, {useContext} from "react";
-
+import {useForm} from "react-hook-form";
+import { useHistory, Link } from 'react-router-dom'
 import axios from "axios";
 
-import {useForm} from "react-hook-form";
-import { useHistory } from 'react-router-dom'
-import { Link } from "react-router-dom";
+import './SignIn.css';
+
 import { AuthContext } from "../../context/AuthenticationContext";
 import {AgeGroupContext} from "../../context/SearchAgeGroupContext";
 
-import './SignIn.css';
+import ButtonB from "../../components/ButtonB";
 
 function SignIn() {
     const { login } = useContext(AuthContext);
@@ -49,14 +49,14 @@ function SignIn() {
       <>
         <div className="signInLayout">
           <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onSubmitReadout)}>
-              <button
-                  type="submit" >
+              <ButtonB
+                  submit>
                   Voorlezen
-              </button>
-              <button
-                  type="submit" >
+              </ButtonB>
+              <ButtonB
+                  submit>
                   Taalkeuze
-              </button>
+              </ButtonB>
           </div>
           <div id="border-right"></div>
           <div className="layoutInputBorderBottom" id="border-bottom">
@@ -92,10 +92,10 @@ function SignIn() {
                 />
             </label>
             <br/>
-            <button
-                type="submit" >
+            <ButtonB
+                submit>
                 Inloggen
-            </button>
+            </ButtonB>
             <h5>Heb je je nog niet geregistreerd? <Link to="/signup">Registreer</Link> je dan eerst.</h5>
           </form>
           <div className="pictureSignIn" id="picture-signIn"></div>

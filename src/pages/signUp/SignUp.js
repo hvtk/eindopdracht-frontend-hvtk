@@ -1,10 +1,12 @@
 import React, {useContext, useState} from "react";
-
-import axios from "axios";
-
 import {useForm} from "react-hook-form";
 import { Link, useHistory} from "react-router-dom";
+import axios from "axios";
+
 import './SignUp.css';
+
+import ButtonB from "../../components/ButtonB";
+
 import {AgeGroupContext} from "../../context/SearchAgeGroupContext";
 
 function SignUp() {
@@ -42,14 +44,14 @@ function SignUp() {
       <>
           <div className="signUpLayout">
               <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onSubmitReadout)}>
-                  <button
-                      type="submit" >
+                  <ButtonB
+                      submit>
                       Voorlezen
-                  </button>
-                  <button
-                      type="submit" >
+                  </ButtonB>
+                  <ButtonB
+                      submit>
                       Taalkeuze
-                  </button>
+                  </ButtonB>
               </div>
               <div id="border-right"></div>
               <div className="layoutInputBorderBottom" id="border-bottom">
@@ -110,10 +112,10 @@ function SignUp() {
                          />
                      </label>
                      <br/>
-                     <button
-                        type="submit" >
+                     <ButtonB
+                        submit>
                         Registreren
-                     </button>
+                     </ButtonB>
 
                          <h5>Heb je je al geregistreerd? Je kunt <Link to="/signin">hier</Link> inloggen.</h5>
 

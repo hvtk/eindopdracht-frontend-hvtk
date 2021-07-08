@@ -1,11 +1,14 @@
 import React, {useContext, useState} from "react";
 import { Link } from "react-router-dom";
 import {useForm} from "react-hook-form";
-import {AuthContext} from "../../context/AuthenticationContext";
-
-import './Profilepage.css';
 import ImageUploading from "react-images-uploading";
 import axios from "axios";
+
+import './Profilepage.css';
+
+import {AuthContext} from "../../context/AuthenticationContext";
+
+import ButtonB from "../../components/ButtonB";
 
 function Profilepage() {
 
@@ -26,7 +29,7 @@ function Profilepage() {
         try {
 
             const result = await axios.post(`https://localhost:8443/users/signup`,{
-                onImageUpload:data.onImageUpload,
+                onImageUpload:data.imageList,
             })
         } catch(e) {
             console.error(e)
@@ -43,14 +46,14 @@ function Profilepage() {
         <>
           <div className="profilePageLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
-                <button
-                    type="submit" >
+                <ButtonB
+                    submit >
                     Voorlezen
-                </button>
-                <button
-                    type="submit" >
+                </ButtonB>
+                <ButtonB
+                    submit >
                     Taalkeuze
-                </button>
+                </ButtonB>
             </div>
             <div id="border-right"></div>
             <div className="layoutInputBorderBottom" id="border-bottom">
@@ -93,16 +96,13 @@ function Profilepage() {
                                         <div>
                                             <button onClick={() => onImageUpdate(index)}> Update </button>
                                             <button onClick={() => onImageRemove(index)}> Remove </button>
+                                            <button type="Submit"> Safe file to database </button>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         )}
                     </ImageUploading>
-                    <button
-                        type="submit" >
-                        Safe file in database
-                    </button>
                 </div>
               <p> <h4> Gebruikersnaam: </h4> {user && user.username} </p>
               <p> <h4> Postcode: </h4> {user && user.postalCode} </p>

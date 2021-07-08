@@ -1,10 +1,16 @@
 import React, {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
-
-import './AfterSearchQuery.css';
-import imageSearchPostalcodeAge from '../../assets/images/afterSearchQuery/ImageSeachPostalcodeAge.svg';
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
+
+import './AfterSearchQuery.css';
+
+import Button from "../../components/Button";
+import ButtonB from "../../components/ButtonB";
+
+import imageSearchPostalcodeAge from '../../assets/images/afterSearchQuery/ImageSeachPostalcodeAge.svg';
+
+
 
 
 function AfterSearchQuery() {
@@ -39,14 +45,14 @@ function AfterSearchQuery() {
 
         <div className="afterSearchLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
-                <button
-                    type="submit" >
+                <ButtonB
+                    submit>
                     Voorlezen
-                </button>
-                <button
-                    type="submit" >
+                </ButtonB>
+                <ButtonB
+                    submit>
                     Taalkeuze
-                </button>
+                </ButtonB>
             </div>
             <div id="border-right"></div>
             <div className="layoutInputBorderBottom" id="border-bottom">
@@ -55,41 +61,41 @@ function AfterSearchQuery() {
             <div id="border-left"></div>
             <div className="searchProblemsLeftElderly" id="search-problems-left" onSubmit={handleSubmit(onFormSubmit)}>
               <p>
-                <button
-                    type="submit" className="searchSelectionBox">
+                <Button
+                    submit>
                     Zoeken
-                </button>
+                </Button>
               </p>
                 <h4> Info over... </h4>
               <p>
-                <button
-                    type="submit"className="searchSelectionBox" >
+                <Button
+                    submit>
                     Aandoeningen A - Z
-                </button>
+                </Button>
               </p>
               <p>
-                <button
-                    type="submit" className="searchSelectionBox">
+                <Button
+                    submit>
                     Problemen thuis
-                </button>
+                </Button>
               </p>
               <p>
-                <button
-                    type="submit" className="searchSelectionBox">
+                <Button
+                    submit>
                     Seksualiteit
-                </button>
+                </Button>
               </p>
               <p>
-                <button
-                    type="submit" className="searchSelectionBox">
+                <Button
+                    submit>
                     Eenzaam
-                </button>
+                </Button>
               </p>
               <p>
-                <button
-                    type="submit" className="searchSelectionBox">
+                <Button
+                    submit>
                     Persoonlijke verhalen
-                </button>
+                </Button>
               </p>
             </div>
             <div className="webAddressBox" id="web-address-box">

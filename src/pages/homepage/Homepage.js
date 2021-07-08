@@ -1,12 +1,17 @@
 import React, {useState, useContext} from "react";
-
-import './Homepage.css';
 import {useForm} from "react-hook-form";
 import {useHistory} from "react-router-dom";
+
+import './Homepage.css';
+
+import {AgeGroupContext} from "../../context/SearchAgeGroupContext"
+
+import ButtonB from "../../components/ButtonB";
+
 import phoneIcon from '../../assets/icons/callicon.svg'
 import chatIcon from'../../assets/icons/chaticon.svg'
 import whatsappIcon from '../../assets/icons/whattsappicon.svg'
-import {AgeGroupContext} from "../../context/SearchAgeGroupContext"
+
 
 
 function Homepage() {
@@ -24,14 +29,14 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
       <>
         <div className="homepageLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
-                <button
-                    type="submit" >
+                <ButtonB
+                    submit >
                     Voorlezen
-                </button>
-                <button
-                    type="submit" >
+                </ButtonB>
+                <ButtonB
+                    submit >
                     Taalkeuze
-                </button>
+                </ButtonB>
             </div>
             <div id="border-right"></div>
             <div className="layoutInputBorderBottom" id="border-bottom">

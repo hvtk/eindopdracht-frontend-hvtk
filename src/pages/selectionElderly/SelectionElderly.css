@@ -103,13 +103,6 @@ img {
     border-radius: 50px
 }
 
-.searchSelectionBox {
-    background-color: #CDD32B;
-    border-radius: 10px;
-    width: 440px;
-    height: 40px;
-}
-
 .layoutInputBorderTop {
     background-color: aqua;
     color: white;
