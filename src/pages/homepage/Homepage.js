@@ -7,6 +7,7 @@ import './Homepage.css';
 import {AgeGroupContext} from "../../context/SearchAgeGroupContext"
 
 import ButtonB from "../../components/ButtonB";
+import ButtonC from "../../components/ButtonC";
 
 import phoneIcon from '../../assets/icons/callicon.svg'
 import chatIcon from'../../assets/icons/chaticon.svg'
@@ -29,12 +30,10 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
       <>
         <div className="homepageLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
-                <ButtonB
-                    submit >
+                <ButtonB>
                     Voorlezen
                 </ButtonB>
-                <ButtonB
-                    submit >
+                <ButtonB>
                     Taalkeuze
                 </ButtonB>
             </div>
@@ -80,42 +79,38 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
 
                 <h4> Kies de leeftijdsgroep </h4>
 
-                <button className="ageSelectionBox"
-                  type="button"
-                  onClick={() => {
+                <ButtonC
+                    clickHandler={() => {
                       setSelectedAgeGroupForContext('KINDEREN');
                       history.push("/signup");
-                  }}
-                >
-                  KINDEREN
-                </button>
-                <button className="ageSelectionBox"
-                  type="button"
-                  onClick={() => {
+                    }}
+                    >
+                    KINDEREN
+                </ButtonC>
+                <ButtonC
+                    clickHandler={() => {
                       setSelectedAgeGroupForContext('JONGEREN');
                       history.push("/signup");
-                  }}
-                >
+                    }}
+                    >
                     JONGEREN
-                </button>
-                <button className="ageSelectionBox"
-                   type="button"
-                   onClick={() => {
+                </ButtonC>
+                <ButtonC
+                   clickHandler={() => {
                        setSelectedAgeGroupForContext('VOLWASSENEN');
                        history.push("/signup");
                    }}
-                >
-                    VOLWASSENEN
-                </button>
-                <button className="ageSelectionBox"
-                   type="button"
-                   onClick={() => {
+                   >
+                   VOLWASSENEN
+                </ButtonC>
+                <ButtonC
+                   clickHandler={() => {
                        setSelectedAgeGroupForContext('OUDEREN');
                        history.push("/signup");
                    }}
-                >
-                    OUDEREN
-                </button>
+                   >
+                   OUDEREN
+                </ButtonC>
             </div>
         </div>
       </>

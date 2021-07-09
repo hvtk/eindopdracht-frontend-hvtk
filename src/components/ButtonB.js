@@ -1,9 +1,9 @@
 import React from "react";
 
-function ButtonB({type, children}) {
+function ButtonB({children}) {
     return (
         <button
-                type={type}>
+            type="submit">
             {children}
         </button>
     )

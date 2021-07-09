@@ -28,12 +28,10 @@ function SelectionYouth() {
 
         <div className="selectionYouthLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
-                <ButtonB
-                    submit>
+                <ButtonB>
                     Voorlezen
                 </ButtonB>
-                <ButtonB
-                    submit>
+                <ButtonB>
                     Taalkeuze
                 </ButtonB>
             </div>
@@ -69,51 +67,43 @@ function SelectionYouth() {
             <div className="pictureYouthSmall" id="picture-youth-small"> <img className="imageYouth" src={imageYouth} alt=""/> </div>
             <div className="searchProblemsRight" id="search-problems-right" onSubmit={handleSubmit(onFormSubmit)}>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Zoeken
                 </Button>
               </p>
                 <h4> Info over... </h4>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Aandoeningen A - Z
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Testen
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Depressief
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Eenzaam
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Burn-out
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Persoonlijke verhalen
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Zelfstandig wonen, hoe?
                 </Button>
               </p>

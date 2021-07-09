@@ -49,12 +49,10 @@ function SignIn() {
       <>
         <div className="signInLayout">
           <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onSubmitReadout)}>
-              <ButtonB
-                  submit>
+              <ButtonB>
                   Voorlezen
               </ButtonB>
-              <ButtonB
-                  submit>
+              <ButtonB>
                   Taalkeuze
               </ButtonB>
           </div>
@@ -92,8 +90,7 @@ function SignIn() {
                 />
             </label>
             <br/>
-            <ButtonB
-                submit>
+            <ButtonB>
                 Inloggen
             </ButtonB>
             <h5>Heb je je nog niet geregistreerd? <Link to="/signup">Registreer</Link> je dan eerst.</h5>

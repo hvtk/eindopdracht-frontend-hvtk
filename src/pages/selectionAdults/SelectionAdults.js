@@ -28,12 +28,10 @@ function SelectionAdults() {
 
         <div className="selectionAdultsLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
-                <ButtonB
-                    submit>
+                <ButtonB>
                     Voorlezen
                 </ButtonB>
-                <ButtonB
-                    submit>
+                <ButtonB>
                     Taalkeuze
                 </ButtonB>
             </div>
@@ -70,33 +68,28 @@ function SelectionAdults() {
             <div className="pictureAdults" id="picture-adults"> </div>
             <div className="searchProblemsRight" id="search-problems-right" onSubmit={handleSubmit(onFormSubmit)}>
                 <p>
-                   <Button
-                      submit>
+                   <Button>
                       Zoeken
                    </Button>
                 </p>
                 <h4> Info over... </h4>
                 <p>
-                   <Button
-                      submit>
+                   <Button>
                       Aandoeningen A - Z
                    </Button>
                 </p>
                 <p>
-                   <Button
-                      submit>
+                   <Button>
                       Testen
                    </Button>
                 </p>
                 <p>
-                   <Button
-                      submit>
+                   <Button>
                       Depressief
                    </Button>
                 </p>
                 <p>
-                   <Button
-                      submit>
+                   <Button>
                       Eenzaam
                    </Button>
                 </p>
@@ -111,14 +104,12 @@ function SelectionAdults() {
                    </button>
                 </p>
                 <p>
-                   <Button
-                      submit>
+                   <Button>
                       Verslaving
                    </Button>
                 </p>
                 <p>
-                   <Button
-                      submit>
+                   <Button>
                       Dementie
                    </Button>
                 </p>

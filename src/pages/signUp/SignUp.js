@@ -44,12 +44,10 @@ function SignUp() {
       <>
           <div className="signUpLayout">
               <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onSubmitReadout)}>
-                  <ButtonB
-                      submit>
+                  <ButtonB>
                       Voorlezen
                   </ButtonB>
-                  <ButtonB
-                      submit>
+                  <ButtonB>
                       Taalkeuze
                   </ButtonB>
               </div>
@@ -112,8 +110,7 @@ function SignUp() {
                          />
                      </label>
                      <br/>
-                     <ButtonB
-                        submit>
+                     <ButtonB>
                         Registreren
                      </ButtonB>
 

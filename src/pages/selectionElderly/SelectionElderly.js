@@ -30,12 +30,10 @@ function SelectionElderly() {
 
         <div className="selectionElderlyLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
-                <ButtonB
-                    submit>
+                <ButtonB>
                     Voorlezen
                 </ButtonB>
-                <ButtonB
-                    submit>
+                <ButtonB>
                     Taalkeuze
                 </ButtonB>
             </div>
@@ -64,39 +62,33 @@ function SelectionElderly() {
             </div>
             <div className="searchProblemsRight" id="search-problems-right" onSubmit={handleSubmit(onFormSubmit)}>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Zoeken
                 </Button>
               </p>
                 <h4> Info over... </h4>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Aandoeningen A - Z
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Eenzaam
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Dementie
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Depressief
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Angstig
                 </Button>
               </p>

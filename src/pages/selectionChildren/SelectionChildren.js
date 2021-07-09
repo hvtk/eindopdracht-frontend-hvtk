@@ -35,12 +35,10 @@ function SelectionChildren() {
 
         <div className="childrenLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
-                <ButtonB
-                    submit>
+                <ButtonB>
                     Voorlezen
                 </ButtonB>
-                <ButtonB
-                    submit>
+                <ButtonB>
                     Taalkeuze
                 </ButtonB>
             </div>

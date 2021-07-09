@@ -45,12 +45,10 @@ function AfterSearchQuery() {
 
         <div className="afterSearchLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
-                <ButtonB
-                    submit>
+                <ButtonB>
                     Voorlezen
                 </ButtonB>
-                <ButtonB
-                    submit>
+                <ButtonB>
                     Taalkeuze
                 </ButtonB>
             </div>
@@ -61,39 +59,33 @@ function AfterSearchQuery() {
             <div id="border-left"></div>
             <div className="searchProblemsLeftElderly" id="search-problems-left" onSubmit={handleSubmit(onFormSubmit)}>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Zoeken
                 </Button>
               </p>
                 <h4> Info over... </h4>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Aandoeningen A - Z
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Problemen thuis
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Seksualiteit
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Eenzaam
                 </Button>
               </p>
               <p>
-                <Button
-                    submit>
+                <Button>
                     Persoonlijke verhalen
                 </Button>
               </p>

@@ -2,10 +2,10 @@ import React from "react";
 
 import './Button.css'
 
-function Button({type, children}) {
+function Button({children}) {
     return (
         <button className="button-in-search-selection-box"
-            type={type}>
+            type="submit">
             {children}
         </button>
     )
