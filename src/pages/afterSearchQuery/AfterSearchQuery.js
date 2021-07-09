@@ -102,7 +102,7 @@ function AfterSearchQuery() {
             </div>
             <div className="postalCodeBox" id="postal-code-box">
                 <label htmlFor="postalCode-field">
-                    <input
+                     <input
                         type="text"
                         name="postalCode"
                         id="postalCode-field"

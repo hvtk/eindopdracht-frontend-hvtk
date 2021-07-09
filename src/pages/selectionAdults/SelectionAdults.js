@@ -10,6 +10,7 @@ import ButtonB from "../../components/ButtonB";
 import phoneIcon from "../../assets/icons/callicon.svg";
 import whatsappIcon from "../../assets/icons/whattsappicon.svg";
 import chatIcon from "../../assets/icons/chaticon.svg";
+import ButtonD from "../../components/ButtonD";
 
 function SelectionAdults() {
 
@@ -94,14 +95,19 @@ function SelectionAdults() {
                    </Button>
                 </p>
                 <p>
-                   <button className="searchSelectionBox"
+                    {/*} <button className="searchSelectionBox"
                       type="button"
                       onClick={() => {
                           history.push("/search/aidWorkers");
                       }}
-                   >
+                   >*/}
+                   <ButtonD
+                      clickHandler={() => {
+                          history.push("/search/aidWorkers");
+                      }}
+                      >
                       Burn-out
-                   </button>
+                   </ButtonD>
                 </p>
                 <p>
                    <Button>
