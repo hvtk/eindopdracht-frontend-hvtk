@@ -1,0 +1,13 @@
+.selectedPage {
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#selected-page {
+    grid-area: selected-page;
+}

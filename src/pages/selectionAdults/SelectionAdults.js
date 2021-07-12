@@ -1,16 +1,20 @@
 import React from "react";
 import {useForm} from "react-hook-form";
-import {useHistory, Link} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 import './SelectionAdults.css';
 
 import Button from "../../components/Button";
 import ButtonB from "../../components/ButtonB";
+import ButtonD from "../../components/ButtonD";
+import BackToHome from "../../components/BackToHome";
+import TheSelectedPage from "../../components/TheSelectedPage";
+import GoToProfilePage from "../../components/GoToProfilePage";
+import LogOut from "../../components/LogOut";
 
 import phoneIcon from "../../assets/icons/callicon.svg";
 import whatsappIcon from "../../assets/icons/whattsappicon.svg";
 import chatIcon from "../../assets/icons/chaticon.svg";
-import ButtonD from "../../components/ButtonD";
 
 function SelectionAdults() {
 
@@ -26,7 +30,7 @@ function SelectionAdults() {
     }
 
     return (
-
+     <>
         <div className="selectionAdultsLayout">
             <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
                 <ButtonB>
@@ -47,7 +51,7 @@ function SelectionAdults() {
                     <img src={phoneIcon} alt=""/>  112 <br/>
                     <span> bij levensbedrijgende situaties</span>
                     <br/>
-                    <img src={phoneIcon} alt=""/> 113 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
+                    <img src={phoneIcon} alt=""/> 113 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/>
                     <span> denk je aan zelfmoord? </span>
                     <br/>
                     <img src={phoneIcon} alt=""/> 0800-0188 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
@@ -95,12 +99,6 @@ function SelectionAdults() {
                    </Button>
                 </p>
                 <p>
-                    {/*} <button className="searchSelectionBox"
-                      type="button"
-                      onClick={() => {
-                          history.push("/search/aidWorkers");
-                      }}
-                   >*/}
                    <ButtonD
                       clickHandler={() => {
                           history.push("/search/aidWorkers");
@@ -120,11 +118,18 @@ function SelectionAdults() {
                    </Button>
                 </p>
             </div>
-            <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>
-            <div id="selected-page" className="selectedPage"> VOLWASSENEN-PAGINA </div>
-            <div id="go-to-profile-page" className="goToProfilePage"> <Link to="/profile"> Ga naar de profielpagina </Link> </div>
-            <div id="log-out" className="logOut"> Uit loggen </div>
+            {/* <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div> */}
+            <BackToHome></BackToHome>
+            {/* <div id="selected-page" className="selectedPage"> VOLWASSENEN-PAGINA </div> */}
+            <TheSelectedPage>
+                Volwassenen-pagina
+            </TheSelectedPage>
+            {/* <div id="go-to-profile-page" className="goToProfilePage"> <Link to="/profile"> Ga naar de profielpagina </Link> </div> */}
+            <GoToProfilePage></GoToProfilePage>
+            {/* <div id="log-out" className="logOut"> Uit loggen </div> */}
+            <LogOut></LogOut>
         </div>
+     </>
     )
 }
 

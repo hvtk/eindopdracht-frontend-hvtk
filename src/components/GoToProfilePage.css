@@ -1,0 +1,13 @@
+.goToProfilePage {
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#go-to-profile-page {
+    grid-area: go-to-profile-page;
+}

@@ -1,0 +1,13 @@
+#log-out {
+    grid-area: log-out;
+}
+
+.logOut {
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+}

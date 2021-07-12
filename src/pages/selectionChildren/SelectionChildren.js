@@ -20,6 +20,10 @@ import Autisme from "../../assets/images/selectionChildren/Autisme-coaching size
 import emotionscartoon from "../../assets/images/selectionChildren/Emotionele-problemen size.svg";
 import emotions from "../../assets/images/selectionChildren/Emotional problems.svg";
 import Lonely from "../../assets/images/selectionChildren/Lonely2.svg";
+import BackToHome from "../../components/BackToHome";
+import TheSelectedPage from "../../components/TheSelectedPage";
+import GoToProfilePage from "../../components/GoToProfilePage";
+import LogOut from "../../components/LogOut";
 
 
 function SelectionChildren() {
@@ -79,10 +83,16 @@ function SelectionChildren() {
                     <p> <img id="imageSize1" src={emotions} alt="" /> <br/> Emotionele problemen </p>
                     <p> <img id="imageSize2" src={Lonely} alt="" /> <br/> Eenzaam </p>
             </div>
-            <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>
+            {/* <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>
             <div id="selected-page" className="selectedPage"> KINDEREN-PAGINA </div>
             <div id="go-to-profile-page" className="goToProfilePage"> <Link to="/profile"> Ga naar de profielpagina </Link> </div>
-            <div id="log-out" className="logOut"> Uit loggen </div>
+            <div id="log-out" className="logOut"> Uit loggen </div> */}
+            <BackToHome></BackToHome>
+            <TheSelectedPage>
+                KINDEREN-PAGINA
+            </TheSelectedPage>
+            <GoToProfilePage></GoToProfilePage>
+            <LogOut></LogOut>
         </div>
     )
 }

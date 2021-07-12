@@ -11,6 +11,10 @@ import elderly from '../../assets/images/selectionElderly/ImageElderly.svg';
 import phoneIcon from "../../assets/icons/callicon.svg";
 import whatsappIcon from "../../assets/icons/whattsappicon.svg";
 import chatIcon from "../../assets/icons/chaticon.svg";
+import BackToHome from "../../components/BackToHome";
+import TheSelectedPage from "../../components/TheSelectedPage";
+import GoToProfilePage from "../../components/GoToProfilePage";
+import LogOut from "../../components/LogOut";
 
 
 
@@ -93,10 +97,16 @@ function SelectionElderly() {
                 </Button>
               </p>
             </div>
-            <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>
+            {/* <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>
             <div id="selected-page" className="selectedPage"> OUDEREN-PAGINA </div>
             <div id="go-to-profile-page" className="goToProfilePage"> <Link to="/profile"> Ga naar de profielpagina </Link> </div>
-            <div id="log-out" className="logOut"> Uit loggen </div>
+            <div id="log-out" className="logOut"> Uit loggen </div> */}
+            <BackToHome></BackToHome>
+            <TheSelectedPage>
+                Ouderen-pagina
+            </TheSelectedPage>
+            <GoToProfilePage></GoToProfilePage>
+            <LogOut></LogOut>
         </div>
     )
 }

@@ -54,7 +54,7 @@
     grid-area: picture-youth-small;
 }
 
-#selected-page {
+{/* #selected-page {
     grid-area: selected-page;
 }
 
@@ -68,7 +68,7 @@
 
 #log-out {
     grid-area: log-out;
-}
+} */}
 
 .layoutInputBorderTop {
     background-color: aqua;
@@ -125,7 +125,7 @@ img {
     border-radius: 50px
 }
 
-.backToHome {
+{/* .backToHome {
     background-color: aqua;
     color: black;
     display: flex;
@@ -163,6 +163,6 @@ img {
     width: 120px;
     height: 30px;
     border-radius: 5px;
-}
+} */}
 
 
