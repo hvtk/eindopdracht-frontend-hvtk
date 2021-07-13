@@ -8,7 +8,7 @@ import './Profilepage.css';
 
 import {AuthContext} from "../../context/AuthenticationContext";
 
-import ButtonB from "../../components/ButtonB";
+import ButtonB from "../../components/buttons/ButtonB";
 
 function Profilepage() {
 

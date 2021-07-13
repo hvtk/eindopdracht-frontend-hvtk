@@ -4,9 +4,9 @@ import {useHistory} from "react-router-dom";
 
 import './SelectionAdults.css';
 
-import Button from "../../components/Button";
-import ButtonB from "../../components/ButtonB";
-import ButtonD from "../../components/ButtonD";
+import Button from "../../components/buttons/Button";
+import ButtonB from "../../components/buttons/ButtonB";
+import ButtonD from "../../components/buttons/ButtonD";
 import BackToHome from "../../components/BackToHome";
 import TheSelectedPage from "../../components/TheSelectedPage";
 import GoToProfilePage from "../../components/GoToProfilePage";
@@ -122,7 +122,7 @@ function SelectionAdults() {
             <BackToHome></BackToHome>
             {/* <div id="selected-page" className="selectedPage"> VOLWASSENEN-PAGINA </div> */}
             <TheSelectedPage>
-                Volwassenen-pagina
+                VOLWASSENEN-PAGINA
             </TheSelectedPage>
             {/* <div id="go-to-profile-page" className="goToProfilePage"> <Link to="/profile"> Ga naar de profielpagina </Link> </div> */}
             <GoToProfilePage></GoToProfilePage>

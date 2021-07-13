@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 import './SelectionChildren.css';
 
-import ButtonB from "../../components/ButtonB";
+import ButtonB from "../../components/buttons/ButtonB";
 
 import phoneIcon from "../../assets/icons/callicon.svg";
 import whatsappIcon from "../../assets/icons/whattsappicon.svg";

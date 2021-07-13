@@ -4,8 +4,8 @@ import {Link} from "react-router-dom";
 
 import './SelectionElderly.css';
 
-import Button from "../../components/Button";
-import ButtonB from "../../components/ButtonB";
+import Button from "../../components/buttons/Button";
+import ButtonB from "../../components/buttons/ButtonB";
 
 import elderly from '../../assets/images/selectionElderly/ImageElderly.svg';
 import phoneIcon from "../../assets/icons/callicon.svg";
@@ -103,7 +103,7 @@ function SelectionElderly() {
             <div id="log-out" className="logOut"> Uit loggen </div> */}
             <BackToHome></BackToHome>
             <TheSelectedPage>
-                Ouderen-pagina
+                OUDEREN-PAGINA
             </TheSelectedPage>
             <GoToProfilePage></GoToProfilePage>
             <LogOut></LogOut>

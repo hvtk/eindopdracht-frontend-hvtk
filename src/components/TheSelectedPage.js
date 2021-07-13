@@ -2,14 +2,14 @@ import React from "react";
 
 import './TheSelectedPage.css'
 
-function TheSelectedPage({selectedPage}) {
+function TheSelectedPage({children}) {
     return (
-        <div
+        <p
             id="selected-page"
             className="selectedPage"
         >
-            {selectedPage}
-        </div>
+            {children}
+        </p>
     )
 }
 

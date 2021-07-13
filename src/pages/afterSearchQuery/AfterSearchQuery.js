@@ -5,10 +5,14 @@ import axios from "axios";
 
 import './AfterSearchQuery.css';
 
-import Button from "../../components/Button";
-import ButtonB from "../../components/ButtonB";
+import Button from "../../components/buttons/Button";
+import ButtonB from "../../components/buttons/ButtonB";
 
 import imageSearchPostalcodeAge from '../../assets/images/afterSearchQuery/ImageSeachPostalcodeAge.svg';
+import BackToHome from "../../components/BackToHome";
+import TheSelectedPage from "../../components/TheSelectedPage";
+import GoToProfilePage from "../../components/GoToProfilePage";
+import LogOut from "../../components/LogOut";
 
 
 
@@ -123,10 +127,16 @@ function AfterSearchQuery() {
                 </label>
             </div>
             <div className="pictureSearchWebSmall" id="picture-search-web-small"><img className="imageSearchPostalcodeAge" src={imageSearchPostalcodeAge} alt=""/> </div>
-            <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>
+            {/* } <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>
             <div id="selected-page" className="selectedPage"> ZOEK-PAGINA </div>
             <div id="go-to-profile-page" className="goToProfilePage"> <Link to="/profile"> Ga naar de profielpagina </Link> </div>
-            <div id="log-out" className="logOut"> Uit loggen </div>
+            <div id="log-out" className="logOut"> Uit loggen </div> */}
+            <BackToHome></BackToHome>
+            <TheSelectedPage>
+                ZOEK-PAGINA
+            </TheSelectedPage>
+            <GoToProfilePage></GoToProfilePage>
+            <LogOut></LogOut>
         </div>
     )
 }

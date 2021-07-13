@@ -5,7 +5,7 @@ import axios from "axios";
 
 import './SignUp.css';
 
-import ButtonB from "../../components/ButtonB";
+import ButtonB from "../../components/buttons/ButtonB";
 
 import {AgeGroupContext} from "../../context/SearchAgeGroupContext";
 

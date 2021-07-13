@@ -6,8 +6,8 @@ import './Homepage.css';
 
 import {AgeGroupContext} from "../../context/SearchAgeGroupContext"
 
-import ButtonB from "../../components/ButtonB";
-import ButtonC from "../../components/ButtonC";
+import ButtonB from "../../components/buttons/ButtonB";
+import ButtonC from "../../components/buttons/ButtonC";
 
 import phoneIcon from '../../assets/icons/callicon.svg'
 import chatIcon from'../../assets/icons/chaticon.svg'

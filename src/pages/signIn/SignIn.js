@@ -8,7 +8,7 @@ import './SignIn.css';
 import { AuthContext } from "../../context/AuthenticationContext";
 import {AgeGroupContext} from "../../context/SearchAgeGroupContext";
 
-import ButtonB from "../../components/ButtonB";
+import ButtonB from "../../components/buttons/ButtonB";
 
 function SignIn() {
     const { login } = useContext(AuthContext);
