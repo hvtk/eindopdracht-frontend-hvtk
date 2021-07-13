@@ -1,13 +1,14 @@
-#log-out {
-    grid-area: log-out;
+#go-to-profile-page-grid {
+    grid-area: go-to-profile-page-grid;
 }
 
-.logOut {
+.go-to-profile-page {
     background-color: aqua;
     color: black;
     display: flex;
     justify-content: center;
-    width: 120px;
+    width: 250px;
     height: 30px;
     border-radius: 5px;
 }
+

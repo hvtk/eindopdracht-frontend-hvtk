@@ -1,12 +1,12 @@
 import React from "react";
 
-import './TheSelectedPage.css'
+import styles from './TheSelectedPage.module.css'
 
 function TheSelectedPage({children}) {
     return (
         <p
-            id="selected-page"
-            className="selectedPage"
+            id={styles['selected-page-grid']}
+            className={styles['selected-page']}
         >
             {children}
         </p>

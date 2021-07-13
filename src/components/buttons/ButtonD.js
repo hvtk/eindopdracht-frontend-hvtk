@@ -1,10 +1,10 @@
 import React from "react";
 
-import './Button.css'
+import styles from './ButtonD.module.css'
 
 function ButtonD({clickHandler, children}) {
     return (
-        <button className="button-in-search-selection-box"
+        <button className={styles['button-in-search-selection-box-with-push-to']}
                 type="button"
                 onClick={clickHandler}
         >

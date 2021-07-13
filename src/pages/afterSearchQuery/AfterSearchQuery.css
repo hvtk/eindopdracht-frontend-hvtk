@@ -5,9 +5,9 @@
     grid-template-areas:
     "border-top border-top border-top border-top border-top border-top border-top border-top border-top"
     "border-left . . . . . . . border-right"
-    "border-left go-to-profile-page go-to-profile-page . . . back-to-home back-to-home border-right"
+    "border-left go-to-profile-page-grid go-to-profile-page-grid . . . back-to-home-grid back-to-home-grid border-right"
     "border-left . . . . . . . border-right"
-    "border-left log-out log-out . . . selected-page selected-page border-right"
+    "border-left log-out-grid log-out-grid . . . selected-page-grid selected-page-grid border-right"
     "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
     "border-left . search-problems-left . web-address-box web-address-box web-address-box . border-right"

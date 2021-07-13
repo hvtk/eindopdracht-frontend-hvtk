@@ -1,12 +1,12 @@
 import React from "react";
 
-import './LogOut.css'
+import styles from './LogOut.module.css'
 
 function LogOut() {
     return (
         <div
-            id="log-out"
-            className="logOut"
+            id={styles['log-out-grid']}
+            className={styles['log-out']}
         >
             Uit loggen
         </div>

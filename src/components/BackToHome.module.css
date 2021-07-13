@@ -1,13 +1,13 @@
-.selectedPage {
+#back-to-home-grid {
+    grid-area: back-to-home-grid;
+}
+
+.back-to-home {
     background-color: aqua;
     color: black;
     display: flex;
     justify-content: center;
-    width: 250px;
+    width: 120px;
     height: 30px;
     border-radius: 5px;
-}
-
-#selected-page {
-    grid-area: selected-page;
 }

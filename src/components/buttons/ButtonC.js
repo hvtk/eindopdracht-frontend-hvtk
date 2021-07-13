@@ -1,10 +1,10 @@
 import React from "react";
 
-import './ButtonC.css'
+import styles from './ButtonC.module.css'
 
 function ButtonC({clickHandler, children}) {
     return (
-        <button className="button-in-age-selection-box"
+        <button className={styles['button-in-age-selection-box']}
                 type="button"
                 onClick={clickHandler}
                 >
