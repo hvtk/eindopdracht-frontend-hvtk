@@ -8,6 +8,7 @@ import './SignUp.css';
 import ButtonB from "../../components/buttons/ButtonB";
 
 import {AgeGroupContext} from "../../context/SearchAgeGroupContext";
+import BorderBottom from "../../components/bordersPageText/BorderBottom";
 
 function SignUp() {
     const {handleSubmit, register}= useForm();
@@ -52,9 +53,10 @@ function SignUp() {
                   </ButtonB>
               </div>
               <div id="border-right"></div>
-              <div className="layoutInputBorderBottom" id="border-bottom">
+              {/*<div className="layoutInputBorderBottom" id="border-bottom">
                   <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-              </div>
+              </div>*/}
+              <BorderBottom></BorderBottom>
               <div id="border-left"></div>
 
                   <form className="signUpBox" id="signUp-box" onSubmit={handleSubmit(onFormSubmit)}>

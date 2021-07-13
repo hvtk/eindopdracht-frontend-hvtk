@@ -7,12 +7,14 @@ import './AfterSearchQuery.css';
 
 import Button from "../../components/buttons/Button";
 import ButtonB from "../../components/buttons/ButtonB";
+import BorderBottom from "../../components/bordersPageText/BorderBottom";
 
 import imageSearchPostalcodeAge from '../../assets/images/afterSearchQuery/ImageSeachPostalcodeAge.svg';
 import BackToHome from "../../components/BackToHome";
 import TheSelectedPage from "../../components/TheSelectedPage";
 import GoToProfilePage from "../../components/GoToProfilePage";
 import LogOut from "../../components/LogOut";
+
 
 
 
@@ -57,9 +59,10 @@ function AfterSearchQuery() {
                 </ButtonB>
             </div>
             <div id="border-right"></div>
-            <div className="layoutInputBorderBottom" id="border-bottom">
+            {/*<div className="layoutInputBorderBottom" id="border-bottom">
                 <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-            </div>
+            </div>*/}
+            <BorderBottom></BorderBottom>
             <div id="border-left"></div>
             <div className="searchProblemsLeftElderly" id="search-problems-left" onSubmit={handleSubmit(onFormSubmit)}>
               <p>

@@ -1,10 +1,15 @@
 import React from "react";
 import {useForm} from "react-hook-form";
-import {Link} from "react-router-dom";
 
 import './SelectionChildren.css';
 
 import ButtonB from "../../components/buttons/ButtonB";
+import BackToHome from "../../components/BackToHome";
+import TheSelectedPage from "../../components/TheSelectedPage";
+import GoToProfilePage from "../../components/GoToProfilePage";
+import LogOut from "../../components/LogOut";
+import BorderBottom from "../../components/bordersPageText/BorderBottom";
+
 
 import phoneIcon from "../../assets/icons/callicon.svg";
 import whatsappIcon from "../../assets/icons/whattsappicon.svg";
@@ -20,10 +25,6 @@ import Autisme from "../../assets/images/selectionChildren/Autisme-coaching size
 import emotionscartoon from "../../assets/images/selectionChildren/Emotionele-problemen size.svg";
 import emotions from "../../assets/images/selectionChildren/Emotional problems.svg";
 import Lonely from "../../assets/images/selectionChildren/Lonely2.svg";
-import BackToHome from "../../components/BackToHome";
-import TheSelectedPage from "../../components/TheSelectedPage";
-import GoToProfilePage from "../../components/GoToProfilePage";
-import LogOut from "../../components/LogOut";
 
 
 function SelectionChildren() {
@@ -47,9 +48,10 @@ function SelectionChildren() {
                 </ButtonB>
             </div>
             <div id="border-right"></div>
-            <div className="layoutInputBorderBottom" id="border-bottom">
+            {/*<div className="layoutInputBorderBottom" id="border-bottom">
                 <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-            </div>
+            </div>*/}
+            <BorderBottom></BorderBottom>
             <div id="border-left"></div>
             <div className="phoneNumbers" id="phone-numbers">
                  <div className="positionTextInBoxPhoneNumbers">

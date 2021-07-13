@@ -11,6 +11,7 @@ import BackToHome from "../../components/BackToHome";
 import TheSelectedPage from "../../components/TheSelectedPage";
 import GoToProfilePage from "../../components/GoToProfilePage";
 import LogOut from "../../components/LogOut";
+import BorderBottom from "../../components/bordersPageText/BorderBottom";
 
 import phoneIcon from "../../assets/icons/callicon.svg";
 import whatsappIcon from "../../assets/icons/whattsappicon.svg";
@@ -41,9 +42,10 @@ function SelectionAdults() {
                 </ButtonB>
             </div>
             <div id="border-right"></div>
-            <div className="layoutInputBorderBottom" id="border-bottom">
+            {/*<div className="layoutInputBorderBottom" id="border-bottom">
                 <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-            </div>
+            </div>*/}
+            <BorderBottom></BorderBottom>
             <div id="border-left"></div>
 
             <div className="phoneNumbers" id="phone-numbers">

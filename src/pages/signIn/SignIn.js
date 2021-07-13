@@ -9,6 +9,7 @@ import { AuthContext } from "../../context/AuthenticationContext";
 import {AgeGroupContext} from "../../context/SearchAgeGroupContext";
 
 import ButtonB from "../../components/buttons/ButtonB";
+import BorderBottom from "../../components/bordersPageText/BorderBottom";
 
 function SignIn() {
     const { login } = useContext(AuthContext);
@@ -57,9 +58,10 @@ function SignIn() {
               </ButtonB>
           </div>
           <div id="border-right"></div>
-          <div className="layoutInputBorderBottom" id="border-bottom">
+            {/*<div className="layoutInputBorderBottom" id="border-bottom">
               <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-          </div>
+          </div>*/}
+          <BorderBottom></BorderBottom>
           <div id="border-left"></div>
 
           <form className="signInBox" id="signIn-box" onSubmit={handleSubmit(onFormSubmit)}>

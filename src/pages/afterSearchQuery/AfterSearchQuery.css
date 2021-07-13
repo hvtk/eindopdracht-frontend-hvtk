@@ -31,10 +31,10 @@
     background-color: #A1EF80;
 }
 
-#border-bottom {
+{/* #border-bottom {
     grid-area: border-bottom;
     background-color: #A1EF80;
-}
+}*/}
 
 #border-right{
     grid-area: border-right;
@@ -65,7 +65,7 @@
     grid-area: age-box;
 }
 
-#selected-page {
+{/*#selected-page {
     grid-area: selected-page;
 }
 
@@ -79,7 +79,7 @@
 
 #log-out {
     grid-area: log-out;
-}
+}*/}
 
 .layoutInputBorderTop {
     background-color: aqua;
@@ -89,13 +89,13 @@
     align-items: center;
 }
 
-.layoutInputBorderBottom {
+{/*.layoutInputBorderBottom {
     background-color: aqua;
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+}*/}
 
 .searchProblemsLeftElderly {
     background-color: #D710EE;
@@ -157,7 +157,7 @@
     width: 388px;
 }
 
-.backToHome {
+{/*.backToHome {
     background-color: aqua;
     color: black;
     display: flex;
@@ -195,7 +195,7 @@
     width: 120px;
     height: 30px;
     border-radius: 5px;
-}
+}*/}
 
 
 

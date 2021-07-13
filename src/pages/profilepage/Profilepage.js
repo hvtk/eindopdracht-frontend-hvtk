@@ -9,6 +9,7 @@ import './Profilepage.css';
 import {AuthContext} from "../../context/AuthenticationContext";
 
 import ButtonB from "../../components/buttons/ButtonB";
+import BorderBottom from "../../components/bordersPageText/BorderBottom";
 
 function Profilepage() {
 
@@ -54,9 +55,10 @@ function Profilepage() {
                 </ButtonB>
             </div>
             <div id="border-right"></div>
-            <div className="layoutInputBorderBottom" id="border-bottom">
+              {/*<div className="layoutInputBorderBottom" id="border-bottom">
               <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-            </div>
+            </div>*/}
+            <BorderBottom></BorderBottom>
             <div id="border-left"></div>
             <div className="profileBox" id="profile-box">
               <h3> Profielpagina </h3>

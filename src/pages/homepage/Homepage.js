@@ -8,12 +8,11 @@ import {AgeGroupContext} from "../../context/SearchAgeGroupContext"
 
 import ButtonB from "../../components/buttons/ButtonB";
 import ButtonC from "../../components/buttons/ButtonC";
+import BorderBottom from "../../components/bordersPageText/BorderBottom";
 
 import phoneIcon from '../../assets/icons/callicon.svg'
 import chatIcon from'../../assets/icons/chaticon.svg'
 import whatsappIcon from '../../assets/icons/whattsappicon.svg'
-
-
 
 function Homepage() {
 const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(AgeGroupContext);
@@ -38,9 +37,10 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
                 </ButtonB>
             </div>
             <div id="border-right"></div>
-            <div className="layoutInputBorderBottom" id="border-bottom">
+            {/*<div className="layoutInputBorderBottom" id="border-bottom">
                 <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-            </div>
+            </div>*/}
+            <BorderBottom></BorderBottom>
             <div id="border-left"></div>
 
             <div className="phoneNumbers" id="phone-numbers">

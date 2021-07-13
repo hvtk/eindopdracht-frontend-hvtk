@@ -27,10 +27,10 @@
     background-color: #A1EF80;
 }
 
-#border-bottom {
+{/*#border-bottom {
     grid-area: border-bottom;
     background-color: #A1EF80;
-}
+}*/}
 
 #border-right{
     grid-area: border-right;
@@ -70,13 +70,13 @@
     align-items: center;
 }
 
-.layoutInputBorderBottom {
+{/*.layoutInputBorderBottom {
     background-color: aqua;
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+}*/}
 
 .phoneNumbers {
     background-color: #D710EE;

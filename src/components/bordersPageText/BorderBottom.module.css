@@ -1,0 +1,12 @@
+#border-bottom {
+    grid-area: border-bottom;
+    background-color: #A1EF80;
+}
+
+.layout-input-border-bottom {
+    background-color: aqua;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
