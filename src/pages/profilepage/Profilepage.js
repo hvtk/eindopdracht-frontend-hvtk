@@ -18,20 +18,35 @@ function Profilepage() {
 
     const {handleSubmit, register} = useForm();
 
-    const [images, setImages] = useState([]);
-    const maxNumber = 69;
-    const onChange = (imageList, addUpdateIndex) => {
-        console.log(imageList, addUpdateIndex);
-        setImages(imageList);
-    };
+    // const [images, setImages] = useState([]);
+    // const maxNumber = 69;
+    // const onChange = (imageList, addUpdateIndex) => {
+    //     console.log(imageList, addUpdateIndex);
+    //     setImages(imageList);
+    // };
 
     async function onFormSubmitFile(data) {
         console.log(data);
         try {
 
-            const result = await axios.post(`https://localhost:8443/users/signup`,{
-                onImageUpload:data.imageList,
-            })
+            // Stel multipart form data samen
+            const formData = new FormData();
+            formData.append('file', data.avatar[0])
+
+            // Configureer de headers voor de POST request
+            const config = {
+                headers: {
+                    'content-type': 'multipart/form-data',
+                    'Authorization': `Bearer ${user.jwt}` // Voeg JWT toe, dit geeft toegang tot het uploaden van de foto
+                }
+            }
+
+            // Stuur multipart form
+            const result = await axios.post(`https://localhost:8443/users/${user.username}/avatar`, formData, config);
+
+            // const result = await axios.post(`https://localhost:8443/users/${user.username}/avatar`,{
+            //     file:data.avatar[0],
+            // })
         } catch(e) {
             console.error(e)
         }
@@ -63,46 +78,55 @@ function Profilepage() {
             <div className="profileBox" id="profile-box">
               <h3> Profielpagina </h3>
               <h4> Profielfoto: </h4>
-                <div onSubmit={handleSubmit(onFormSubmitFile)} >
-                    <ImageUploading
-                        multiple
-                        value={images}
-                        onChange={onChange}
-                        maxNumber={maxNumber}
-                        dataURLKey="data_url"
-                    >
-                        {({
-                              imageList,
-                              onImageUpload,
-                              onImageRemoveAll,
-                              onImageUpdate,
-                              onImageRemove,
-                              isDragging,
-                              dragProps
-                          }) => (
-                            <div>
-                                <button
-                                    style={isDragging ? {color: "red" } : null}
-                                    onClick={onImageUpload}
-                                    {...dragProps}
-                                >
-                                    Click or Drop here
-                                </button>
-                                &nbsp;
-                                <button onClick={onImageRemoveAll}> Remove all Images </button>
-                                {imageList.map((image, index) => (
-                                    <div key={index}>
-                                        <img className="upload-image-size" src={image.data_url} alt=""/>
-                                        <div>
-                                            <button onClick={() => onImageUpdate(index)}> Update </button>
-                                            <button onClick={() => onImageRemove(index)}> Remove </button>
-                                            <button type="Submit"> Safe file to database </button>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                    </ImageUploading>
+                <div>
+                    {/*Formulier om avatar te uploaden, en om afbeelding te tonen*/}
+                    <img src={`https://localhost:8443/users/${user.username}/avatar`} />
+                    <form onSubmit={handleSubmit(onFormSubmitFile)} >
+                    <input type="file" name="avatar" {...register("avatar")}/>
+                        Afbeelding mag niet groter zijn dan 1 MB. Afbeelding moet van type JPG zijn.
+
+                    <input type="submit" value="Sla op"/>
+
+                    {/*<ImageUploading*/}
+                    {/*    multiple*/}
+                    {/*    value={images}*/}
+                    {/*    onChange={onChange}*/}
+                    {/*    maxNumber={maxNumber}*/}
+                    {/*    dataURLKey="data_url"*/}
+                    {/*>*/}
+                    {/*    {({*/}
+                    {/*          imageList,*/}
+                    {/*          onImageUpload,*/}
+                    {/*          onImageRemoveAll,*/}
+                    {/*          onImageUpdate,*/}
+                    {/*          onImageRemove,*/}
+                    {/*          isDragging,*/}
+                    {/*          dragProps*/}
+                    {/*      }) => (*/}
+                    {/*        <div>*/}
+                    {/*            <button*/}
+                    {/*                style={isDragging ? {color: "red" } : null}*/}
+                    {/*                onClick={onImageUpload}*/}
+                    {/*                {...dragProps}*/}
+                    {/*            >*/}
+                    {/*                Click or Drop here*/}
+                    {/*            </button>*/}
+                    {/*            &nbsp;*/}
+                    {/*            <button onClick={onImageRemoveAll}> Remove all Images </button>*/}
+                    {/*            {imageList.map((image, index) => (*/}
+                    {/*                <div key={index}>*/}
+                    {/*                    <img className="upload-image-size" src={image.data_url} alt=""/>*/}
+                    {/*                    <div>*/}
+                    {/*                        <button onClick={() => onImageUpdate(index)}> Update </button>*/}
+                    {/*                        <button onClick={() => onImageRemove(index)}> Remove </button>*/}
+                    {/*                        <button type="Submit"> Save file to database </button>*/}
+                    {/*                    </div>*/}
+                    {/*                </div>*/}
+                    {/*            ))}*/}
+                    {/*        </div>*/}
+                    {/*    )}*/}
+                    {/*</ImageUploading>*/}
+                    </form>
                 </div>
               <p> <h4> Gebruikersnaam: </h4> {user && user.username} </p>
               <p> <h4> Postcode: </h4> {user && user.postalCode} </p>

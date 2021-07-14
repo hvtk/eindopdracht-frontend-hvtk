@@ -34,7 +34,7 @@ function AuthContextProvider({children}) {
                     username: result.data.username,
                     age: result.data.age,
                     postalCode: result.data.postalCode,
-                    jwt: result.data.jwt,
+                    jwt: jwtToken,
                 },
                 status: "done"
             })
