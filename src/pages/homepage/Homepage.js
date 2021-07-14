@@ -12,6 +12,7 @@ import BorderBottom from "../../components/bordersPageText/BorderBottom";
 import phoneIcon from '../../assets/icons/callicon.svg'
 import chatIcon from'../../assets/icons/chaticon.svg'
 import whatsappIcon from '../../assets/icons/whattsappicon.svg'
+import ButtonC from "../../components/buttons/ButtonC";
 
 function Homepage() {
 const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(AgeGroupContext);
@@ -78,7 +79,15 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
 
                 <h4> Kies de leeftijdsgroep </h4>
 
-                <button className="button-in-age-selection-box"
+                <ButtonC
+                    clickHandler={() => {
+                        setSelectedAgeGroupForContext('KINDEREN');
+                        history.push("/signup");
+                    }}
+                >
+                    KINDEREN
+                </ButtonC>
+                {/*<button className="button-in-age-selection-box"
                     type="button"
                     onClick={() => {
                       setSelectedAgeGroupForContext('KINDEREN');
@@ -86,8 +95,16 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
                     }}
                     >
                     KINDEREN
-                </button>
-                <button className="button-in-age-selection-box"
+                </button>*/}
+                <ButtonC
+                    clickHandler={() => {
+                        setSelectedAgeGroupForContext('JONGEREN');
+                        history.push("/signup");
+                    }}
+                >
+                    JONGEREN
+                </ButtonC>
+                {/* <button className="button-in-age-selection-box"
                     type="button"
                     onClick={() => {
                       setSelectedAgeGroupForContext('JONGEREN');
@@ -95,8 +112,16 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
                     }}
                     >
                     JONGEREN
-                </button>
-                <button className="button-in-age-selection-box"
+                </button>*/}
+                <ButtonC
+                    clickHandler={() => {
+                    setSelectedAgeGroupForContext('VOLWASSENEN');
+                    history.push("/signup");
+                }}
+                    >
+                    VOLWASSENEN
+                </ButtonC>
+                {/* <button className="button-in-age-selection-box"
                    type="button"
                    onClick={() => {
                        setSelectedAgeGroupForContext('VOLWASSENEN');
@@ -104,8 +129,16 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
                    }}
                    >
                    VOLWASSENEN
-                </button>
-                <button className="button-in-age-selection-box"
+                </button>*/}
+                <ButtonC
+                    clickHandler={() => {
+                        setSelectedAgeGroupForContext('OUDEREN');
+                        history.push("/signup");
+                    }}
+                >
+                    OUDEREN
+                </ButtonC>
+                {/* <button className="button-in-age-selection-box"
                    type="button"
                    onClick={() => {
                        setSelectedAgeGroupForContext('OUDEREN');
@@ -113,7 +146,7 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
                    }}
                    >
                    OUDEREN
-                </button>
+                </button>*/}
             </div>
         </div>
       </>

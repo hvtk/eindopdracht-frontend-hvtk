@@ -1,0 +1,9 @@
+.button-in-age-selection-box {
+    background-color: #CDD32B;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 241px;
+    height: 53px;
+}
