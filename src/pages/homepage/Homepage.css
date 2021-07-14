@@ -22,12 +22,12 @@
     background-color: #A1EF80;
 }
 
-{/* #border-bottom {
+#border-bottom {
     grid-area: border-bottom;
     background-color: #A1EF80;
-}*/}
+}
 
-#border-right{
+#border-right {
     grid-area: border-right;
     background-color: #A1EF80;
 }
@@ -57,13 +57,13 @@
     border-radius: 10px;
 }
 
-.layoutInputBorderTop {
+{/*.layoutInputBorderTop {
     background-color: aqua;
     color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
+}*/}
 
 {/*.layoutInputBorderBottom {
     background-color: aqua;
@@ -112,7 +112,15 @@ img {
     margin-top: 65px;
 }
 
-
+.button-in-age-selection-box {
+    background-color: #CDD32B;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 241px;
+    height: 53px;
+}
 
 
 

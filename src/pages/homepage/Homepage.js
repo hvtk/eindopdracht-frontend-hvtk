@@ -7,7 +7,6 @@ import './Homepage.css';
 import {AgeGroupContext} from "../../context/SearchAgeGroupContext"
 
 import ButtonB from "../../components/buttons/ButtonB";
-import ButtonC from "../../components/buttons/ButtonC";
 import BorderBottom from "../../components/bordersPageText/BorderBottom";
 
 import phoneIcon from '../../assets/icons/callicon.svg'
@@ -79,38 +78,42 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
 
                 <h4> Kies de leeftijdsgroep </h4>
 
-                <ButtonC
-                    clickHandler={() => {
+                <button className="button-in-age-selection-box"
+                    type="button"
+                    onClick={() => {
                       setSelectedAgeGroupForContext('KINDEREN');
                       history.push("/signup");
                     }}
                     >
                     KINDEREN
-                </ButtonC>
-                <ButtonC
-                    clickHandler={() => {
+                </button>
+                <button className="button-in-age-selection-box"
+                    type="button"
+                    onClick={() => {
                       setSelectedAgeGroupForContext('JONGEREN');
                       history.push("/signup");
                     }}
                     >
                     JONGEREN
-                </ButtonC>
-                <ButtonC
-                   clickHandler={() => {
+                </button>
+                <button className="button-in-age-selection-box"
+                   type="button"
+                   onClick={() => {
                        setSelectedAgeGroupForContext('VOLWASSENEN');
                        history.push("/signup");
                    }}
                    >
                    VOLWASSENEN
-                </ButtonC>
-                <ButtonC
-                   clickHandler={() => {
+                </button>
+                <button className="button-in-age-selection-box"
+                   type="button"
+                   onClick={() => {
                        setSelectedAgeGroupForContext('OUDEREN');
                        history.push("/signup");
                    }}
                    >
                    OUDEREN
-                </ButtonC>
+                </button>
             </div>
         </div>
       </>
