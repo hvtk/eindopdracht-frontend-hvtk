@@ -69,9 +69,14 @@ function Profilepage() {
                     {/*Formulier om avatar te uploaden, en om afbeelding te tonen*/}
                     <img className="upload-image-size" src={`https://localhost:8443/users/${user.username}/avatar`} />
                     <form className="file-upload" onSubmit={handleSubmit(onFormSubmitFile)} >
-                    <input type="file" name="avatar" {...register("avatar")}/>
-                        <p> Image max. 1 MB van type JPG </p>
-                    <input type="submit" value="Sla op"/>
+                      <input
+                          type="file"
+                          name="avatar"
+                          {...register("avatar")}/>
+                      <p> Image max. 1 MB van type JPG </p>
+                      <ButtonB>
+                          Sla op
+                      </ButtonB>
                     </form>
                 </div>
               <p> <h4> Gebruikersnaam: </h4> {user && user.username} </p>
