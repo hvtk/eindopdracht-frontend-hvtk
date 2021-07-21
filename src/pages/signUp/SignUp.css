@@ -1,4 +1,4 @@
-.signUpLayout {
+.sign-up-layout {
     display: grid;
     grid-template-columns: 60px 35px 490px 35px 750px 35px 490px 35px 60px;
     grid-template-rows: 60px 45px 60px 45px 660px 45px 60px 45px 60px;
@@ -6,9 +6,9 @@
     "border-top border-top border-top border-top border-top border-top border-top border-top border-top"
     "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
-    "border-left . . . picture-signUp picture-signUp picture-signUp . border-right"
-    "border-left . signUp-box . picture-signUp picture-signUp picture-signUp . border-right"
-    "border-left . . . picture-signUp picture-signUp picture-signUp . border-right"
+    "border-left . . . picture-sign-up-grid picture-sign-up-grid picture-sign-up-grid . border-right"
+    "border-left . sign-up-box-grid . picture-sign-up-grid picture-sign-up-grid picture-sign-up-grid . border-right"
+    "border-left . . . picture-sign-up-grid picture-sign-up-grid picture-sign-up-grid . border-right"
     "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
     "border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom";
@@ -24,22 +24,22 @@
     background-color: #A1EF80;
 }
 
-{/*#border-bottom {
-    grid-area: border-bottom;
-    background-color: #A1EF80;
-}*/}
-
 #border-right{
     grid-area: border-right;
     background-color: #A1EF80;
 }
 
-#signUp-box {
-    grid-area: signUp-box;
+#sign-up-box-grid {
+    grid-area: sign-up-box-grid;
     background-color: #CA4564;
 }
 
-.signUpBox {
+#picture-sign-up-grid {
+    grid-area: picture-sign-up-grid;
+    background-color: #CA4564;
+}
+
+.sign-up-box {
     background-color: #D710EE;
     display: flex;
     flex-direction: column;
@@ -48,12 +48,7 @@
     border-radius: 50px;
 }
 
-#picture-signUp {
-    grid-area: picture-signUp;
-    background-color: #CA4564;
-}
-
-.pictureSignUp {
+.picture-sign-up {
     background-color: #D710EE;
     background-image: url("ImageSignUp.svg");
     background-size: cover;
@@ -63,18 +58,10 @@
     border-radius: 10px;
 }
 
-.layoutInputBorderTop {
+.layout-input-border-top {
     background-color: aqua;
     color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
-{/*.layoutInputBorderBottom {
-    background-color: aqua;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/}
