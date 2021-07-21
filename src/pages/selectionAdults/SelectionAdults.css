@@ -1,4 +1,4 @@
-.selectionAdultsLayout {
+.selection-adults-layout {
     display: grid;
     grid-template-columns: 60px 35px 490px 35px 750px 35px 490px 35px 60px;
     grid-template-rows: 60px 10px 40px 5px 40px 10px 45px 80px 500px 80px 105px 45px 60px;
@@ -10,9 +10,9 @@
     "border-left log-out-grid log-out-grid . . . selected-page-grid selected-page-grid border-right"
     "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
-    "border-left . phone-numbers . . . search-problems-right . border-right"
-    "border-left . phone-numbers . picture-adults . search-problems-right . border-right"
-    "border-left . phone-numbers . . . search-problems-right . border-right"
+    "border-left . phone-numbers-grid . . . search-problems-right-grid . border-right"
+    "border-left . phone-numbers-grid . picture-adults-grid . search-problems-right-grid . border-right"
+    "border-left . phone-numbers-grid . . . search-problems-right-grid . border-right"
     "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
     "border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom";
@@ -28,45 +28,24 @@
     background-color: #A1EF80;
 }
 
-{/*#border-bottom {
-    grid-area: border-bottom;
-    background-color: #A1EF80;
-}*/}
-
 #border-right {
     grid-area: border-right;
     background-color: #A1EF80;
 }
 
-#phone-numbers {
+#phone-numbers-grid {
     grid-area: phone-numbers;
 }
 
-#search-problems-right {
-    grid-area: search-problems-right;
+#search-problems-right-grid {
+    grid-area: search-problems-right-grid;
 }
 
-#picture-adults {
-    grid-area: picture-adults;
+#picture-adults-grid {
+    grid-area: picture-adults-grid;
 }
 
-{/* #selected-page {
-    grid-area: selected-page;
-} */}
-
-{/* #back-to-home {
-    grid-area: back-to-home;
-} */}
-
-{/* #go-to-profile-page {
-    grid-area: go-to-profile-page;
-} */}
-
-{/* #log-out {
-    grid-area: log-out;
-} */}
-
-.layoutInputBorderTop {
+.layout-input-border-top {
     background-color: aqua;
     color: white;
     display: flex;
@@ -74,15 +53,7 @@
     align-items: center;
 }
 
-{/*.layoutInputBorderBottom {
-    background-color: aqua;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/}
-
-.phoneNumbers {
+.phone-numbers {
     background-color: #D710EE;
     display: flex;
     flex-direction: row;
@@ -92,17 +63,17 @@
     border-radius: 50px;
 }
 
-.positionTextInBoxPhoneNumbers {
+.position-text-in-box-phone-numbers {
     margin-left: 20px;
     margin-top: 65px;
 }
 
-img {
+.img {
     width: 28px;
     height: 28px;
 }
 
-.pictureAdults {
+.picture-adults {
     background-color: #D710EE;
     background-image: url("ImageAdults.svg");
     background-size: cover;
@@ -113,7 +84,7 @@ img {
     border-radius: 10px;
 }
 
-.searchProblemsRight {
+.search-problems-right {
     background-color: #D710EE;
     display: flex;
     flex-direction: column;
@@ -121,52 +92,11 @@ img {
     border-radius: 50px
 }
 
-.searchSelectionBox {
+.search-selection-box {
     background-color: #CDD32B;
     border-radius: 10px;
     width: 440px;
     height: 40px;
 }
-
-{/*.backToHome {
-    background-color: aqua;
-    color: black;
-    display: flex;
-    justify-content: center;
-    width: 120px;
-    height: 30px;
-    border-radius: 5px;
-} */}
-
-{/* .selectedPage {
-    background-color: aqua;
-    color: black;
-    display: flex;
-    justify-content: center;
-    width: 200px;
-    height: 30px;
-    border-radius: 5px;
-} */}
-
-{/* .goToProfilePage {
-    background-color: aqua;
-    color: black;
-    display: flex;
-    justify-content: center;
-    width: 250px;
-    height: 30px;
-    border-radius: 5px;
-} */}
-
-{/* .logOut {
-    background-color: aqua;
-    color: black;
-    display: flex;
-    justify-content: center;
-    width: 120px;
-    height: 30px;
-    border-radius: 5px;
-} */}
-
 
 

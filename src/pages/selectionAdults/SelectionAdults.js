@@ -32,8 +32,8 @@ function SelectionAdults() {
 
     return (
      <>
-        <div className="selectionAdultsLayout">
-            <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
+        <div className="selection-adults-layout">
+            <div className="layout-input-border-top" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
                 <ButtonB>
                     Voorlezen
                 </ButtonB>
@@ -42,14 +42,11 @@ function SelectionAdults() {
                 </ButtonB>
             </div>
             <div id="border-right"></div>
-            {/*<div className="layoutInputBorderBottom" id="border-bottom">
-                <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-            </div>*/}
             <BorderBottom></BorderBottom>
             <div id="border-left"></div>
 
-            <div className="phoneNumbers" id="phone-numbers">
-                <span className="positionTextInBoxPhoneNumbers">
+            <div className="phone-numbers" id="phone-numbers-grid">
+                <span className="position-text-in-box-phone-numbers">
                     <img src={phoneIcon} alt=""/>  112 <br/>
                     <span> bij levensbedrijgende situaties</span>
                     <br/>
@@ -72,8 +69,8 @@ function SelectionAdults() {
                     <span> @ease praten over gevoelens? (12 tot 25 jaar) </span>
                 </span>
             </div>
-            <div className="pictureAdults" id="picture-adults"> </div>
-            <div className="searchProblemsRight" id="search-problems-right" onSubmit={handleSubmit(onFormSubmit)}>
+            <div className="picture-adults" id="picture-adults-grid"> </div>
+            <div className="search-problems-right" id="search-problems-right-grid" onSubmit={handleSubmit(onFormSubmit)}>
                 <p>
                    <Button>
                       Zoeken
@@ -120,15 +117,12 @@ function SelectionAdults() {
                    </Button>
                 </p>
             </div>
-            {/* <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div> */}
+
             <BackToHome></BackToHome>
-            {/* <div id="selected-page" className="selectedPage"> VOLWASSENEN-PAGINA </div> */}
             <TheSelectedPage>
                 VOLWASSENEN-PAGINA
             </TheSelectedPage>
-            {/* <div id="go-to-profile-page" className="goToProfilePage"> <Link to="/profile"> Ga naar de profielpagina </Link> </div> */}
             <GoToProfilePage></GoToProfilePage>
-            {/* <div id="log-out" className="logOut"> Uit loggen </div> */}
             <LogOut></LogOut>
         </div>
      </>
