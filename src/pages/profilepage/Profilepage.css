@@ -1,4 +1,4 @@
-.profilePageLayout {
+.profile-page-layout {
     display: grid;
     grid-template-columns: 60px 35px 490px 35px 750px 35px 490px 35px 60px;
     grid-template-rows: 60px 45px 60px 45px 660px 45px 60px 45px 60px;
@@ -6,9 +6,9 @@
     "border-top border-top border-top border-top border-top border-top border-top border-top border-top"
     "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
-    "border-left . . . picture-profile-background picture-profile-background picture-profile-background . border-right"
-    "border-left . profile-box . picture-profile-background picture-profile-background picture-profile-background . border-right"
-    "border-left . . . picture-profile-background picture-profile-background picture-profile-background . border-right"
+    "border-left . . . picture-profile-background-grid picture-profile-background-grid picture-profile-background-grid . border-right"
+    "border-left . profile-box-grid . picture-profile-background-grid picture-profile-background-grid picture-profile-background-grid . border-right"
+    "border-left . . . picture-profile-background-grid picture-profile-background-grid picture-profile-background-grid . border-right"
     "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
     "border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom";
@@ -24,27 +24,22 @@
     background-color: #A1EF80;
 }
 
-{/*#border-bottom {
-    grid-area: border-bottom;
-    background-color: #A1EF80;
-}*/}
-
 #border-right{
     grid-area: border-right;
     background-color: #A1EF80;
 }
 
-#profile-box {
-    grid-area: profile-box;
+#profile-box-grid {
+    grid-area: profile-box-grid;
     background-color: #CA4564;
 }
 
-#picture-profile-background {
-    grid-area: picture-profile-background;
+#picture-profile-background-grid {
+    grid-area: picture-profile-background-grid;
     background-color: #CA4564;
 }
 
-.profileBox {
+.profile-box {
     background-color: #D710EE;
     display: flex;
     flex-direction: column;
@@ -53,7 +48,7 @@
     border-radius: 50px;
 }
 
-.pictureProfileBackground {
+.picture-profile-background {
     background-color: #D710EE;
     background-image: url("ImageProfile.svg");
     background-size: cover;
@@ -63,21 +58,13 @@
     border-radius: 10px;
 }
 
-.layoutInputBorderTop {
+.layout-input-border-top {
     background-color: aqua;
     color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
-{/*.layoutInputBorderBottom {
-    background-color: aqua;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/}
 
 .upload-image-size {
     width: 80px;

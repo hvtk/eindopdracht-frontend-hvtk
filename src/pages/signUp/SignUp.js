@@ -5,9 +5,9 @@ import axios from "axios";
 
 import './SignUp.css';
 
-import ButtonB from "../../components/buttons/ButtonB";
-
 import {AgeGroupContext} from "../../context/SearchAgeGroupContext";
+
+import ButtonB from "../../components/buttons/ButtonB";
 import BorderBottom from "../../components/bordersPageText/BorderBottom";
 
 function SignUp() {
@@ -43,8 +43,8 @@ function SignUp() {
 
     return (
       <>
-          <div className="signUpLayout">
-              <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onSubmitReadout)}>
+          <div className="sign-up-layout">
+              <div className="layout-input-border-top" id="border-top" onSubmit={handleSubmit(onSubmitReadout)}>
                   <ButtonB>
                       Voorlezen
                   </ButtonB>
@@ -53,13 +53,10 @@ function SignUp() {
                   </ButtonB>
               </div>
               <div id="border-right"></div>
-              {/*<div className="layoutInputBorderBottom" id="border-bottom">
-                  <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-              </div>*/}
               <BorderBottom></BorderBottom>
               <div id="border-left"></div>
 
-                  <form className="signUpBox" id="signUp-box" onSubmit={handleSubmit(onFormSubmit)}>
+                  <form className="sign-up-box" id="sign-up-box-grid" onSubmit={handleSubmit(onFormSubmit)}>
                      <h3> registreren </h3>
                      <h4> Postcode: </h4>
                      <label htmlFor="postalCode-field">
@@ -110,7 +107,7 @@ function SignUp() {
                           placeholder="herhaal-wachtwoord"
                           {...register("repeatPassword")}
                          />
-                     </label>*
+                     </label>
                      <br/>
                      <ButtonB>
                         Registreren
@@ -120,7 +117,7 @@ function SignUp() {
 
                      {authenticateSucces === true && <p> Registreren is gelukt! Je wordt nu doorgestuurd naar de inlogpagina</p>}
                   </form>
-              <div className="pictureSignUp" id="picture-signUp"></div>
+              <div className="picture-sign-up" id="picture-sign-up-grid"></div>
           </div>
       </>
     );

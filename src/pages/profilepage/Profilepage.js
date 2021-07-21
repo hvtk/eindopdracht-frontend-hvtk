@@ -21,19 +21,16 @@ function Profilepage() {
         console.log(data);
         try {
 
-            // Stel multipart form data samen
             const formData = new FormData();
             formData.append('file', data.avatar[0])
 
-            // Configureer de headers voor de POST request
             const config = {
                 headers: {
                     'content-type': 'multipart/form-data',
-                    'Authorization': `Bearer ${user.jwt}` // Voeg JWT toe, dit geeft toegang tot het uploaden van de foto
+                    'Authorization': `Bearer ${user.jwt}`
                 }
             }
 
-            // Stuur multipart form
             const result = await axios.post(`https://localhost:8443/users/${user.username}/avatar`, formData, config);
 
         } catch(e) {
@@ -47,8 +44,8 @@ function Profilepage() {
 
     return (
         <>
-          <div className="profilePageLayout">
-            <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
+          <div className="profile-page-layout">
+            <div className="layout-input-border-top" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
                 <ButtonB>
                     Voorlezen
                 </ButtonB>
@@ -57,16 +54,12 @@ function Profilepage() {
                 </ButtonB>
             </div>
             <div id="border-right"></div>
-              {/*<div className="layoutInputBorderBottom" id="border-bottom">
-              <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-            </div>*/}
             <BorderBottom></BorderBottom>
             <div id="border-left"></div>
-            <div className="profileBox" id="profile-box">
+            <div className="profile-box" id="profile-box-grid">
               <h3> Profielpagina </h3>
               <h4> Profielfoto: </h4>
                 <div className="file-upload">
-                    {/*Formulier om avatar te uploaden, en om afbeelding te tonen*/}
                     <img className="upload-image-size" src={`https://localhost:8443/users/${user.username}/avatar`} />
                     <form className="file-upload" onSubmit={handleSubmit(onFormSubmitFile)} >
                       <input
@@ -84,10 +77,9 @@ function Profilepage() {
               <p> <h4> Leeftijd: </h4> {user && user.age} </p>
               <h5>Terug naar de <Link to="/">Startpagina</Link> </h5>
             </div>
-            <div className="pictureProfileBackground" id="picture-profile-background"> </div>
+            <div className="picture-profile-background" id="picture-profile-background-grid"> </div>
           </div>
         </>
-
     )
 }
 
