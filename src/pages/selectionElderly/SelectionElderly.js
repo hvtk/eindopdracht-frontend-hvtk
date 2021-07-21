@@ -1,23 +1,20 @@
 import React from "react";
 import {useForm} from "react-hook-form";
-import {Link} from "react-router-dom";
 
 import './SelectionElderly.css';
 
 import Button from "../../components/buttons/Button";
 import ButtonB from "../../components/buttons/ButtonB";
-
-import elderly from '../../assets/images/selectionElderly/ImageElderly.svg';
-import phoneIcon from "../../assets/icons/callicon.svg";
-import whatsappIcon from "../../assets/icons/whattsappicon.svg";
-import chatIcon from "../../assets/icons/chaticon.svg";
 import BackToHome from "../../components/BackToHome";
 import TheSelectedPage from "../../components/TheSelectedPage";
 import GoToProfilePage from "../../components/GoToProfilePage";
 import LogOut from "../../components/LogOut";
 import BorderBottom from "../../components/bordersPageText/BorderBottom";
 
-
+import elderly from '../../assets/images/selectionElderly/ImageElderly.svg';
+import phoneIcon from "../../assets/icons/callicon.svg";
+import whatsappIcon from "../../assets/icons/whattsappicon.svg";
+import chatIcon from "../../assets/icons/chaticon.svg";
 
 function SelectionElderly() {
 
@@ -33,8 +30,8 @@ function SelectionElderly() {
 
     return (
 
-        <div className="selectionElderlyLayout">
-            <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
+        <div className="selection-elderly-layout">
+            <div className="layout-input-border-top" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
                 <ButtonB>
                     Voorlezen
                 </ButtonB>
@@ -43,14 +40,11 @@ function SelectionElderly() {
                 </ButtonB>
             </div>
             <div id="border-right"></div>
-            {/*<div className="layoutInputBorderBottom" id="border-bottom">
-                <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-            </div>*/}
             <BorderBottom></BorderBottom>
             <div id="border-left"></div>
-            <div className="pictureElderly" id="picture-elderly"> <img className="imageElderly" src={elderly} alt=""/></div>
-            <div className="phoneNumbers" id="phone-numbers">
-                  <span className="positionTextInBoxPhoneNumbers">  <img src={phoneIcon} alt=""/>  112 <br/>
+            <div className="picture-elderly" id="picture-elderly-grid"> <img className="imageElderly" src={elderly} alt=""/></div>
+            <div className="phone-numbers" id="phone-numbers-grid">
+                  <span className="position-text-in-box-phone-numbers">  <img src={phoneIcon} alt=""/>  112 <br/>
                     <span> bij levensbedrijgende situaties</span>
                     <br/>
                     <img src={phoneIcon} alt=""/> 113 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
@@ -66,7 +60,7 @@ function SelectionElderly() {
                     <span> ouderen infolijn (van seniorenorganisatie KBO-PCOB)</span>
                  </span>
             </div>
-            <div className="searchProblemsRight" id="search-problems-right" onSubmit={handleSubmit(onFormSubmit)}>
+            <div className="search-problems-right" id="search-problems-right-grid" onSubmit={handleSubmit(onFormSubmit)}>
               <p>
                 <Button>
                     Zoeken
@@ -99,10 +93,6 @@ function SelectionElderly() {
                 </Button>
               </p>
             </div>
-            {/* <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>
-            <div id="selected-page" className="selectedPage"> OUDEREN-PAGINA </div>
-            <div id="go-to-profile-page" className="goToProfilePage"> <Link to="/profile"> Ga naar de profielpagina </Link> </div>
-            <div id="log-out" className="logOut"> Uit loggen </div> */}
             <BackToHome></BackToHome>
             <TheSelectedPage>
                 OUDEREN-PAGINA
@@ -112,8 +102,6 @@ function SelectionElderly() {
         </div>
     )
 }
-
-
 
 export default SelectionElderly;
 
