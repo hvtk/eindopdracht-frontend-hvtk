@@ -1,4 +1,4 @@
-.signInLayout {
+.sign-in-layout {
     display: grid;
     grid-template-columns: 60px 35px 490px 35px 750px 35px 490px 35px 60px;
     grid-template-rows: 60px 45px 60px 45px 660px 45px 60px 45px 60px;
@@ -6,9 +6,9 @@
     "border-top border-top border-top border-top border-top border-top border-top border-top border-top"
     "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
-    "border-left . . . picture-signIn picture-signIn picture-signIn . border-right"
-    "border-left . signIn-box . picture-signIn picture-signIn picture-signIn . border-right"
-    "border-left . . . picture-signIn picture-signIn picture-signIn . border-right"
+    "border-left . . . picture-sign-in-grid picture-sign-in-grid picture-sign-in-grid . border-right"
+    "border-left . sign-in-box-grid . picture-sign-in-grid picture-sign-in-grid picture-sign-in-grid . border-right"
+    "border-left . . . picture-sign-in-grid picture-sign-in-grid picture-sign-in-grid . border-right"
     "border-left . . . . . . . border-right"
     "border-left . . . . . . . border-right"
     "border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom";
@@ -24,28 +24,23 @@
     background-color: #A1EF80;
 }
 
-{/*#border-bottom {
-    grid-area: border-bottom;
-    background-color: #A1EF80;
-}*/}
-
 #border-right{
     grid-area: border-right;
     background-color: #A1EF80;
 }
 
-#signIn-box {
-    grid-area: signIn-box;
+#sign-in-box-grid {
+    grid-area: sign-in-box-grid;
     background-color: #CA4564;
 }
 
-#picture-signIn {
-    grid-area: picture-signIn;
+#picture-sign-in-grid {
+    grid-area: picture-sign-in-grid;
     background-color: #CA4564;
     border-radius: 10px;
 }
 
-.signInBox {
+.sign-in-box {
     background-color: #D710EE;
     display: flex;
     flex-direction: column;
@@ -54,7 +49,7 @@
     border-radius: 50px;
 }
 
-.pictureSignIn {
+.picture-sign-in {
     background-color: #D710EE;
     background-image: url("ImageSignIn.svg");
     background-size: cover;

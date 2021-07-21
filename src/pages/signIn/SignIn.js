@@ -48,8 +48,8 @@ function SignIn() {
 
     return (
       <>
-        <div className="signInLayout">
-          <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onSubmitReadout)}>
+        <div className="sign-in-layout">
+          <div className="layout-input-border-top" id="border-top" onSubmit={handleSubmit(onSubmitReadout)}>
               <ButtonB>
                   Voorlezen
               </ButtonB>
@@ -58,13 +58,10 @@ function SignIn() {
               </ButtonB>
           </div>
           <div id="border-right"></div>
-            {/*<div className="layoutInputBorderBottom" id="border-bottom">
-              <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-          </div>*/}
           <BorderBottom></BorderBottom>
           <div id="border-left"></div>
 
-          <form className="signInBox" id="signIn-box" onSubmit={handleSubmit(onFormSubmit)}>
+          <form className="sign-in-box" id="sign-in-box-grid" onSubmit={handleSubmit(onFormSubmit)}>
 
             <h3> Inloggen </h3>
 
@@ -97,7 +94,7 @@ function SignIn() {
             </ButtonB>
             <h5>Heb je je nog niet geregistreerd? <Link to="/signup">Registreer</Link> je dan eerst.</h5>
           </form>
-          <div className="pictureSignIn" id="picture-signIn"></div>
+          <div className="picture-sign-in" id="picture-sign-in-grid"></div>
         </div>
       </>
     )
