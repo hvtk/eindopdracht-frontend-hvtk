@@ -1,21 +1,20 @@
 import React from "react";
 import {useForm} from "react-hook-form";
-import {Link} from "react-router-dom";
 
 import './SelectionYouth.css';
 
 import Button from "../../components/buttons/Button";
 import ButtonB from "../../components/buttons/ButtonB";
-
-import phoneIcon from "../../assets/icons/callicon.svg";
-import whatsappIcon from "../../assets/icons/whattsappicon.svg";
-import chatIcon from "../../assets/icons/chaticon.svg";
-import imageYouth from "../../assets/images/selectionYouth/ImageYouth.svg";
 import BackToHome from "../../components/BackToHome";
 import TheSelectedPage from "../../components/TheSelectedPage";
 import GoToProfilePage from "../../components/GoToProfilePage";
 import LogOut from "../../components/LogOut";
 import BorderBottom from "../../components/bordersPageText/BorderBottom";
+
+import phoneIcon from "../../assets/icons/callicon.svg";
+import whatsappIcon from "../../assets/icons/whattsappicon.svg";
+import chatIcon from "../../assets/icons/chaticon.svg";
+import imageYouth from "../../assets/images/selectionYouth/ImageYouth.svg";
 
 function SelectionYouth() {
 
@@ -31,8 +30,8 @@ function SelectionYouth() {
 
     return (
 
-        <div className="selectionYouthLayout">
-            <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
+        <div className="selection-youth-layout">
+            <div className="layout-input-border-top" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
                 <ButtonB>
                     Voorlezen
                 </ButtonB>
@@ -41,14 +40,11 @@ function SelectionYouth() {
                 </ButtonB>
             </div>
             <div id="border-right"></div>
-            {/*<div className="layoutInputBorderBottom" id="border-bottom">
-                <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-            </div>*/}
             <BorderBottom></BorderBottom>
             <div id="border-left"></div>
 
-            <div className="phoneNumbers" id="phone-numbers">
-                 <span className="positionTextInBox">  <img src={phoneIcon} alt=""/>  112 <br/>
+            <div className="phone-numbers" id="phone-numbers-grid">
+                 <span className="position-text-in-box">  <img src={phoneIcon} alt=""/>  112 <br/>
                     <span> bij levensbedrijgende situaties</span>
                     <br/>
                     <img src={phoneIcon} alt=""/> 113 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
@@ -70,8 +66,8 @@ function SelectionYouth() {
                     <span> @ease praten over gevoelens? (12 tot 25 jaar) </span>
                  </span>
             </div>
-            <div className="pictureYouthSmall" id="picture-youth-small"> <img className="imageYouth" src={imageYouth} alt=""/> </div>
-            <div className="searchProblemsRight" id="search-problems-right" onSubmit={handleSubmit(onFormSubmit)}>
+            <div className="picture-youth-small" id="picture-youth-small-grid"> <img className="imageYouth" src={imageYouth} alt=""/> </div>
+            <div className="search-problems-right" id="search-problems-right-grid" onSubmit={handleSubmit(onFormSubmit)}>
               <p>
                 <Button>
                     Zoeken
@@ -114,10 +110,6 @@ function SelectionYouth() {
                 </Button>
               </p>
             </div>
-            {/* <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>
-            <div id="selected-page" className="selectedPage"> JONGEREN-PAGINA </div>
-            <div id="go-to-profile-page" className="goToProfilePage"> <Link to="/profile"> Ga naar de profielpagina </Link> </div>
-            <div id="log-out" className="logOut"> Uit loggen </div> */}
             <BackToHome></BackToHome>
             <TheSelectedPage>
                 JONGEREN-PAGINA
