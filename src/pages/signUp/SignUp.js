@@ -110,7 +110,7 @@ function SignUp() {
                           placeholder="herhaal-wachtwoord"
                           {...register("repeatPassword")}
                          />
-                     </label>
+                     </label>*
                      <br/>
                      <ButtonB>
                         Registreren

@@ -23,7 +23,9 @@ function App() {
                 <Homepage/>
               </Route>
               <Route path="/search/:endpoint">
-                <AfterSearchQuery/>
+                  {user ?
+                    <AfterSearchQuery/>
+                  : <Redirect to="/"/>}
               </Route>
               <Route path="/adults">
                 <SelectionAdults/>
