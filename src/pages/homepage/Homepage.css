@@ -1,13 +1,13 @@
-.homepageLayout {
+.homepage-layout {
     display: grid;
     grid-template-columns: 60px 35px 490px 35px 750px 35px 490px 35px 60px;
     grid-template-rows: 60px 45px 105px 660px 105px 45px 60px;
     grid-template-areas:
     "border-top border-top border-top border-top border-top border-top border-top border-top border-top"
     "border-left . . . . . . . border-right"
-    "border-left . . . picture-homepage . . . border-right"
-    "border-left . phone-numbers . picture-homepage . search-age . border-right"
-    "border-left . . . picture-homepage . . . border-right"
+    "border-left . . . picture-homepage-grid . . . border-right"
+    "border-left . phone-numbers-grid . picture-homepage-grid . search-age-grid . border-right"
+    "border-left . . . picture-homepage-grid . . . border-right"
     "border-left . . . . . . . border-right"
     "border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom border-bottom";
 }
@@ -22,31 +22,26 @@
     background-color: #A1EF80;
 }
 
-#border-bottom {
-    grid-area: border-bottom;
-    background-color: #A1EF80;
-}
-
 #border-right {
     grid-area: border-right;
     background-color: #A1EF80;
 }
 
-#picture-homepage {
-    grid-area: picture-homepage;
+#picture-homepage-grid {
+    grid-area: picture-homepage-grid;
 }
 
-#phone-numbers {
-    grid-area: phone-numbers;
+#phone-numbers-grid {
+    grid-area: phone-numbers-grid;
     background-color: #CA4564;
 }
 
-#search-age {
-    grid-area: search-age;
+#search-age-grid {
+    grid-area: search-age-grid;
     background-color: #CA4564;
 }
 
-.pictureHomepage {
+.picture-homepage {
     background-color: #D710EE;
     background-image: url("ImageHomepage.svg");
     background-size: cover;
@@ -57,23 +52,7 @@
     border-radius: 10px;
 }
 
-{/*.layoutInputBorderTop {
-    background-color: aqua;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}*/}
-
-{/*.layoutInputBorderBottom {
-    background-color: aqua;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/}
-
-.phoneNumbers {
+.phone-numbers {
     background-color: #D710EE;
     display: flex;
     flex-direction: row;
@@ -83,12 +62,12 @@
     border-radius: 50px;
 }
 
-img {
+.img {
     width: 28px;
     height: 28px;
 }
 
-.searchAge {
+.search-age {
     background-color: #D710EE;
     display: flex;
     flex-direction: column;
@@ -97,7 +76,7 @@ img {
     border-radius: 50px;
 }
 
-.ageSelectionBox {
+.age-selection-box {
     background-color: #CDD32B;
     border-radius: 10px;
     display: flex;
@@ -107,20 +86,10 @@ img {
     height: 53px;
 }
 
-.positionTextInBoxPhoneNumbers {
+.position-text-in-box-phone-numbers {
     margin-left: 20px;
     margin-top: 65px;
 }
-
-{/*.button-in-age-selection-box {
-    background-color: #CDD32B;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 241px;
-    height: 53px;
-}*/}
 
 
 

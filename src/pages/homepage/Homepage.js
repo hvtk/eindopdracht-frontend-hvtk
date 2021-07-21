@@ -7,12 +7,12 @@ import './Homepage.css';
 import {AgeGroupContext} from "../../context/SearchAgeGroupContext"
 
 import ButtonB from "../../components/buttons/ButtonB";
+import ButtonC from "../../components/buttons/ButtonC";
 import BorderBottom from "../../components/bordersPageText/BorderBottom";
 
 import phoneIcon from '../../assets/icons/callicon.svg'
 import chatIcon from'../../assets/icons/chaticon.svg'
 import whatsappIcon from '../../assets/icons/whattsappicon.svg'
-import ButtonC from "../../components/buttons/ButtonC";
 
 function Homepage() {
 const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(AgeGroupContext);
@@ -27,8 +27,8 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
 
     return (
       <>
-        <div className="homepageLayout">
-            <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
+        <div className="homepage-layout">
+            <div className="layout-input-border-top" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
                 <ButtonB>
                     Voorlezen
                 </ButtonB>
@@ -37,14 +37,11 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
                 </ButtonB>
             </div>
             <div id="border-right"></div>
-            {/*<div className="layoutInputBorderBottom" id="border-bottom">
-                <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-            </div>*/}
             <BorderBottom></BorderBottom>
             <div id="border-left"></div>
 
-            <div className="phoneNumbers" id="phone-numbers">
-                <span className="positionTextInBoxPhoneNumbers">  <img src={phoneIcon} alt=""/>  112 <br/>
+            <div className="phone-numbers" id="phone-numbers-grid">
+                <span className="position-text-in-box-phone-numbers">  <img src={phoneIcon} alt=""/>  112 <br/>
                     <span> bij levensbedrijgende situaties</span>
                     <br/>
                     <img src={phoneIcon} alt=""/> 113 <img src={whatsappIcon} alt=""/> <img src={chatIcon} alt=""/> <br/>
@@ -73,9 +70,9 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
                 </span>
             </div>
 
-            <div className="pictureHomepage" id="picture-homepage"> </div>
+            <div className="picture-homepage" id="picture-homepage-grid"> </div>
 
-            <div className="searchAge" id="search-age">
+            <div className="search-age" id="search-age-grid">
 
                 <h4> Kies de leeftijdsgroep </h4>
 
@@ -87,15 +84,6 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
                 >
                     KINDEREN
                 </ButtonC>
-                {/*<button className="button-in-age-selection-box"
-                    type="button"
-                    onClick={() => {
-                      setSelectedAgeGroupForContext('KINDEREN');
-                      history.push("/signup");
-                    }}
-                    >
-                    KINDEREN
-                </button>*/}
                 <ButtonC
                     clickHandler={() => {
                         setSelectedAgeGroupForContext('JONGEREN');
@@ -104,15 +92,6 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
                 >
                     JONGEREN
                 </ButtonC>
-                {/* <button className="button-in-age-selection-box"
-                    type="button"
-                    onClick={() => {
-                      setSelectedAgeGroupForContext('JONGEREN');
-                      history.push("/signup");
-                    }}
-                    >
-                    JONGEREN
-                </button>*/}
                 <ButtonC
                     clickHandler={() => {
                     setSelectedAgeGroupForContext('VOLWASSENEN');
@@ -121,15 +100,6 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
                     >
                     VOLWASSENEN
                 </ButtonC>
-                {/* <button className="button-in-age-selection-box"
-                   type="button"
-                   onClick={() => {
-                       setSelectedAgeGroupForContext('VOLWASSENEN');
-                       history.push("/signup");
-                   }}
-                   >
-                   VOLWASSENEN
-                </button>*/}
                 <ButtonC
                     clickHandler={() => {
                         setSelectedAgeGroupForContext('OUDEREN');
@@ -138,15 +108,6 @@ const {selectedAgeGroupForContext, setSelectedAgeGroupForContext} = useContext(A
                 >
                     OUDEREN
                 </ButtonC>
-                {/* <button className="button-in-age-selection-box"
-                   type="button"
-                   onClick={() => {
-                       setSelectedAgeGroupForContext('OUDEREN');
-                       history.push("/signup");
-                   }}
-                   >
-                   OUDEREN
-                </button>*/}
             </div>
         </div>
       </>
