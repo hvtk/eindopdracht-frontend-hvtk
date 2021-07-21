@@ -38,8 +38,8 @@ function SelectionChildren() {
 
     return (
 
-        <div className="childrenLayout">
-            <div className="layoutInputBorderTop" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
+        <div className="children-layout">
+            <div className="layout-input-border-top" id="border-top" onSubmit={handleSubmit(onFormSubmitReadout)}>
                 <ButtonB>
                     Voorlezen
                 </ButtonB>
@@ -48,13 +48,10 @@ function SelectionChildren() {
                 </ButtonB>
             </div>
             <div id="border-right"></div>
-            {/*<div className="layoutInputBorderBottom" id="border-bottom">
-                <h4> GEEF NIET OP! JE BENT AL ZOVER GEKOMEN. </h4>
-            </div>*/}
             <BorderBottom></BorderBottom>
             <div id="border-left"></div>
-            <div className="phoneNumbers" id="phone-numbers">
-                 <div className="positionTextInBoxPhoneNumbers">
+            <div className="phone-numbers" id="phone-numbers-grid">
+                 <div className="position-text-in-box-phone-numbers">
                     <img src={phoneIcon} alt=""/>  112 <br/>
                     <span> bij levensbedrijgende situaties</span>
                     <br/>
@@ -72,7 +69,7 @@ function SelectionChildren() {
                     <br/>
                 </div>
             </div>
-            <div id="picture-children-background" className="pictureChildrenBackground">
+            <div id="picture-children-background-grid" className="picture-children-background">
                     <p> <img id="imageSize1" src={adhdcartoon} alt="" /> <br/> ADHD </p>
                     <p> <img id="imageSize1" src={trauma} alt="" /> <br/> Trauma/angstig </p>
                     <p> <img id="imageSize2" src={boos} alt="" /> <br/>  Boos </p>
@@ -85,10 +82,6 @@ function SelectionChildren() {
                     <p> <img id="imageSize1" src={emotions} alt="" /> <br/> Emotionele problemen </p>
                     <p> <img id="imageSize2" src={Lonely} alt="" /> <br/> Eenzaam </p>
             </div>
-            {/* <div id="back-to-home" className="backToHome"> <Link to="/"> Home </Link> </div>
-            <div id="selected-page" className="selectedPage"> KINDEREN-PAGINA </div>
-            <div id="go-to-profile-page" className="goToProfilePage"> <Link to="/profile"> Ga naar de profielpagina </Link> </div>
-            <div id="log-out" className="logOut"> Uit loggen </div> */}
             <BackToHome></BackToHome>
             <TheSelectedPage>
                 KINDEREN-PAGINA
