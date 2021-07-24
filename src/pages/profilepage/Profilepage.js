@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import {useForm} from "react-hook-form";
 import axios from "axios";
@@ -17,7 +17,7 @@ function Profilepage() {
 
     const {handleSubmit, register} = useForm();
 
-    const [uploadedFile, setUploadFile]= useState(null);
+    const [uploadedFile, setUploadFile]= useState([]);
 
     async function onFormSubmitFile(data) {
         console.log(data);
@@ -39,15 +39,17 @@ function Profilepage() {
             console.error(e)
         }
     }
-
-    async function fetchUploadFile() {
-        try {
-            const result = await axios.get(`https://localhost:8443/users/${user.username}/avatar`);
-            setUploadFile(result.data);
-        } catch (e) {
-            console.error(e);
+    useEffect (() => {
+        async function fetchUploadFile() {
+            try {
+                const result = await axios.get(`https://localhost:8443/users/${user.username}/avatar`);
+                setUploadFile(result.data);
+            } catch (e) {
+                console.error(e);
+            }
         }
-    }
+        fetchUploadFile()
+    }, []);
 
     function onFormSubmitReadout(data) {
         console.log(data);
@@ -81,7 +83,7 @@ function Profilepage() {
                       <ButtonB>
                           Sla op
                       </ButtonB>
-                        {uploadedFile &&
+                        {/*} {uploadedFile &&
                             <div>
                                 {uploadedFile.name}
                             </div>
@@ -91,7 +93,12 @@ function Profilepage() {
                             onClick={fetchUploadFile}
                             >
                             Haal file op
-                        </button>
+                        </button> */}
+                        <ul>
+                            {uploadedFile && uploadedFile.name(uploadedFile) => {
+                                return <li key={avatar.name}>{avatar.name}</li>
+                            })}
+                        </ul>
                     </form>
                 </div>
               <p> <h4> Gebruikersnaam: </h4> {user && user.username} </p>
