@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import {useForm} from "react-hook-form";
 import axios from "axios";
@@ -16,8 +16,6 @@ function Profilepage() {
     console.log(user);
 
     const {handleSubmit, register} = useForm();
-
-    const [uploadedFile, setUploadFile]= useState([]);
 
     async function onFormSubmitFile(data) {
         console.log(data);
@@ -39,17 +37,6 @@ function Profilepage() {
             console.error(e)
         }
     }
-    useEffect (() => {
-        async function fetchUploadFile() {
-            try {
-                const result = await axios.get(`https://localhost:8443/users/${user.username}/avatar`);
-                setUploadFile(result.data);
-            } catch (e) {
-                console.error(e);
-            }
-        }
-        fetchUploadFile()
-    }, []);
 
     function onFormSubmitReadout(data) {
         console.log(data);
@@ -73,7 +60,7 @@ function Profilepage() {
               <h3> Profielpagina </h3>
               <h4> Profielfoto: </h4>
                 <div className="file-upload">
-                    {/*} <img className="upload-image-size" src={`https://localhost:8443/users/${user.username}/avatar`} />*/}
+                    <img className="upload-image-size" src={`https://localhost:8443/users/${user.username}/avatar`} />
                     <form className="file-upload" onSubmit={handleSubmit(onFormSubmitFile)} >
                       <input
                           type="file"
@@ -83,22 +70,6 @@ function Profilepage() {
                       <ButtonB>
                           Sla op
                       </ButtonB>
-                        {/*} {uploadedFile &&
-                            <div>
-                                {uploadedFile.name}
-                            </div>
-                        }
-                        <button className="upload-image-size"
-                            type="button"
-                            onClick={fetchUploadFile}
-                            >
-                            Haal file op
-                        </button> */}
-                        <ul>
-                            {uploadedFile && uploadedFile.name(uploadedFile) => {
-                                return <li key={avatar.name}>{avatar.name}</li>
-                            })}
-                        </ul>
                     </form>
                 </div>
               <p> <h4> Gebruikersnaam: </h4> {user && user.username} </p>
